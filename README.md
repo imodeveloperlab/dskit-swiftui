@@ -93,15 +93,26 @@ To add DSKit to your project, follow these steps:
    - Select the version of the package you wish to add. You can choose a specific release or the latest commit.
    - Xcode will download the package and ask which of your project's targets to add it to. Select the target where you want to use DSKit.
 
-### Step 2: Importing DSKit
-Once DSKit is added to your project, you can start using it by importing the package at the top of your Swift files where you want to use the design system components:
+### Step 2: Set Up
+Once DSKit is added to your project, you can start using it by importing the package at the top of your Swift files where you intend to use the design system components. First, set up the appearance of your app by applying `.dsAppearance(RetroAppearance())`. `RetroAppearance()` is one of DSKit's [appearances](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Appearance-in-DSKit.md). You can create your own [appearance](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Appearance-in-DSKit.md) by copying one that you like and then modifying it as needed.:
 
 ```swift
+import SwiftUI
 import DSKit
+
+@main
+struct DSKitDemoApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .dsAppearance(RetroAppearance())
+        }
+    }
+}
 ```
 
 ### Step 3: Using DSKit in Your Screens
-To integrate DSKit components and modifiers into your SwiftUI views, simply use them like any other SwiftUI component or modifier. Here’s an example of how you might use DSKit:
+To integrate [DSKit components](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Views.md) and modifiers into your SwiftUI views, simply use them like any other SwiftUI component or modifier. Here’s an example of how you might use DSKit:
 
 ```swift
 import SwiftUI
@@ -109,20 +120,26 @@ import DSKit
 
 struct ContentView: View {
     var body: some View {
-        DSVStack {
+        DSVStack(alignment: .center) {
             DSText("Welcome to DSKit")
+                .dsTextStyle(.title1)
                 .dsPadding()
                 .dsBackground(.primary)
             DSText("Design with ease")
                 .dsPadding()
                 .dsBackground(.secondary)
+                .dsCornerRadius()
+            DSButton(
+                title: "Start Now!!!", 
+                action: { print("Do something") }
+            )
         }
-        .dsPadding()
+        .dsScreen()
     }
 }
 ```
 
-In this example, `DSVStack`, `DSText`, and various modifiers like `dsPadding()` and `dsBackground()` are used. These components and modifiers are part of DSKit and help apply consistent styling and spacing as defined in your design system.
+In this example, [DSVStack](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Views.md), [DSText](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Views.md), and various modifiers like `dsPadding()` and `dsBackground()` are used. These components and modifiers are part of DSKit and help apply consistent styling and spacing as defined in your design system.
 
 ## Contributions and support
 
