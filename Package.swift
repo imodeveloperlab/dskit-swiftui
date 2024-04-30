@@ -19,7 +19,8 @@ let package = Package(
             dependencies: [
                 // Corrected: Refer to the package by its name without the .git suffix
                 .product(name: "SDWebImageSwiftUI", package: "SDWebImageSwiftUI")
-            ]
+            ],
+            path: "DSKit/Sources"
         )
     ]
 )
