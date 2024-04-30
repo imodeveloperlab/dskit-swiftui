@@ -67,7 +67,7 @@ public extension DSAppearance {
 }
 
 public extension View {
-    func setAppearance(_ appearance: DSAppearance) -> some View {
+    func dsAppearance(_ appearance: DSAppearance) -> some View {
         appearance.overrideTheSystemAppearance()
         return self
             .environment(\.appearance, appearance)
