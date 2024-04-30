@@ -65,3 +65,11 @@ public extension DSAppearance {
         UINavigationBar.appearance().standardAppearance = navigationBarAppearance
     }
 }
+
+public extension View {
+    func setAppearance(_ appearance: DSAppearance) -> some View {
+        appearance.overrideTheSystemAppearance()
+        return self
+            .environment(\.appearance, appearance)
+    }
+}
