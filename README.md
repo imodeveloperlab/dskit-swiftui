@@ -19,9 +19,6 @@ DSKit is a simple **Design System Kit**  for **iOS 15+ SwiftUI**, designed to he
 > [!Note]
 > If you're looking for the UIKit version of DSKit, you can find it within the same repository under the subfolder named **UIKitVersion**. For more details on the UIKit implementation and its features, please refer to the [UIKit Version documentation](https://github.com/imodeveloperlab/dskit) provided in the repository.
 
-### Components and Layouts
-
-DSKit offers a library of ready-to-use UI components and full-screen layouts that are designed to be easily integrated and customized within your projects. Each component and screen layout is fully adaptable, allowing you to tweak and refine them to perfectly fit the specific needs of your application. This accessibility accelerates the development process, enabling you to implement complex design solutions efficiently while maintaining a high standard of aesthetics and functionality.
 
 <table>
 <tr>
@@ -32,34 +29,28 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 <img src="Content/Screenshots/ItemDetails2.DSKit_light_screenshot_framed.png">
 </td>
 <td>
+<img src="Content/Screenshots/ItemDetails3.Blue_light_screenshot_framed.png">
+</td>
+<td>
 <img src="Content/Screenshots/Order1.DSKit_light_screenshot_framed.png">
 </td>
+
 </tr>
 </table>
-<p align="center"><a href="Content/Layout-in-DSKit.md">Learn more about layout in DSKit<a/> or see <a href="Content/Views.md">all available Views</a></p>
 
+### Components and Layouts
+
+DSKit offers a library of ready-to-use UI components and full-screen layouts that are designed to be easily integrated and customized within your projects. Each component and screen layout is fully adaptable, allowing you to tweak and refine them to perfectly fit the specific needs of your application. This accessibility accelerates the development process, enabling you to implement complex design solutions efficiently while maintaining a high standard of aesthetics and functionality.
+
+
+<a href="Content/Layout-in-DSKit.md">Read more about layout in DSKit<a/> or see <a href="Content/Views.md">all available components</a>
 
 
 ### Appearances
 
 DSKit includes a selection of ready-to-use appearances that support both light and dark modes, suitable for immediate integration into your projects. These appearances are fully customizable, allowing you to tweak and modify them according to your specific requirements. This flexibility ensures that you can maintain consistency across different themes while adapting to user preferences. 
 
-<table>
-<tr>
-<td>
-<img src="Content/Screenshots/ItemDetails3.Dark_light_screenshot_framed.png">
-</td>
-<td>
-<img src="Content/Screenshots/ItemDetails3.Peach_light_screenshot_framed.png">
-</td>
-<td>
-<img src="Content/Screenshots/ItemDetails3.Blue_light_screenshot_framed.png">
-</td>
-</tr>
-</table>
-<p align="center"><a href="Content/Appearance-in-DSKit.md">Read more about appearance and customization<a/></p>
-
-
+<a href="Content/Appearance-in-DSKit.md">Read more about appearance and customization</a>
 
 ## Documentation
 
