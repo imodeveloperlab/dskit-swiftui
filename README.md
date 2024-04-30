@@ -112,7 +112,7 @@ struct DSKitDemoApp: App {
 ```
 
 ### Step 3: Using DSKit in Your Screens
-To integrate DSKit components and modifiers into your SwiftUI views, simply use them like any other SwiftUI component or modifier. Here’s an example of how you might use DSKit:
+To integrate [DSKit components](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Views.md) and modifiers into your SwiftUI views, simply use them like any other SwiftUI component or modifier. Here’s an example of how you might use DSKit:
 
 ```swift
 import SwiftUI
@@ -139,7 +139,7 @@ struct ContentView: View {
 }
 ```
 
-In this example, `DSVStack`, `DSText`, and various modifiers like `dsPadding()` and `dsBackground()` are used. These components and modifiers are part of DSKit and help apply consistent styling and spacing as defined in your design system.
+In this example, [DSVStack](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Views.md), [DSText](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Views.md), and various modifiers like `dsPadding()` and `dsBackground()` are used. These components and modifiers are part of DSKit and help apply consistent styling and spacing as defined in your design system.
 
 ## Contributions and support
 
