@@ -89,7 +89,7 @@ To add DSKit to your project, follow these steps:
 
 2. **Add the package dependency**:
    - Go to `File` > `Swift Packages` > `Add Package Dependency...`
-   - Enter the repository URL `git@github.com:imodeveloperlab/dskit.git`.
+   - Enter the repository URL `git@github.com:imodeveloperlab/dskit-swiftui.git`.
    - Select the version of the package you wish to add. You can choose a specific release or the latest commit.
    - Xcode will download the package and ask which of your project's targets to add it to. Select the target where you want to use DSKit.
 
