@@ -36,14 +36,14 @@ DSKit is a simple **Design System Kit**  for **iOS 15+ SwiftUI**, designed to he
 > [!Note]
 > If you're looking for the UIKit version of DSKit, you can find it within the same repository under the subfolder named **UIKitVersion**. For more details on the UIKit implementation and its features, please refer to the [UIKit Version documentation](https://github.com/imodeveloperlab/dskit) provided in the repository.
 
-To get started with DSKit, a design system toolkit for SwiftUI applications, you can integrate it into your projects using Swift Package Manager (SPM)
+To get started with DSKit, you can integrate it into your projects using Swift Package Manager (SPM)
 
 ### Step 1: Adding DSKit via Swift Package Manager (SPM)
 To add DSKit to your project, follow these steps:
 
-1. **Open your Xcode project**: Launch Xcode and open the project where you want to include DSKit.
+1. Open your Xcode project: Launch Xcode and open the project where you want to include DSKit.
 
-2. **Add the package dependency**:
+2. Add the package dependency:
    - Go to `File` > `Swift Packages` > `Add Package Dependency...`
    - Enter the repository URL `git@github.com:imodeveloperlab/dskit-swiftui.git`.
    - Select the version of the package you wish to add. You can choose a specific release or the latest commit.
