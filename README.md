@@ -46,9 +46,6 @@ DSKit includes a selection of ready-to-use [appearances](Content/Appearance-in-D
 
 The most effective way to familiarize yourself with DSKit and its capabilities is by utilizing the **DSKit Explorer app**. To begin, clone the repository and launch the **DSKit Explorer app**. Within the app, you'll have access to all available screens, which you can open in preview mode. This feature allows you to interactively switch between different appearances and make modifications to the screens according to your preferences.
 
->  [!NOTE]
->  Using the **DSKit Explorer** provides a practical demonstration of how DSKit's components and modifiers integrate to create efficient and cohesive UIs with minimal coding effort. It serves as an excellent visual and interactive guide to understanding the simplicity and power of DSKit in streamlining screen development.
-
 To dive deeper into specific features and functionalities, continue to the sections below. These segments offer detailed insights into the individual elements of DSKit, helping you leverage its full potential in your projects.
 
 - [Layout](Content/Layout-in-DSKit.md)
