@@ -111,6 +111,8 @@ DSKit includes a selection of ready-to-use [appearances](Content/Appearance-in-D
 
 To dive deeper into specific features and functionalities, continue to the sections below. These segments offer detailed insights into the individual elements of DSKit, helping you leverage its full potential in your projects.
 
+### Documents
+
 - [Layout](Content/Layout-in-DSKit.md)
 - [Views / Components](Content/Views.md)
 - [Appearance](Content/Appearance-in-DSKit.md)
