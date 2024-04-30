@@ -94,7 +94,7 @@ To add DSKit to your project, follow these steps:
    - Xcode will download the package and ask which of your project's targets to add it to. Select the target where you want to use DSKit.
 
 ### Step 2: Set Up
-Once DSKit is added to your project, you can start using it by importing the package at the top of your Swift files where you intend to use the design system components. First, set up the appearance of your app by applying `.dsAppearance(RetroAppearance())`. `RetroAppearance()` is one of DSKit's appearances. You can create your own appearance by copying one that you like and then modifying it as needed.:
+Once DSKit is added to your project, you can start using it by importing the package at the top of your Swift files where you intend to use the design system components. First, set up the appearance of your app by applying `.dsAppearance(RetroAppearance())`. `RetroAppearance()` is one of DSKit's [appearances](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Appearance-in-DSKit.md). You can create your own [appearance](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Appearance-in-DSKit.md) by copying one that you like and then modifying it as needed.:
 
 ```swift
 import SwiftUI
