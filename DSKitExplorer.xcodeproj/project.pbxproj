@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41A858162BF340A400375D4D /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 41A858152BF340A400375D4D /* SnapshotTesting */; };
+		41A858182BF340AF00375D4D /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 41A858172BF340AF00375D4D /* SnapshotTesting */; };
+		41A8581D2BF3414A00375D4D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 41A8581C2BF3414A00375D4D /* SDWebImageSwiftUI */; };
+		41A8581F2BF3415300375D4D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 41A8581E2BF3415300375D4D /* SDWebImageSwiftUI */; };
+		41A858222BF3420000375D4D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 41A858212BF3420000375D4D /* SDWebImage */; };
+		41A858242BF3421200375D4D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 41A858232BF3421200375D4D /* SDWebImage */; };
 		604EED4B2BD23BE9009E3278 /* DSKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 604EED4A2BD23BE9009E3278 /* DSKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		604EED4F2BD23BE9009E3278 /* DSKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 604EED482BD23BE9009E3278 /* DSKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		604EED602BD23D23009E3278 /* DSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604EED482BD23BE9009E3278 /* DSKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -95,7 +101,6 @@
 		604EEE1D2BD23E1B009E3278 /* DSTermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDC22BD23E1A009E3278 /* DSTermsAndConditions.swift */; };
 		604EEE1E2BD23E1B009E3278 /* DSToolbarSFSymbolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDC32BD23E1A009E3278 /* DSToolbarSFSymbolButton.swift */; };
 		604EEE1F2BD23E1C009E3278 /* DSVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDC42BD23E1A009E3278 /* DSVStack.swift */; };
-		604EEE292BD2439C009E3278 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 604EEE282BD2439C009E3278 /* SDWebImageSwiftUI */; };
 		604EEE2B2BD24797009E3278 /* DSScrollableContentMarginsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEE2A2BD24797009E3278 /* DSScrollableContentMarginsModifier.swift */; };
 		608350B22BCC565F002E4F47 /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608350B12BCC565F002E4F47 /* ScreenKey.swift */; };
 		608350B52BCC5892002E4F47 /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608350B42BCC5892002E4F47 /* ScreenView.swift */; };
@@ -161,8 +166,6 @@
 		60D469F42BCAF0DC00A6F7FC /* ProfileScreen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D469BA2BCAF0DC00A6F7FC /* ProfileScreen3.swift */; };
 		60D469FC2BCAF14000A6F7FC /* DSKitExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D469FB2BCAF14000A6F7FC /* DSKitExplorerTests.swift */; };
 		60D46A092BCAF16600A6F7FC /* DSKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D46A082BCAF16600A6F7FC /* DSKitTests.swift */; };
-		60D46A112BCAF1C000A6F7FC /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 60D46A102BCAF1C000A6F7FC /* SnapshotTesting */; };
-		60D46A142BCAF1CF00A6F7FC /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 60D46A132BCAF1CF00A6F7FC /* SnapshotTesting */; };
 		60D46A192BCAF25A00A6F7FC /* AssertSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D46A182BCAF25A00A6F7FC /* AssertSnapshot.swift */; };
 		60D46A1B2BCAF29600A6F7FC /* AssertSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D46A1A2BCAF29600A6F7FC /* AssertSnapshot.swift */; };
 /* End PBXBuildFile section */
@@ -387,7 +390,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604EEE292BD2439C009E3278 /* SDWebImageSwiftUI in Frameworks */,
+				41A858242BF3421200375D4D /* SDWebImage in Frameworks */,
+				41A8581F2BF3415300375D4D /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +399,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A858222BF3420000375D4D /* SDWebImage in Frameworks */,
+				41A8581D2BF3414A00375D4D /* SDWebImageSwiftUI in Frameworks */,
 				604EED602BD23D23009E3278 /* DSKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,7 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6092FE5C2BD2AC600016CB4A /* DSKit.framework in Frameworks */,
-				60D46A112BCAF1C000A6F7FC /* SnapshotTesting in Frameworks */,
+				41A858162BF340A400375D4D /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +418,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60D46A142BCAF1CF00A6F7FC /* SnapshotTesting in Frameworks */,
+				41A858182BF340AF00375D4D /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,7 +733,8 @@
 			);
 			name = DSKit;
 			packageProductDependencies = (
-				604EEE282BD2439C009E3278 /* SDWebImageSwiftUI */,
+				41A8581E2BF3415300375D4D /* SDWebImageSwiftUI */,
+				41A858232BF3421200375D4D /* SDWebImage */,
 			);
 			productName = DSKit;
 			productReference = 604EED482BD23BE9009E3278 /* DSKit.framework */;
@@ -750,6 +757,8 @@
 			);
 			name = DSKitExplorer;
 			packageProductDependencies = (
+				41A8581C2BF3414A00375D4D /* SDWebImageSwiftUI */,
+				41A858212BF3420000375D4D /* SDWebImage */,
 			);
 			productName = DSKitExplorer;
 			productReference = 60D4696E2BCAF07F00A6F7FC /* DSKitExplorer.app */;
@@ -772,7 +781,7 @@
 			);
 			name = DSKitExplorerTests;
 			packageProductDependencies = (
-				60D46A102BCAF1C000A6F7FC /* SnapshotTesting */,
+				41A858152BF340A400375D4D /* SnapshotTesting */,
 			);
 			productName = DSKitExplorerTests;
 			productReference = 60D469F92BCAF14000A6F7FC /* DSKitExplorerTests.xctest */;
@@ -793,7 +802,7 @@
 			);
 			name = DSKitTests;
 			packageProductDependencies = (
-				60D46A132BCAF1CF00A6F7FC /* SnapshotTesting */,
+				41A858172BF340AF00375D4D /* SnapshotTesting */,
 			);
 			productName = DSKitTests;
 			productReference = 60D46A062BCAF16600A6F7FC /* DSKitTests.xctest */;
@@ -836,8 +845,9 @@
 			);
 			mainGroup = 60D469652BCAF07F00A6F7FC;
 			packageReferences = (
-				60D46A0F2BCAF1C000A6F7FC /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
-				604EEE272BD2439C009E3278 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				41A858142BF340A400375D4D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				41A858192BF3412600375D4D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				41A858202BF3420000375D4D /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 60D4696F2BCAF07F00A6F7FC /* Products */;
 			projectDirPath = "";
@@ -1472,6 +1482,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		41A858142BF340A400375D4D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.16.0;
+			};
+		};
+		41A858192BF3412600375D4D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
+		41A858202BF3420000375D4D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.2;
+			};
+		};
 		604EED2E2BD198CA009E3278 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
@@ -1480,44 +1514,43 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		604EEE272BD2439C009E3278 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.2;
-			};
-		};
-		60D46A0F2BCAF1C000A6F7FC /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.16.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		41A858152BF340A400375D4D /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A858142BF340A400375D4D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+		41A858172BF340AF00375D4D /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A858142BF340A400375D4D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+		41A8581C2BF3414A00375D4D /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A858192BF3412600375D4D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		41A8581E2BF3415300375D4D /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A858192BF3412600375D4D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		41A858212BF3420000375D4D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A858202BF3420000375D4D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		41A858232BF3421200375D4D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A858202BF3420000375D4D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		604EED3A2BD19FDB009E3278 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 604EED2E2BD198CA009E3278 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
-		};
-		604EEE282BD2439C009E3278 /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 604EEE272BD2439C009E3278 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-		60D46A102BCAF1C000A6F7FC /* SnapshotTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 60D46A0F2BCAF1C000A6F7FC /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
-			productName = SnapshotTesting;
-		};
-		60D46A132BCAF1CF00A6F7FC /* SnapshotTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 60D46A0F2BCAF1C000A6F7FC /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
-			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
