@@ -16,20 +16,8 @@
 
 DSKit is a simple **Design System Kit**  for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent and attractive user interfaces with ease. It includes essential view modifiers which ensure that all UI components follow a unified style guide. 
 
+<img src="Content/Images/Preview.png">
 
-<table>
-<tr>
-<td>
-<img src="Content/Screenshots/HomeScreen3.DSKit_light_screenshot_framed.png">
-</td>
-<td>
-<img src="Content/Screenshots/ItemDetails2.DSKit_light_screenshot_framed.png">
-</td>
-<td>
-<img src="Content/Screenshots/Order1.DSKit_light_screenshot_framed.png">
-</td>
-</tr>
-</table>
 
 ## Get Started
 
@@ -100,6 +88,8 @@ In this example, [DSVStack](https://github.com/imodeveloperlab/dskit-swiftui/blo
 ## Documentation
 
 The most effective way to familiarize yourself with DSKit and its capabilities is by utilizing the **DSKit Explorer app**. To begin, clone the repository and launch the **DSKit Explorer app**. Within the app, you'll have access to all available screens, which you can open in preview mode. This feature allows you to interactively switch between different appearances and make modifications to the screens according to your preferences.
+
+<img src="Content/Images/DSKitExplorerApp.png">
 
 ### Components and Layouts
 

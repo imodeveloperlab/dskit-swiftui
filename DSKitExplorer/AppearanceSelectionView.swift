@@ -60,7 +60,7 @@ fileprivate struct AppearanceView: View {
                 appearance.secondaryView.background.color
                 appearance.secondaryView.button.accentColor.color
             }
-            .dsHeight(20)
+            .dsHeight(40)
             .dsCornerRadius()
         }
         .dsPadding()
