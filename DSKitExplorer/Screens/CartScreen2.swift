@@ -58,7 +58,7 @@ extension CartScreen2 {
                     }
                     DSPriceView(price: product.price, size: .smallHeadline)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .dsFullWidth()
                 .overlay(alignment: .trailing, content: {
                     DSButton(
                         title: "Remove",

@@ -16,7 +16,7 @@ import SwiftUI
 Initializes a `DSText` with the text content and optional alignment.
 - Parameters:
 - `text`: The text to be displayed.
-- `multilineTextAlignment`: Alignment of the text within the view, defaulting to `.leading`.
+- `alignment`: Alignment of the text within the view, defaulting to `.leading`.
 
 #### Usage:
 `DSText` is ideal for displaying any textual content where adherence to a design system is required. It supports multiple text styles and configurations, making it versatile for use in titles, body text, captions, and more.
@@ -29,18 +29,18 @@ public struct DSText: View {
     @Environment(\.textStyle) var textStyle: DSTextStyle
     
     let text: String
-    let multilineTextAlignment: TextAlignment
+    let alignment: TextAlignment
     
-    public init(_ text: String, multilineTextAlignment: TextAlignment = .leading) {
+    public init(_ text: String, alignment: TextAlignment = .leading) {
         self.text = text
-        self.multilineTextAlignment = multilineTextAlignment
+        self.alignment = alignment
     }
     
     public var body: some View {
         Text(text)
             .font(textStyle.font(for: appearance))
             .foregroundStyle(textStyle.color(for: appearance, and: viewStyle))
-            .multilineTextAlignment(multilineTextAlignment)
+            .multilineTextAlignment(alignment)
             .dsDebuggable(debugColor: Color.orange.opacity(0.3))
     }
 }
@@ -156,18 +156,18 @@ struct Testable_DSText: View {
             DSHStack {
                 DSText(
                     "Lorem Ipsum is simply dummy text.",
-                    multilineTextAlignment: .center
+                    alignment: .center
                 )
                 .dsTextStyle(.footnote)
                 .border(Color.black, width: 1)
                 DSText(
                     "Lorem Ipsum is simply dummy text.",
-                    multilineTextAlignment: .leading
+                    alignment: .leading
                 )
                 .dsTextStyle(.footnote)
                 .border(Color.black, width: 1)
                 DSText("Lorem Ipsum is simply dummy text.",
-                       multilineTextAlignment: .trailing
+                       alignment: .trailing
                 )
                 .dsTextStyle(.footnote)
                 .border(Color.black, width: 1)

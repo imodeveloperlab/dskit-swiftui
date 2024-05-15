@@ -48,7 +48,7 @@ extension Categories1 {
                     }
                 }
                 .dsPadding(category.image != nil ? .zero : .medium)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .dsFullWidth()
             }
             .overlay(alignment: .trailing) {
                 DSChevronView().dsPadding()

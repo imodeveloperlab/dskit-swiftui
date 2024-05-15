@@ -33,7 +33,7 @@ struct ItemDetails5: View {
                         DSVStack(spacing: .zero) {
                             DSText(viewModel.title).dsTextStyle(.title2)
                             DSText(viewModel.subtitle).dsTextStyle(.subheadline)
-                        }.frame(maxWidth: .infinity, alignment: .leading)
+                        }.dsFullWidth()
                     }
                 }
                 

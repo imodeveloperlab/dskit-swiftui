@@ -69,7 +69,7 @@ extension CartScreen4 {
                             DSText(product.size).dsTextStyle(.smallHeadline)
                         }
                         DSPriceView(price: product.price, size: .smallHeadline)
-                    }.frame(maxWidth: .infinity, alignment: .leading)
+                    }.dsFullWidth()
                     
                     DSSFSymbolButton(name: "minus.circle.fill", size: .mediumIcon)
                         .dsPadding(.trailing, .regular)

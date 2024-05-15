@@ -43,7 +43,7 @@ struct ItemDetails1: View {
                 DSButton(title: "Add to cart", rightSystemName: "cart.fill") {
                     dismiss()
                 }
-                DSText(viewModel.priceDisclaimer, multilineTextAlignment: .center)
+                DSText(viewModel.priceDisclaimer, alignment: .center)
                     .dsTextStyle(.caption2)
                     .dsPadding(.horizontal)
             }

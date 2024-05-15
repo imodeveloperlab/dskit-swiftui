@@ -18,7 +18,7 @@ struct SignUpScreen4: View {
             Spacer()
             DSVStack(spacing: .medium) {
                 DSText("Enter secure\ncode to verify").dsTextStyle(.largeHeadline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .dsFullWidth()
                     .overlay(alignment: .trailing) {
                         DSImageView(systemName: "checkmark.circle.fill", size: 60, tint: .viewStyle(.secondary, .background))
                     }

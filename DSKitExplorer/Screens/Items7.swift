@@ -60,7 +60,7 @@ extension Items7 {
                     
                     DSPriceView(price: product.price, size: .smallHeadline)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .dsFullWidth()
                 .dsPadding(.regular)
                 .overlay(alignment: .trailing) {
                     DSChevronView()

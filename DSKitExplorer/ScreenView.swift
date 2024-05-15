@@ -16,6 +16,14 @@ struct ScreenView: View {
     
     var body: some View {
         switch screen {
+        case .newsScreen1:
+            NewsScreen1()
+                .navigationTitle("News")
+                .environment(\.appearance, appearance)
+        case .newsScreen2:
+            NewsScreen2()
+                .navigationTitle("Bookmarks")
+                .environment(\.appearance, appearance)
         case .cartScreen1:
             CartScreen1()
                 .navigationTitle("My Cart")

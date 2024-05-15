@@ -25,7 +25,7 @@ struct ItemDetails3: View {
                         DSVStack(spacing: .zero) {
                             DSText(viewModel.title).dsTextStyle(.title2)
                             DSText(viewModel.subtitle).dsTextStyle(.subheadline)
-                        }.frame(maxWidth: .infinity, alignment: .leading)
+                        }.dsFullWidth()
                     }
                     
                     DSHStack(alignment: .center, spacing: .regular) {
@@ -48,7 +48,7 @@ struct ItemDetails3: View {
                     
                     DSHStack(alignment: .center) {
                         DSImageView(systemName: "info.circle.fill", size: .font(.caption1), tint: .color(.yellow))
-                        DSText(viewModel.priceDisclaimer, multilineTextAlignment: .leading).dsTextStyle(.caption2)
+                        DSText(viewModel.priceDisclaimer, alignment: .leading).dsTextStyle(.caption2)
                     }
                 }
                 

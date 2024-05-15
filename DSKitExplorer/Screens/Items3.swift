@@ -50,7 +50,7 @@ extension Items3 {
                         DSText(product.title).dsTextStyle(.smallHeadline)
                         DSText(product.description).dsTextStyle(.caption2)
                         DSPriceView(price: product.price, size: .smallHeadline)
-                    }.frame(maxWidth: .infinity, alignment: .leading)
+                    }.dsFullWidth()
                 }
                 
                 DSImageView(

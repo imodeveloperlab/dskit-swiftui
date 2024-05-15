@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4185F9142BF38836007483AA /* NewsScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185F9132BF38836007483AA /* NewsScreen1.swift */; };
+		4185F9162BF3D8C3007483AA /* NewsScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185F9152BF3D8C3007483AA /* NewsScreen2.swift */; };
+		4185F9182BF4C81A007483AA /* DSFrameModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185F9172BF4C81A007483AA /* DSFrameModifier.swift */; };
 		41A858162BF340A400375D4D /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 41A858152BF340A400375D4D /* SnapshotTesting */; };
 		41A858182BF340AF00375D4D /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 41A858172BF340AF00375D4D /* SnapshotTesting */; };
 		41A8581D2BF3414A00375D4D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 41A8581C2BF3414A00375D4D /* SDWebImageSwiftUI */; };
@@ -227,6 +230,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4185F9132BF38836007483AA /* NewsScreen1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsScreen1.swift; sourceTree = "<group>"; };
+		4185F9152BF3D8C3007483AA /* NewsScreen2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsScreen2.swift; sourceTree = "<group>"; };
+		4185F9172BF4C81A007483AA /* DSFrameModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSFrameModifier.swift; sourceTree = "<group>"; };
 		604EED482BD23BE9009E3278 /* DSKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DSKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604EED4A2BD23BE9009E3278 /* DSKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSKit.h; sourceTree = "<group>"; };
 		604EED632BD23E1A009E3278 /* DSBackgroundModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSBackgroundModifier.swift; sourceTree = "<group>"; };
@@ -453,6 +459,7 @@
 				604EED6B2BD23E1A009E3278 /* DSDebugLayoutModifier.swift */,
 				604EED6C2BD23E1A009E3278 /* DSDisplayShapeModifier.swift */,
 				604EED6D2BD23E1A009E3278 /* DSHeightModifier.swift */,
+				4185F9172BF4C81A007483AA /* DSFrameModifier.swift */,
 				604EED6E2BD23E1A009E3278 /* DSHideKeyboardWhenTappedModifier.swift */,
 				604EED6F2BD23E1A009E3278 /* DSKeyboardAwareModifier.swift */,
 				604EED702BD23E1A009E3278 /* DSMaxWidthCenteredModifier.swift */,
@@ -654,6 +661,8 @@
 				60D469982BCAF0DC00A6F7FC /* Items6.swift */,
 				60D469902BCAF0DC00A6F7FC /* Items7.swift */,
 				60D4699E2BCAF0DC00A6F7FC /* Items8.swift */,
+				4185F9132BF38836007483AA /* NewsScreen1.swift */,
+				4185F9152BF3D8C3007483AA /* NewsScreen2.swift */,
 				60D469B32BCAF0DC00A6F7FC /* LogInScreen1.swift */,
 				60D469A02BCAF0DC00A6F7FC /* LogInScreen2.swift */,
 				60D469AB2BCAF0DC00A6F7FC /* LogInScreen3.swift */,
@@ -912,6 +921,7 @@
 				604EEDFE2BD23E1B009E3278 /* BlueAppearance.swift in Sources */,
 				604EEE192BD23E1B009E3278 /* DSRatingView.swift in Sources */,
 				604EEDC72BD23E1B009E3278 /* DSBlurBackgroundModifier.swift in Sources */,
+				4185F9182BF4C81A007483AA /* DSFrameModifier.swift in Sources */,
 				604EEE062BD23E1B009E3278 /* DSText.swift in Sources */,
 				604EEDEA2BD23E1B009E3278 /* DSDynamicColor.swift in Sources */,
 				604EEDC62BD23E1B009E3278 /* DSBackgroundModifier.swift in Sources */,
@@ -1006,10 +1016,12 @@
 				60D469E02BCAF0DC00A6F7FC /* LogInScreen4.swift in Sources */,
 				60D469D52BCAF0DC00A6F7FC /* Filters1.swift in Sources */,
 				60D469E42BCAF0DC00A6F7FC /* SignUpScreen4.swift in Sources */,
+				4185F9142BF38836007483AA /* NewsScreen1.swift in Sources */,
 				60D469C62BCAF0DC00A6F7FC /* Items5.swift in Sources */,
 				60D469DD2BCAF0DC00A6F7FC /* CartScreen4.swift in Sources */,
 				60D469E32BCAF0DC00A6F7FC /* ItemDetails2.swift in Sources */,
 				60D469EB2BCAF0DC00A6F7FC /* SignUpScreen1.swift in Sources */,
+				4185F9162BF3D8C3007483AA /* NewsScreen2.swift in Sources */,
 				60D469CF2BCAF0DC00A6F7FC /* Items2.swift in Sources */,
 				60D469CC2BCAF0DC00A6F7FC /* Categories3.swift in Sources */,
 				60D469E22BCAF0DC00A6F7FC /* HomeScreen3.swift in Sources */,
@@ -1300,7 +1312,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DSKitExplorer/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
@@ -1334,7 +1347,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DSKitExplorer/Preview Content\"";
 				DEVELOPMENT_TEAM = "";

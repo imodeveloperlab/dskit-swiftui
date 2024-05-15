@@ -25,7 +25,7 @@ struct LogInScreen3: View {
                 )
                 DSText(
                     "Meet new people from over millions of users. Create posts, find friends and more.",
-                    multilineTextAlignment: .center
+                    alignment: .center
                 )
                 .dsTextStyle(.subheadline)
                 .dsWidth(300)

@@ -8,6 +8,8 @@
 import Foundation
 
 enum ScreenKey: String, CaseIterable, Identifiable {
+    case newsScreen1
+    case newsScreen2
     case filters1
     case filters2
     case filters3
@@ -116,6 +118,8 @@ enum ScreenKey: String, CaseIterable, Identifiable {
         case .logInScreen4: return "Log In Screen 4"
         case .notificationsScreen1: return "Notifications Screen 1"
         case .aboutUsScreen1: return "About us 1"
+        case .newsScreen1: return "News Screen 1"
+        case .newsScreen2: return "News Screen 2"
         }
     }
 }

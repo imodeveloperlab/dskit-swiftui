@@ -48,9 +48,9 @@ struct AboutUsScreen2: View {
 //            DSVStack {
 //                DSVStack {
 //                    DSText("Best Store in town", .font(.title2))
-//                        .frame(maxWidth: .infinity, alignment: .leading)
+//                        .dsFullWidth()
 //                    DSText("Here you will feel the attitude, here you will receive quality, here you will see the atmosphere of an authentic store", .font(.body))
-//                        .frame(maxWidth: .infinity, alignment: .leading)
+//                        .dsFullWidth()
 //                }
 //                
 //                DSCoverFlow(height: 300, data: infoImageGallery, id: \.self) { image in
@@ -58,9 +58,9 @@ struct AboutUsScreen2: View {
 //                }
 //                
 //                DSVStack {
-//                    DSText(DSFaker().text, .font(.body)).frame(maxWidth: .infinity, alignment: .leading)
-//                    DSText(DSFaker().text, .font(.subheadline)).frame(maxWidth: .infinity, alignment: .leading)
-//                    DSText(DSFaker().text, .font(.body)).frame(maxWidth: .infinity, alignment: .leading)
+//                    DSText(DSFaker().text, .font(.body)).dsFullWidth()
+//                    DSText(DSFaker().text, .font(.subheadline)).dsFullWidth()
+//                    DSText(DSFaker().text, .font(.body)).dsFullWidth()
 //                }
 //            }
         }
@@ -77,7 +77,7 @@ struct AboutUsScreen2: View {
                             
                             DSVStack(spacing: .small) {
                                 DSText("DSFaker().name").dsTextStyle(.headline)
-                                   .frame(maxWidth: .infinity, alignment: .leading)
+                                   .dsFullWidth()
                                 DSHStack {
                                     DSImageView(systemName: "calendar", size: .size(14), tint: .text(.caption1))
                                     DSText("14.05.2024").dsTextStyle(.subheadline)
@@ -90,7 +90,7 @@ struct AboutUsScreen2: View {
                                     }
                                 }
                                 DSText("DSFaker().text").dsTextStyle(.caption1)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .dsFullWidth()
                             }
                         }
                         .dsPadding()
@@ -127,7 +127,7 @@ struct AboutUsScreen2: View {
                                 .alignmentGuide(.healthSafetyAlignment) { d in d[VerticalAlignment.center] }
                             DSText("· Mask required\n· Temperature check required\n· Staff wear masks\n· Staff get temperature checks")
                                 .dsTextStyle(.subheadline, 14)
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .dsFullWidth()
                         }
                     }
                     .dsPadding()
@@ -135,7 +135,7 @@ struct AboutUsScreen2: View {
                     .dsCornerRadius()
                     
                     Map(coordinateRegion: $region)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .dsFullWidth()
                         .dsHeight(200)
                         .dsCornerRadius()
                         .disabled(true)
@@ -172,7 +172,7 @@ struct ContactView: View {
                 DSText(title).dsTextStyle(.smallHeadline)
                 DSText(info)
                     .dsTextStyle(.subheadline, 14)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .dsFullWidth()
             }
         }.dsCardStyle()
     }

@@ -23,7 +23,7 @@ struct Order3: View {
                 DSImageView(systemName: "checkmark.circle.fill", size: 70, tint: .color(.green))
                     .dsPadding(.bottom, 30)
                 DSText("It's Ordered").dsTextStyle(.largeHeadline)
-                DSText("Hi John - thanks for your order,\nwe hope you enjoyed shopping\nwith us", multilineTextAlignment: .center)
+                DSText("Hi John - thanks for your order,\nwe hope you enjoyed shopping\nwith us", alignment: .center)
                     .dsTextStyle(.subheadline)
                 Spacer()
                 Spacer()

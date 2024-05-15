@@ -60,7 +60,7 @@ extension CartScreen1 {
                     DSText(product.description).dsTextStyle(.smallSubtitle)
                     DSRatingView(rating: product.rating, size: 10)
                     DSPriceView(price: product.price, size: .smallHeadline).dsPadding(.top, .regular)
-                }.frame(maxWidth: .infinity, alignment: .leading)
+                }.dsFullWidth()
     
                 
                 DSSFSymbolButton(name: "pencil.circle.fill", size: .mediumIcon)

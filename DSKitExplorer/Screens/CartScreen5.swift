@@ -73,7 +73,7 @@ extension CartScreen5 {
                     }
                     DSPriceView(price: product.price, size: .smallHeadline)
                     
-                }.frame(maxWidth: .infinity, alignment: .leading)
+                }.dsFullWidth()
                 
                 DSSFSymbolButton(name: "minus.circle.fill", size: .mediumIcon)
                     .dsPadding(.trailing, .regular)
@@ -138,7 +138,7 @@ extension CartScreen5 {
                 DSImageView(url: product.image, size: .size(width: 60, height: 40))
                     .dsCornerRadius()
                 DSVStack(alignment: .leading, spacing: .small) {
-                    DSText(product.title, multilineTextAlignment: .leading)
+                    DSText(product.title, alignment: .leading)
                         .dsTextStyle(.smallHeadline)
                     DSPriceView(price: product.price, size: .smallHeadline)
                 }

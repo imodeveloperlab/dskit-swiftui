@@ -50,10 +50,10 @@ extension CartScreen3 {
                     .dsCornerRadius()
                 DSVStack(alignment: .leading) {
                     DSText(product.title).dsTextStyle(.smallHeadline)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .dsFullWidth()
                     DSText(product.description).dsTextStyle(.caption2)
                     DSPriceView(price: product.price, size: .smallHeadline)
-                }.frame(maxWidth: .infinity, alignment: .leading)
+                }.dsFullWidth()
                 
                 DSSFSymbolButton(name: "minus.circle.fill", size: .mediumIcon)
                     .dsPadding(.trailing, .regular)

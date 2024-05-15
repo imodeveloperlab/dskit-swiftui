@@ -208,6 +208,14 @@ final class DSKitExplorerTests: XCTestCase {
         assertSnapshot(for: Testable_NotificationsScreen1(), named: "NotificationsScreen1")
     }
     
+    func testNewsScreen1() throws {
+        assertSnapshot(for: Testable_NewsScreen1(), named: "NewsScreen1")
+    }
+    
+    func testNewsScreen2() throws {
+        assertSnapshot(for: Testable_NewsScreen2(), named: "NewsScreen2")
+    }
+    
 //    func testAboutUsScreen1() throws {
 //        assertSnapshot(for: Testable_AboutUsScreen1(), named: "AboutUsScreen1")
 //    }

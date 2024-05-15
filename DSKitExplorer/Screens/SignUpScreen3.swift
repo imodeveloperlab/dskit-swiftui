@@ -21,7 +21,7 @@ struct SignUpScreen3: View {
             DSVStack(spacing: .medium) {
                 
                 DSText("Start with \nphone number").dsTextStyle(.largeHeadline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .dsFullWidth()
                     .overlay(alignment: .trailing) {
                         DSImageView(systemName: "phone.fill", size: 60, tint: .viewStyle(.secondary, .background))
                     }

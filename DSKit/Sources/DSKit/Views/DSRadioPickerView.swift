@@ -52,7 +52,7 @@ public struct DSRadioPickerView<Data, ID, Content>: View where Data: RandomAcces
                 DSVStack(alignment: .leading) {
                     self.content(element, selected == element)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .dsFullWidth()
                 .overlay(alignment: .trailing) {
                     if selected == element  {
                         DSImageView(systemName: "checkmark.circle.fill", size: 17, tint: .color(.green))

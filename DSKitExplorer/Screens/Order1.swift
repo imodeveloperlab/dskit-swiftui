@@ -191,7 +191,7 @@ extension Order1 {
                     DSText(product.title).dsTextStyle(.smallHeadline)
                     DSText(product.subtitle).dsTextStyle(.smallSubtitle)
                     DSPriceView(price: product.price, size: .smallHeadline)
-                }.frame(maxWidth: .infinity, alignment: .leading)
+                }.dsFullWidth()
             }
             .onTap { }
         }
