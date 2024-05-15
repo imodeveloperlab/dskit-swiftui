@@ -14,7 +14,7 @@
 
 ### What is DSKit?
 
-DSKit is a simple **Design System Kit**  for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent and attractive user interfaces with ease. It includes essential view modifiers which ensure that all UI components follow a unified style guide. 
+DSKit is a simple Design System Kit for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent and attractive user interfaces with ease.
 
 <img src="Content/Images/Preview.png">
 
@@ -22,7 +22,7 @@ DSKit is a simple **Design System Kit**  for **iOS 15+ SwiftUI**, designed to he
 ## Get Started
 
 > [!Note]
-> If you're looking for the UIKit version of DSKit, you can find it within the same repository under the subfolder named **UIKitVersion**. For more details on the UIKit implementation and its features, please refer to the [UIKit Version documentation](https://github.com/imodeveloperlab/dskit) provided in the repository.
+> If you're looking for the UIKit version of DSKit, you can find it here: [UIKit Version](https://github.com/imodeveloperlab/dskit).
 
 To get started with DSKit, you can integrate it into your projects using Swift Package Manager (SPM)
 
@@ -38,7 +38,7 @@ To add DSKit to your project, follow these steps:
    - Xcode will download the package and ask which of your project's targets to add it to. Select the target where you want to use DSKit.
 
 ### Step 2: Set Up
-Once DSKit is added to your project, you can start using it by importing the package at the top of your Swift files where you intend to use the design system components. First, set up the appearance of your app by applying `.dsAppearance(RetroAppearance())`. `RetroAppearance()` is one of DSKit's [appearances](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Appearance-in-DSKit.md). You can create your own [appearance](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Appearance-in-DSKit.md) by copying one that you like and then modifying it as needed.:
+Once DSKit is added to your project, you can start using it by importing the package at the top of your Swift files where you intend to use the design system components. First, set up the appearance of your app by applying `.dsAppearance(RetroAppearance())`. the RetroAppearance is one of DSKit's appearances. You can create your own [appearance](https://github.com/imodeveloperlab/dskit-swiftui/blob/main/Content/Appearance-in-DSKit.md) by copying one that you like and then modifying it as needed.
 
 ```swift
 import SwiftUI
@@ -87,9 +87,7 @@ In this example, [DSVStack](https://github.com/imodeveloperlab/dskit-swiftui/blo
 
 ## Documentation
 
-The most effective way to familiarize yourself with DSKit and its capabilities is by utilizing the **DSKit Explorer app**. To begin, clone the repository and launch the **DSKit Explorer app**. Within the app, you'll have access to all available screens, which you can open in preview mode. This feature allows you to interactively switch between different appearances and make modifications to the screens according to your preferences.
-
-<img src="Content/Images/DSKitExplorerApp.png">
+The most effective way to familiarize yourself with DSKit and its capabilities is by utilizing the DSKit Explorer app. To begin, clone the repository and launch the **DSKit Explorer app**. Within the app, you'll have access to all available screens, which you can open in preview mode. This feature allows you to interactively switch between different appearances and make modifications to the screens according to your preferences.
 
 ### Components and Layouts
 
