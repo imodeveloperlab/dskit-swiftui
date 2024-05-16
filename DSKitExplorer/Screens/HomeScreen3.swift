@@ -28,7 +28,7 @@ struct HomeScreen3: View {
                 
                 DSHScroll(data: viewModel.categories, id: \.self) { category in
                     CategoryView(title: category) { dismiss() }
-                }
+                }.dsPadding(.top, .small)
                 
                 DSVStack {
                     DSSectionHeaderView(title: "Discounts", actionTitle: "View all", action: { self.dismiss() })

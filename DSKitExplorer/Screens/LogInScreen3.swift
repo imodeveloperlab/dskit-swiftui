@@ -20,7 +20,7 @@ struct LogInScreen3: View {
             DSVStack(alignment: .center, spacing: .medium) {
                 DSImageView(
                     systemName: "square.3.layers.3d.top.filled",
-                    size: 60,
+                    size: 90,
                     tint: .text(.headline)
                 )
                 DSText(
@@ -31,9 +31,9 @@ struct LogInScreen3: View {
                 .dsWidth(300)
             }.frame(maxWidth: .infinity)
             
-           Spacer()
-           Spacer()
-           Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
             
             DSVStack(alignment: .center) {
                 
@@ -61,10 +61,15 @@ struct LogInScreen3: View {
                 
                 DSText("or sign up with Email").dsTextStyle(.subheadline)
                 
-                DSButton(title: "Sign Up", rightSystemName: "envelope.fill", pushContentToSides: true, style: .light) {
+                DSButton(
+                    title: "Sign Up",
+                    rightSystemName: "envelope.fill",
+                    pushContentToSides: true,
+                    style: .light
+                ) {
                     self.dismiss()
                 }
-            
+                
                 DSButton(title: "Log in with Email", style: .clear, action: {
                     self.dismiss()
                 })

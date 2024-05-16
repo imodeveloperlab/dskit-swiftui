@@ -18,7 +18,7 @@ struct LogInScreen2: View {
             
             DSImageView(
                 systemName: "square.3.layers.3d.top.filled",
-                size: 50,
+                size: 70,
                 tint: .text(.headline)
             )
             

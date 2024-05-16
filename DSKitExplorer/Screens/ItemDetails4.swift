@@ -122,7 +122,7 @@ final class ItemDetails4Model: ObservableObject {
         amount: "120.0",
         regularAmount: "200",
         currency: "$",
-        discountBadge: "80$ Off"
+        discountBadge: "80$ OFF"
     )
     
     @Published var selectedSize: String = "10"

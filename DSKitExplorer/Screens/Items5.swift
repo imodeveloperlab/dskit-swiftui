@@ -30,6 +30,7 @@ struct Items5: View {
                     DSText(title).dsTextStyle(.smallHeadline)
                         .dsPadding(.horizontal)
                         .dsCardStyle()
+                        .dsHeight(.actionElement)
                         .onTap { self.dismiss() }
                 }
                 DSGrid(data: viewModel.products, id: \.id) { product in

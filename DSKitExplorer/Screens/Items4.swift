@@ -21,6 +21,7 @@ struct Items4: View {
                         .dsTextStyle(.headline, 12)
                         .dsPadding(.horizontal, .large)
                         .dsCardStyle()
+                        .dsHeight(.actionElement)
                         .onTap { self.dismiss() }
                 }
                 DSGrid(data: viewModel.products, id: \.id) { product in

@@ -55,7 +55,7 @@ struct ItemDetails2: View {
         }
         .safeAreaInset(edge: .bottom) {
             DSBottomContainer {
-                DSButton(title: "Add to cart", rightSystemName: "cart") {
+                DSButton(title: "Add to cart", rightSystemName: "cart.fill") {
                     dismiss()
                 }
                 DSText(viewModel.priceDisclaimer, alignment: .center)
@@ -90,7 +90,7 @@ final class ItemDetails2Model: ObservableObject {
         amount: "120.0",
         regularAmount: "200",
         currency: "$",
-        discountBadge: "80$ Off"
+        discountBadge: "80$ OFF"
     )
 }
 

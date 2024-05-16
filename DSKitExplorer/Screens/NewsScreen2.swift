@@ -159,7 +159,26 @@ struct Testable_NewsScreen2: View {
 
 struct NewsScreen2_Previews: PreviewProvider {
     static var previews: some View {
-        DSPreviewForEachAppearance { Testable_NewsScreen2() }
+        @State var selectedTab: Int = 1
+        DSPreviewForEachAppearance {
+            TabView(selection: $selectedTab) {
+                Text("Empty")
+                    .tabItem {
+                        Image(systemName: "newspaper.fill")
+                        Text("Home")
+                    }.tag(0)
+                Testable_NewsScreen2()
+                    .tabItem {
+                        Image(systemName: "bookmark")
+                        Text("Bookmarks")
+                    }.tag(1)
+                Text("Empty")
+                    .tabItem {
+                        Image(systemName: "gearshape")
+                        Text("Settings")
+                    }.tag(2)
+            }
+        }
     }
 }
 

@@ -26,10 +26,10 @@ extension XCTestCase {
         let view = UIHostingController(rootView: testView)
         view.overrideUserInterfaceStyle = .light
         
-        guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
-            fatalError("A key window is required for UI operations")
-        }
-        window.rootViewController = view
+//        guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
+//            fatalError("A key window is required for UI operations")
+//        }
+        //window.rootViewController = view
         
         SnapshotTesting.assertSnapshot(
             matching: view,

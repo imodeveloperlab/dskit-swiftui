@@ -106,7 +106,7 @@ extension CartScreen4 {
                     DSText("for").dsTextStyle(.subheadline)
                     DSText(itemsCount).dsTextStyle(.smallHeadline)
                     DSText("items").dsTextStyle(.subheadline)
-                    DSPriceView(price: price, size: .subheadline)
+                    DSPriceView(price: price, size: .headline)
                 }
             }
         }

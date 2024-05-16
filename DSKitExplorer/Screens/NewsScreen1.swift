@@ -22,8 +22,8 @@ struct NewsScreen1: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                ForEach(viewModel.articles) { product in
-                    ArticleView(article: product, style: $style)
+                ForEach(viewModel.articles) { article in
+                    ArticleView(article: article, style: $style)
                 }
             }
         }
@@ -80,7 +80,6 @@ extension NewsScreen1 {
                         }
                     }.dsPadding()
                 } else {
-                    
                     DSHStack(alignment: .top, spacing: .medium) {
                         
                         if let image = article.image {
@@ -100,7 +99,11 @@ extension NewsScreen1 {
                         }
                         
                         if article.bookmarked {
-                            DSImageView(systemName: "bookmark.fill", size: .font(.smallSubtitle), tint: .color(.orange))
+                            DSImageView(
+                                systemName: "bookmark.fill",
+                                size: .font(.smallSubtitle),
+                                tint: .color(.orange)
+                            )
                         }
                         
                     }.dsPadding()
@@ -203,7 +206,25 @@ struct Testable_NewsScreen1: View {
 
 struct NewsScreen1_Previews: PreviewProvider {
     static var previews: some View {
-        DSPreviewForEachAppearance { Testable_NewsScreen1() }
+        DSPreviewForEachAppearance {
+            TabView {
+                Testable_NewsScreen1()
+                    .tabItem {
+                        Image(systemName: "newspaper.fill")
+                        Text("Home")
+                    }
+                Text("Empty")
+                    .tabItem {
+                        Image(systemName: "bookmark")
+                        Text("Bookmarks")
+                    }
+                Text("Empty")
+                    .tabItem {
+                        Image(systemName: "gearshape")
+                        Text("Settings")
+                    }
+            }
+        }
     }
 }
 

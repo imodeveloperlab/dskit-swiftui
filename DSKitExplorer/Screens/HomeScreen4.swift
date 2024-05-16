@@ -32,13 +32,13 @@ struct HomeScreen4: View {
                 DSHScroll(data: viewModel.categories, id: \.id) { category in
                     CategoryView(category: category, isSelected: viewModel.selectedCategory == category.id)
                         .onTap { viewModel.selectedCategory = category.id }
-                }
+                }.dsPadding(.top, .small)
                 
                 DSVStack {
                     DSGrid(viewHeight: 190, data: viewModel.products, id: \.id) { product in
                         ProductView(product: product).onTap { self.dismiss() }
                     }
-                }
+                }.dsPadding(.top, .small)
             }
         }.dsScreen()
     }

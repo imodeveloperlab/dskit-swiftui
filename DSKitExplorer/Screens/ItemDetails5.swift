@@ -93,7 +93,7 @@ final class ItemDetails5Model: ObservableObject {
         amount: "120",
         regularAmount: "200",
         currency: "$",
-        discountBadge: "80$ Off"
+        discountBadge: "80$ OFF"
     )
 }
 

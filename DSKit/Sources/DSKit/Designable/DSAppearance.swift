@@ -63,6 +63,20 @@ public extension DSAppearance {
         ]
         
         UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+        
+        let itemAppearance = UITabBarItemAppearance()
+        itemAppearance.normal.iconColor = self.tabBar.unselectedItemTint
+        itemAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: self.tabBar.unselectedItemTint]
+        itemAppearance.selected.iconColor =  self.tabBar.itemTint
+        itemAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: self.tabBar.itemTint]
+        
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.backgroundColor = self.tabBar.barTint
+        tabBarAppearance.stackedLayoutAppearance = itemAppearance
+        
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
     }
 }
 
