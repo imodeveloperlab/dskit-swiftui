@@ -17,13 +17,13 @@ struct ScreenView: View {
     var body: some View {
         switch screen {
         case .newsScreen1:
-            NewsScreen1()
-                .navigationTitle("News")
+            Testable_NewsScreen1()
                 .environment(\.appearance, appearance)
+                .navigationBarHidden(true)
         case .newsScreen2:
-            NewsScreen2()
-                .navigationTitle("Bookmarks")
+            Testable_NewsScreen2()
                 .environment(\.appearance, appearance)
+                .navigationBarHidden(true)
         case .cartScreen1:
             CartScreen1()
                 .navigationTitle("My Cart")
@@ -66,19 +66,19 @@ struct ScreenView: View {
                 .environment(\.appearance, appearance)
                 .navigationBarTitleDisplayMode(.inline)
         case .homeScreen1:
-            HomeScreen1()
+            Testable_HomeScreen1()
                 .navigationBarHidden(true)
                 .environment(\.appearance, appearance)
         case .homeScreen2:
-            HomeScreen2()
+            Testable_HomeScreen2()
                 .navigationBarHidden(true)
                 .environment(\.appearance, appearance)
         case .homeScreen3:
-            HomeScreen3()
+            Testable_HomeScreen3()
                 .navigationBarHidden(true)
                 .environment(\.appearance, appearance)
         case .homeScreen4:
-            HomeScreen4()
+            Testable_HomeScreen4()
                 .navigationBarHidden(true)
                 .environment(\.appearance, appearance)
         case .profileScreen1:

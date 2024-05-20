@@ -194,10 +194,30 @@ final class NewsScreen1Model {
 // MARK: - Testable
 
 struct Testable_NewsScreen1: View {
+    @Environment(\.dismiss) var dismiss
     var body: some View {
-        NavigationView {
-            NewsScreen1()
-                .navigationTitle("News")
+        TabView {
+            NavigationView {
+                NewsScreen1()
+                    .navigationTitle("News")
+            }
+            .tabItem {
+                Image(systemName: "newspaper.fill")
+                Text("Home")
+            }
+            Text("Bookmarks")
+                .tabItem {
+                    Image(systemName: "bookmark")
+                    Text("Bookmarks")
+                }
+            DSVStack {
+                DSButton(title: "Dismiss", style: .clear) {
+                    dismiss()
+                }.dsPadding()
+            }.tabItem {
+                Image(systemName: "gearshape")
+                Text("Settings")
+            }
         }
     }
 }
@@ -207,23 +227,7 @@ struct Testable_NewsScreen1: View {
 struct NewsScreen1_Previews: PreviewProvider {
     static var previews: some View {
         DSPreviewForEachAppearance {
-            TabView {
-                Testable_NewsScreen1()
-                    .tabItem {
-                        Image(systemName: "newspaper.fill")
-                        Text("Home")
-                    }
-                Text("Empty")
-                    .tabItem {
-                        Image(systemName: "bookmark")
-                        Text("Bookmarks")
-                    }
-                Text("Empty")
-                    .tabItem {
-                        Image(systemName: "gearshape")
-                        Text("Settings")
-                    }
-            }
+            Testable_NewsScreen1()
         }
     }
 }

@@ -147,10 +147,32 @@ final class NewsScreen2Model {
 // MARK: - Testable
 
 struct Testable_NewsScreen2: View {
+    @Environment(\.dismiss) var dismiss
+    @State var selectedTab: Int = 1
     var body: some View {
-        NavigationView {
-            NewsScreen2()
-                .navigationTitle("Bookmarks")
+        TabView(selection: $selectedTab) {
+            Text("Home")
+                .tabItem {
+                    Image(systemName: "newspaper.fill")
+                    Text("Home")
+                }.tag(0)
+            NavigationView {
+                NewsScreen2()
+                    .navigationTitle("Bookmarks")
+            }
+                .tabItem {
+                    Image(systemName: "bookmark")
+                    Text("Bookmarks")
+                }.tag(1)
+            DSVStack {
+                DSButton(title: "Dismiss", style: .clear) {
+                    dismiss()
+                }.dsPadding()
+            }
+                .tabItem {
+                    Image(systemName: "gearshape")
+                    Text("Settings")
+                }.tag(2)
         }
     }
 }
@@ -159,25 +181,8 @@ struct Testable_NewsScreen2: View {
 
 struct NewsScreen2_Previews: PreviewProvider {
     static var previews: some View {
-        @State var selectedTab: Int = 1
         DSPreviewForEachAppearance {
-            TabView(selection: $selectedTab) {
-                Text("Empty")
-                    .tabItem {
-                        Image(systemName: "newspaper.fill")
-                        Text("Home")
-                    }.tag(0)
-                Testable_NewsScreen2()
-                    .tabItem {
-                        Image(systemName: "bookmark")
-                        Text("Bookmarks")
-                    }.tag(1)
-                Text("Empty")
-                    .tabItem {
-                        Image(systemName: "gearshape")
-                        Text("Settings")
-                    }.tag(2)
-            }
+            Testable_NewsScreen2()
         }
     }
 }

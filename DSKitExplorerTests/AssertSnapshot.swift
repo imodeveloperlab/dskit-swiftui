@@ -22,18 +22,25 @@ extension XCTestCase {
     ) {
         SnapshotTesting.diffTool = "open"
         isRecording = false
-        UIView.setAnimationsEnabled(false)
-        let view = UIHostingController(rootView: testView)
-        view.overrideUserInterfaceStyle = .light
+       // UIView.setAnimationsEnabled(false)
+       // let view = UIHostingController(rootView: testView)
+       // view.overrideUserInterfaceStyle = .light
         
 //        guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
 //            fatalError("A key window is required for UI operations")
 //        }
         //window.rootViewController = view
+        let testView = VStack {
+            Spacer().frame(height: 47)
+            testView.frame(width: 393, height: 852)
+                .safeAreaInset(edge: .bottom) {
+                    Spacer().frame(height: 34)
+                }
+        }.dsAppearance(DSKitAppearance())
         
         SnapshotTesting.assertSnapshot(
-            matching: view,
-            as: .wait(for: 0.1 , on: .image(on: .iPhone13Pro)),
+            of: testView, 
+            as: .wait(for: 0.05, on: .image(drawHierarchyInKeyWindow: true)),
             named: "snapshot",
             record: record,
             timeout: timeout,
@@ -41,6 +48,17 @@ extension XCTestCase {
             testName: named,
             line: line
         )
+        
+//        SnapshotTesting.assertSnapshot(
+//            matching: testView,
+//            as: .image(on: .iPhone13Pro),
+//            named: "snapshot",
+//            record: record,
+//            timeout: timeout,
+//            file: file,
+//            testName: named,
+//            line: line
+//        )
     }
 }
 

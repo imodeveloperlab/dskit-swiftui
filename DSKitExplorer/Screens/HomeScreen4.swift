@@ -231,8 +231,33 @@ final class HomeScreen4Model: ObservableObject {
 // MARK: - Testable
 
 struct Testable_HomeScreen4: View {
+    @Environment(\.dismiss) var dismiss
     var body: some View {
-        HomeScreen4()
+        TabView {
+            HomeScreen4()
+            .tabItem {
+                Image(systemName: "house.fill")
+                Text("Home")
+            }
+            Text("Shop")
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Shop")
+                }
+            Text("Cart")
+                .tabItem {
+                    Image(systemName: "cart.fill")
+                    Text("Cart")
+                }
+            DSVStack {
+                DSButton(title: "Dismiss", style: .clear) {
+                    dismiss()
+                }
+            }.tabItem {
+                Image(systemName: "gearshape")
+                Text("Settings")
+            }
+        }
     }
 }
 
@@ -240,7 +265,9 @@ struct Testable_HomeScreen4: View {
 
 struct HomeScreen4_Previews: PreviewProvider {
     static var previews: some View {
-        DSPreviewForEachAppearance { HomeScreen4() }
+        DSPreviewForEachAppearance {
+            Testable_HomeScreen4()
+        }
     }
 }
 
