@@ -35,7 +35,7 @@ public class PeachAppearance: DSAppearance {
         )
         
         let button = DSButtonAppearance(
-            accentColor: .dynamic(light: 0xFF5A5F, dark: 0xFF5A5F),
+            accentColor: .dynamic(light: 0xE84F3D, dark: 0xE84F3D),
             supportColor: .dynamic(light: 0xFFFFFF, dark: 0xFFFFFF)
         )
         
@@ -68,7 +68,7 @@ public class PeachAppearance: DSAppearance {
         )
         
         let secondaryViewButton = DSButtonAppearance(
-            accentColor: .dynamic(light: 0xFF5A5F, dark: 0xFF5A5F),
+            accentColor: .dynamic(light: 0xE84F3D, dark: 0xE84F3D),
             supportColor: .dynamic(light: 0xFFFFFF, dark: 0xFFFFFF)
         )
         
@@ -85,16 +85,16 @@ public class PeachAppearance: DSAppearance {
         
         tabBar = DSTabbarAppearance(
             barTint: .dynamic(light: 0xFFFFFF, dark: 0x1A1A1A),
-            itemTint: .dynamic(light: 0xFF5A5F, dark: 0xFF5A5F),
+            itemTint: .dynamic(light: 0xE84F3D, dark: 0xE84F3D),
             unselectedItemTint: .dynamic(light: 0x717171, dark: 0x999999),
-            badge: .dynamic(light: 0xFF5A5F, dark: 0xFF5A5F),
+            badge: .dynamic(light: 0xE84F3D, dark: 0xE84F3D),
             translucent: true
         )
         
         // MARK: - Navigation Bar
         
         navigationBar = DSNavigationBarAppearance(
-            buttons: .dynamic(light: 0xFF5A5F, dark: 0xD0D0D0),
+            buttons: .dynamic(light: 0xE84F3D, dark: 0xD0D0D0),
             text: text.title1,
             bar: .dynamic(light: 0xFFFFFF, dark: 0x1A1A1A),
             translucent: true
@@ -104,7 +104,7 @@ public class PeachAppearance: DSAppearance {
         
         price = DSPriceAppearance(
             regularAmount: .dynamic(light: 0x4A1F0F, dark: 0x8C8C8C),
-            badgeBackground: .dynamic(light: 0xFF5A5F, dark: 0xFF5A5F),
+            badgeBackground: .dynamic(light: 0xE84F3D, dark: 0xE84F3D),
             badgeCornerRadius: 6
         )
     }
