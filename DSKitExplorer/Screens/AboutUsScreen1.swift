@@ -19,28 +19,51 @@ struct AboutUsScreen1: View {
         ScrollView {
             DSVStack(spacing: .medium) {
                 DSVStack {
-                    DSText("Our Story").dsTextStyle(.title2)
-                    DSText("Start working with DSKit that can provide everything you need to generate any interface you need. Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content.").dsTextStyle(.body)
+                    DSText("Our Story")
+                        .dsTextStyle(.title2)
+                    DSText("Here you will feel the attitude, here you will receive quality, here you will see the atmosphere of an authentic store")
+                        .dsTextStyle(.body)
                 }
                 
                 DSCoverFlow(height: 250, data: imageGallery, id: \.self) { image in
-                    DSImageView(url: image).dsCornerRadius()
+                    DSImageView(url: image)
+                        .dsCornerRadius()
                 }
                 
                 DSVStack(alignment: .leading) {
-                    DSHStack {
-                        DSImageView(systemName: "message.fill", size: .font(.headline), tint: .text(.body))
-                        DSText("DSFaker().text").dsTextStyle(.caption1).dsFullWidth()
+                    DSHStack(spacing: .medium) {
+                        DSImageView(
+                            systemName: "message.fill", 
+                            size: .font(.headline),
+                            tint: .text(.body)
+                        )
+                        DSText("Introducing Grocify, where convenience meets quality. Our goal: tailor solutions for modern grocery stores. With a focus on user-friendly technology, we empower stores of all sizes to thrive.")
+                            .dsTextStyle(.caption1)
+                            .dsFullWidth()
                     }
-                    DSDivider().background(appearance.secondaryView.separator.color)
-                    DSHStack {
-                        DSImageView(systemName: "shippingbox.fill", size: .font(.headline), tint: .text(.body))
-                        DSText("DSFaker().text").dsTextStyle(.subheadline).dsFullWidth()
+                    DSDivider()
+                        .dsPadding(.leading, 30)
+                    DSHStack(spacing: .medium) {
+                        DSImageView(
+                            systemName: "shippingbox.fill",
+                            size: .font(.headline),
+                            tint: .text(.body)
+                        )
+                        DSText("At Grocify, collaboration is key. Our team crafts cutting-edge tools for seamless operations, from inventory management to customer service. From local markets to supermarket chains, we're committed to elevating the grocery experience.")
+                            .dsTextStyle(.subheadline)
+                            .dsFullWidth()
                     }
-                    DSDivider().background(appearance.secondaryView.separator.color)
-                    DSHStack {
-                        DSImageView(systemName: "leaf.arrow.triangle.circlepath", size: .font(.headline), tint: .text(.body))
-                        DSText("DSFaker().text").dsTextStyle(.footnote).dsFullWidth()
+                    DSDivider()
+                        .dsPadding(.leading, 30)
+                    DSHStack(spacing: .medium) {
+                        DSImageView(
+                            systemName: "leaf.arrow.triangle.circlepath",
+                            size: .font(.headline),
+                            tint: .text(.body)
+                        )
+                        DSText("Join us at Grocify, redefining the grocery industry. With intuitive solutions, we're shaping the future of shopping.")
+                            .dsTextStyle(.footnote)
+                            .dsFullWidth()
                     }
                 }.dsCardStyle()
             }
@@ -51,8 +74,36 @@ struct AboutUsScreen1: View {
 // MARK: - Testable
 
 struct Testable_AboutUsScreen1: View {
+    @Environment(\.dismiss) var dismiss
+    @State var selectedTab: Int = 2
     var body: some View {
-        AboutUsScreen1()
+        TabView(selection: $selectedTab) {
+            Text("Shop")
+            .tabItem {
+                Image(systemName: "house.fill")
+                Text("Home")
+            }.tag(0)
+            Text("Cart")
+                .tabItem {
+                    Image(systemName: "cart.fill")
+                    Text("Cart")
+                }.tag(1)
+            
+            AboutUsScreen1()
+                .tabItem {
+                    Image(systemName: "info.circle.fill")
+                    Text("About")
+                }.tag(2)
+            
+            DSVStack {
+                DSButton(title: "Dismiss", style: .clear) {
+                    dismiss()
+                }
+            }.tabItem {
+                Image(systemName: "gearshape")
+                Text("Settings")
+            }.tag(3)
+        }
     }
 }
 
@@ -63,8 +114,5 @@ struct AboutUsScreen1_Previews: PreviewProvider {
 }
 
 fileprivate let p1Image = URL(string: "https://images.pexels.com/photos/1036857/pexels-photo-1036857.jpeg?cs=srgb&dl=pexels-artem-beliaikin-1036857.jpg&fm=jpg")
-
-
 fileprivate let p2Image = URL(string: "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?cs=srgb&dl=pexels-pixabay-264636.jpg&fm=jpg")
-
 fileprivate let p3Image = URL(string: "https://images.pexels.com/photos/1402407/pexels-photo-1402407.jpeg?cs=srgb&dl=pexels-lisa-fotios-1402407.jpg&fm=jpg")

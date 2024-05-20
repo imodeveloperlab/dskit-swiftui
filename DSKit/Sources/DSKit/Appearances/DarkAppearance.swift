@@ -78,7 +78,7 @@ public class DarkAppearance: DSAppearance {
             text: secondaryText,
             textField: secondaryViewTextField,
             background: .dynamic(light: 0xF4F4F4, dark: 0x2D2D2D),
-            separator: .dynamic(light: 0xEBEBEB, dark: 0x555555),
+            separator: .dynamic(light: 0xEBEBEB, dark: 0x333333),
             cornerRadius: 2
         )
         

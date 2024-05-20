@@ -73,7 +73,7 @@ public class BlueAppearance: DSAppearance {
             text: secondaryText,
             textField: secondaryViewTextField,
             background: .dynamic(light: 0xF4F4F4, dark: 0x181825),
-            separator: .dynamic(light: 0xEBEBEB, dark: 0xEBEBEB),
+            separator: .dynamic(light: 0xEBEBEB, dark: 0x1E1E2E),
             cornerRadius: 10
         )
         

@@ -112,7 +112,7 @@ public struct DSKitAppearance: DSAppearance {
         let sBackground: UIColor = .dynamic(light: 0xf3f4f2, dark: 0x101a24)
         
         // Separator
-        let sSeparator: UIColor = .dynamic(light: 0xd0dbe3, dark: 0x38444d)
+        let sSeparator: UIColor = .dynamic(light: 0xd0dbe3, dark: 0x15202b)
         
         // Corner radius
         let sCornerRadius: CGFloat = 10

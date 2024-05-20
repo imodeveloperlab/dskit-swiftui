@@ -95,7 +95,7 @@ public final class RetroAppearance: DSAppearance {
             text: secondaryText,
             textField: secondaryViewTextField,
             background: .dynamic(light: 0xF4F2EA, dark: 0x4E4A57),
-            separator: .dynamic(light: 0xDFDCD3, dark: 0xFFFCF8),
+            separator: .dynamic(light: 0xDFDCD3, dark: 0x111111),
             cornerRadius: 13
         )
         
