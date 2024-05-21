@@ -18,7 +18,7 @@ public class DarkAppearance: DSAppearance {
     public var tabBar: DSTabBarAppearanceProtocol
     public var navigationBar: DSNavigationBarAppearanceProtocol
     public var price: DSPriceAppearanceProtocol
-    public var fonts: DSFontsProtocol = DSFonts()
+    public var fonts: DSFontsProtocol = DSVerdanaFont()
     public var actionElementHeight: CGFloat = 44
     public var screenMargins: CGFloat = 16
     

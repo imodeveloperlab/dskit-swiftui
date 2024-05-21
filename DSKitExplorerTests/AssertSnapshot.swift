@@ -36,7 +36,7 @@ extension XCTestCase {
                 .safeAreaInset(edge: .bottom) {
                     Spacer().frame(height: 34)
                 }
-        }.dsAppearance(DSKitAppearance())
+        }.dsAppearance(LightBlueAppearance())
         
         SnapshotTesting.assertSnapshot(
             of: testView, 
@@ -63,7 +63,7 @@ extension XCTestCase {
 }
 
 fileprivate let appearances: [(title: String, appearance: DSAppearance)] = [
-    ("DSKit", DSKitAppearance()),
+    ("Light Blue", LightBlueAppearance()),
     ("Blue", BlueAppearance()),
     ("Dark", DarkAppearance()),
     ("Retro", RetroAppearance()),

@@ -20,7 +20,7 @@ public class PeachAppearance: DSAppearance {
     public var tabBar: DSTabBarAppearanceProtocol
     public var navigationBar: DSNavigationBarAppearanceProtocol
     public var price: DSPriceAppearanceProtocol
-    public var fonts: DSFontsProtocol = DSFonts()
+    public var fonts: DSFontsProtocol = DSHelveticaNeueFont()
     public var actionElementHeight: CGFloat = 48
     public var screenMargins: CGFloat = 16
     

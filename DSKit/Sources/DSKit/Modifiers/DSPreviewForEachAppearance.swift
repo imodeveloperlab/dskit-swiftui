@@ -29,7 +29,7 @@ public struct DSPreviewForEachAppearance<Content: View>: View {
 }
 
 fileprivate let appearances: [(title: String, appearance: DSAppearance)] = [
-    ("DSKit", DSKitAppearance()),
+    ("Light Blue", LightBlueAppearance()),
     ("Dark", DarkAppearance()),
     ("Blue", BlueAppearance()),
     ("Retro", RetroAppearance()),

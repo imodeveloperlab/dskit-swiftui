@@ -79,7 +79,7 @@ struct IdentifiableDesignable: Identifiable {
 }
 
 fileprivate let appearances: [DSAppearance] = [
-    DSKitAppearance(),
+    LightBlueAppearance(),
     DarkAppearance(),
     BlueAppearance(),
     RetroAppearance(),

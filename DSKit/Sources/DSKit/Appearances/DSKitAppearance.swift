@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct DSKitAppearance: DSAppearance {
+public struct LightBlueAppearance: DSAppearance {
     
     public var title: String
     public var primaryView: DSViewAppearanceProtocol
@@ -27,7 +27,7 @@ public struct DSKitAppearance: DSAppearance {
     /// - Parameter brandColor: UIColor
     public init(brandColor: UIColor? = nil) {
         
-        self.title = "DSKit"
+        self.title = "Light Blue"
         
         // MARK: - Primary view
         

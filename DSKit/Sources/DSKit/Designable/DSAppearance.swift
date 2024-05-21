@@ -10,7 +10,7 @@ import SwiftUI
 import UIKit
 
 struct AppearanceEnvironment: EnvironmentKey {
-    static let defaultValue: DSAppearance = DSKitAppearance()
+    static let defaultValue: DSAppearance = LightBlueAppearance()
 }
 
 public extension EnvironmentValues {

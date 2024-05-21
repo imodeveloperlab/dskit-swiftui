@@ -57,5 +57,5 @@ fileprivate struct CustomActionView: View {
 }
 
 #Preview {
-    ScreensView(appearance: DSKitAppearance())
+    ScreensView(appearance: LightBlueAppearance())
 }

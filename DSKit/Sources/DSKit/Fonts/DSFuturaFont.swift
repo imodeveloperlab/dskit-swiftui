@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class DSRetroFont: DSFontsProtocol {
+public class DSFuturaFont: DSFontsProtocol {
     public var body: UIFont {
         return regularFont(size: 17.0)
     }

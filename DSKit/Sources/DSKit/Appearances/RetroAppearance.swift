@@ -21,7 +21,7 @@ public final class RetroAppearance: DSAppearance {
     public var tabBar: DSTabBarAppearanceProtocol
     public var navigationBar: DSNavigationBarAppearanceProtocol
     public var price: DSPriceAppearanceProtocol
-    public var fonts: DSFontsProtocol = DSRetroFont()
+    public var fonts: DSFontsProtocol = DSFuturaFont()
     public var actionElementHeight: CGFloat = 45
     public var screenMargins: CGFloat = 16
     
