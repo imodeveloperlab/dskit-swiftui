@@ -174,6 +174,8 @@
 		90FB4ACE2BFCB1FE008178DF /* DSFuturaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB4ACC2BFCB1FE008178DF /* DSFuturaFont.swift */; };
 		90FB4AD02BFCDD20008178DF /* DSHelveticaNeueFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB4ACF2BFCDD20008178DF /* DSHelveticaNeueFont.swift */; };
 		90FB4AD22BFCDECD008178DF /* DSVerdanaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB4AD12BFCDECD008178DF /* DSVerdanaFont.swift */; };
+		90FB4AD42BFD2B60008178DF /* ImageGalleryScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB4AD32BFD2B60008178DF /* ImageGalleryScreen1.swift */; };
+		90FB4AD62BFD2FA3008178DF /* ImageGalleryScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB4AD52BFD2FA3008178DF /* ImageGalleryScreen2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -395,6 +397,8 @@
 		90FB4ACC2BFCB1FE008178DF /* DSFuturaFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSFuturaFont.swift; sourceTree = "<group>"; };
 		90FB4ACF2BFCDD20008178DF /* DSHelveticaNeueFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSHelveticaNeueFont.swift; sourceTree = "<group>"; };
 		90FB4AD12BFCDECD008178DF /* DSVerdanaFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSVerdanaFont.swift; sourceTree = "<group>"; };
+		90FB4AD32BFD2B60008178DF /* ImageGalleryScreen1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryScreen1.swift; sourceTree = "<group>"; };
+		90FB4AD52BFD2FA3008178DF /* ImageGalleryScreen2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryScreen2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -651,6 +655,8 @@
 				60D4699B2BCAF0DC00A6F7FC /* Filters1.swift */,
 				60D469912BCAF0DC00A6F7FC /* Filters2.swift */,
 				60D4699A2BCAF0DC00A6F7FC /* Filters3.swift */,
+				90FB4AD32BFD2B60008178DF /* ImageGalleryScreen1.swift */,
+				90FB4AD52BFD2FA3008178DF /* ImageGalleryScreen2.swift */,
 				60D469A42BCAF0DC00A6F7FC /* HomeScreen1.swift */,
 				60D469B52BCAF0DC00A6F7FC /* HomeScreen2.swift */,
 				60D469A82BCAF0DC00A6F7FC /* HomeScreen3.swift */,
@@ -1031,6 +1037,7 @@
 				60D469BC2BCAF0DC00A6F7FC /* DSKitExplorerApp.swift in Sources */,
 				60D469ED2BCAF0DC00A6F7FC /* LogInScreen1.swift in Sources */,
 				60D469D92BCAF0DC00A6F7FC /* CartScreen2.swift in Sources */,
+				90FB4AD42BFD2B60008178DF /* ImageGalleryScreen1.swift in Sources */,
 				60D469F12BCAF0DC00A6F7FC /* ItemDetails1.swift in Sources */,
 				60D469C82BCAF0DC00A6F7FC /* Categories4.swift in Sources */,
 				608350B52BCC5892002E4F47 /* ScreenView.swift in Sources */,
@@ -1057,6 +1064,7 @@
 				60D469D22BCAF0DC00A6F7FC /* Items6.swift in Sources */,
 				60D469E92BCAF0DC00A6F7FC /* NotificationsScreen1.swift in Sources */,
 				60D469D72BCAF0DC00A6F7FC /* Items4.swift in Sources */,
+				90FB4AD62BFD2FA3008178DF /* ImageGalleryScreen2.swift in Sources */,
 				60D469DB2BCAF0DC00A6F7FC /* SignUpScreen2.swift in Sources */,
 				60D469C72BCAF0DC00A6F7FC /* Payment1.swift in Sources */,
 				60D469E72BCAF0DC00A6F7FC /* HomeScreen4.swift in Sources */,

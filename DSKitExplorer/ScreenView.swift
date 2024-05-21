@@ -11,11 +11,18 @@ import DSKit
 struct ScreenView: View {
     
     @Environment(\.appearance) var appearance: DSAppearance
-
     let screen: ScreenKey
     
     var body: some View {
         switch screen {
+        case .ImageGalleryScreen1:
+            ImageGalleryScreen1()
+                .environment(\.appearance, appearance)
+                .navigationBarHidden(true)
+        case .ImageGalleryScreen2:
+            ImageGalleryScreen2()
+                .environment(\.appearance, appearance)
+                .navigationBarHidden(true)
         case .newsScreen1:
             Testable_NewsScreen1()
                 .environment(\.appearance, appearance)
