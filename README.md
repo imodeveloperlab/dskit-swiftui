@@ -107,7 +107,7 @@ To dive deeper into specific features and functionalities, continue to the secti
 
 ### Demo Screens
 
-To help you get started, DSKit includes demonstration screen code showcasing a wide range of possibilities. This ready-made code can be directly utilized in your next project, making it easier to integrate DSKit's features and functionalities seamlessly.
+To help you get started, DSKit includes demonstration screen code showcasing a wide range of possibilities. With over 60 ready-to-use screens, you can see the full potential of DSKit in action. This extensive collection of ready-made code can be directly utilized in your next project, making it easier to integrate DSKit's features and functionalities seamlessly.
 
 #### E-Commerce 
 
