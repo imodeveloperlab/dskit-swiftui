@@ -12,9 +12,9 @@
 </p>
 
 
-### What is DSKit?
+# What is DSKit?
 
-DSKit is a simple Design System Kit for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent and attractive user interfaces with ease.
+DSKit is a simple Design System Kit for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent, and attractive user interfaces with ease. To help you get started, DSKit includes demonstration screen code showcasing a wide range of possibilities. With over 60 ready-to-use screens, you can see the full potential of DSKit in action. This extensive collection of ready-made code can be directly utilized in your next project, making it easier to integrate DSKit's features and functionalities seamlessly.
 
 <img src="Content/Images/Preview.png">
 
