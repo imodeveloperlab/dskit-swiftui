@@ -15,11 +15,31 @@ struct ScreenView: View {
     
     var body: some View {
         switch screen {
-        case .ImageGalleryScreen1:
+        case .bookingScreen1:
+            Testable_BookingScreen1()
+                .environment(\.appearance, appearance)
+                .navigationBarHidden(true)
+        case .bookingScreen2:
+            Testable_BookingScreen2()
+                .environment(\.appearance, appearance)
+                .navigationBarHidden(true)
+        case .bookingScreen3:
+            Testable_BookingScreen3()
+                .environment(\.appearance, appearance)
+                .navigationBarHidden(true)
+        case .bookingScreen4:
+            Testable_BookingScreen4()
+                .environment(\.appearance, appearance)
+                .navigationBarHidden(true)
+        case .bookingScreen5:
+            Testable_BookingScreen5()
+                .environment(\.appearance, appearance)
+                .navigationBarHidden(true)
+        case .imageGalleryScreen1:
             ImageGalleryScreen1()
                 .environment(\.appearance, appearance)
                 .navigationBarHidden(true)
-        case .ImageGalleryScreen2:
+        case .imageGalleryScreen2:
             ImageGalleryScreen2()
                 .environment(\.appearance, appearance)
                 .navigationBarHidden(true)

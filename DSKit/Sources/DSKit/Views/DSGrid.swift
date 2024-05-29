@@ -16,7 +16,7 @@ import SwiftUI
 Initializes `DSGrid` with customizable settings for layout and data handling.
 - Parameters:
 - `viewHeight`: Optional height for each item, allowing for uniform or dynamic row heights.
-- `numberOfColumns`: The number of columns in the grid, defaulting to 2.
+- `columns`: The number of columns in the grid, defaulting to 2.
 - `spacing`: Spacing between grid items, with a default setting.
 - `data`: The collection of data items to display.
 - `id`: KeyPath to the unique identifier for each data item.
@@ -32,7 +32,7 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
 
     let viewHeight: DSDimension?
     let spacing: DSSpace
-    let numberOfColumns: Int
+    let columns: Int
     
     let data: Data
     let content: (Data.Element) -> Content
@@ -40,14 +40,14 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
     
     public init(
         viewHeight: DSDimension? = nil,
-        numberOfColumns: Int = 2,
+        columns: Int = 2,
         spacing: DSSpace = .regular,
         data: Data,
         id: KeyPath<Data.Element, ID>,
         @ViewBuilder content: @escaping (Data.Element) -> Content
     ) {
         self.viewHeight = viewHeight
-        self.numberOfColumns = numberOfColumns
+        self.columns = columns
         self.data = data
         self.spacing = spacing
         self.id = id
@@ -55,7 +55,7 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
     }
         
     var layout: [GridItem] {
-        Array(repeating: GridItem(.flexible(), spacing: appearance.spacing.value(for: self.spacing)), count: numberOfColumns)
+        Array(repeating: GridItem(.flexible(), spacing: appearance.spacing.value(for: self.spacing)), count: columns)
     }
     
     public var body: some View {
@@ -80,7 +80,7 @@ struct Testable_DSGrid: View {
     var body: some View {
         DSGrid(
             viewHeight: 50,
-            numberOfColumns: 3,
+            columns: 3,
             data: colors,
             id: \.self,
             content: { color in

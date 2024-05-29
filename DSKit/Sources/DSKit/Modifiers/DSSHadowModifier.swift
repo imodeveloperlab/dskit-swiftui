@@ -31,7 +31,7 @@ public struct DSShadowModifier: ViewModifier {
             content
                 .dsPadding(.top, padding)
             Rectangle()
-                .fill(Color.blue)
+                .fill(appearance.primaryView.background.color)
                 .frame(maxWidth: .infinity)
                 .frame(height: 20)
                 .shadow(color: Color.black.opacity(0.15), radius: 10, x: 0, y: 1)

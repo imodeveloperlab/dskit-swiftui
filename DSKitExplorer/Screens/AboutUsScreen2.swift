@@ -237,7 +237,6 @@ final class AboutUsScreen2Model: ObservableObject {
             feedbackText: "Grocify has transformed the way I shop for groceries. It's convenient, efficient, and the user interface is fantastic!"
         )
     ]
-
 }
 
 // MARK: - Testable

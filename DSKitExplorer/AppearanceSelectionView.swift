@@ -27,7 +27,7 @@ struct AppearanceSelectionView: View {
                 }
                 .dsPadding(.top)
                 
-                DSGrid(numberOfColumns: 2, data: appearances, id: \.title) { appearance in
+                DSGrid(columns: 2, data: appearances, id: \.title) { appearance in
                     AppearanceView(appearance: appearance).onTap {
                         self.selectedAppearance = IdentifiableDesignable(appearance: appearance)
                     }

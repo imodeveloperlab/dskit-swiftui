@@ -105,6 +105,18 @@ To dive deeper into specific features and functionalities, continue to the secti
 - [Views / Components](Content/Views.md)
 - [Appearance](Content/Appearance-in-DSKit.md)
 
+### Demo Screens
+
+To help you get started, DSKit includes demonstration screen code showcasing a wide range of possibilities. This ready-made code can be directly utilized in your next project, making it easier to integrate DSKit's features and functionalities seamlessly.
+
+#### E-Commerce 
+
+<img src="Content/Images/e-commerce.png">
+
+#### Barbershop
+
+<img src="Content/Images/barbershop.png">
+
 ## Contributions and support
 
 DSKit is developed completely in the open, and your contributions are more than welcome.

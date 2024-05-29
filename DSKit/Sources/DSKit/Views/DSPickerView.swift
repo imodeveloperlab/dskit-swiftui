@@ -75,7 +75,7 @@ public struct DSPickerView<Data, ID, Content>: View where Data: RandomAccessColl
     }
     
     func gridStyle(columns: Int) -> some View {
-        DSGrid(numberOfColumns: columns, spacing: .regular, data: data, id: id) { element in
+        DSGrid(columns: columns, spacing: .regular, data: data, id: id) { element in
             styledContent(element)
         }
     }
