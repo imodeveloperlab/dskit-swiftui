@@ -23,7 +23,7 @@ struct CartScreen5: View {
         }
         .safeAreaInset(edge: .bottom) {
             DSBottomContainer {
-                DSText("You may also like").dsTextStyle(.smallSubtitle)
+                DSText("You may also like").dsTextStyle(.smallSubheadline)
                 DSHScroll(data: viewModel.suggestedProducts, id: \.id) { product in
                     SuggestedProductView(product: product)
                 }
@@ -62,9 +62,9 @@ extension CartScreen5 {
                 DSVStack(alignment: .leading, spacing: .small) {
                     DSText(product.title).dsTextStyle(.smallHeadline)
                     DSHStack {
-                        DSText("Color:").dsTextStyle(.smallSubtitle)
+                        DSText("Color:").dsTextStyle(.smallSubheadline)
                         DSText(product.color).dsTextStyle(.smallHeadline)
-                        DSText("Size:").dsTextStyle(.smallSubtitle)
+                        DSText("Size:").dsTextStyle(.smallSubheadline)
                         DSText(product.size).dsTextStyle(.smallHeadline)
                     }
                     DSHStack {

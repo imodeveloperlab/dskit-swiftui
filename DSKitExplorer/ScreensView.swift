@@ -30,7 +30,7 @@ struct ScreensView: View {
                     }
                 }
             }
-            .navigationTitle("Screens")
+            .navigationTitle("Home")
             .safeAreaInset(edge: .bottom) {
                 DSBottomContainer {
                     DSButton(title: "Change Appearance", action: { dismiss() })

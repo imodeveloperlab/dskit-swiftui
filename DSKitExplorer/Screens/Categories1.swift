@@ -44,7 +44,7 @@ extension Categories1 {
                 DSVStack {
                     DSVStack(spacing: .zero) {
                         DSText(category.title).dsTextStyle(.smallHeadline)
-                        DSText(category.description).dsTextStyle(.smallSubtitle)
+                        DSText(category.description).dsTextStyle(.smallSubheadline)
                     }
                 }
                 .dsPadding(category.image != nil ? .zero : .medium)

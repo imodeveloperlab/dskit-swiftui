@@ -70,7 +70,7 @@ extension ItemDetails1 {
             DSHStack {
                 DSText(title).dsTextStyle(.smallHeadline)
                 Spacer()
-                DSText(selection).dsTextStyle(.smallSubtitle)
+                DSText(selection).dsTextStyle(.smallSubheadline)
                 DSChevronView()
             }
             .dsHeight(.actionElement)
@@ -88,7 +88,7 @@ extension ItemDetails1 {
             DSHStack {
                 DSText(title).dsTextStyle(.smallHeadline)
                 Spacer()
-                DSText(label).dsTextStyle(.smallSubtitle)
+                DSText(label).dsTextStyle(.smallSubheadline)
                 selection
                     .dsSize(20)
                     .dsCornerRadius()

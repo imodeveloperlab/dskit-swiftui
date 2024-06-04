@@ -37,7 +37,8 @@ public struct DSSectionHeaderView: View {
     
     public var body: some View {
         DSHStack {
-            DSText(title).dsTextStyle(.headline)
+            DSText(title)
+                .dsTextStyle(.headline)
             Spacer()
             DSButton.callToActionLink(title: actionTitle, action: action)
         }.dsHeight(20)

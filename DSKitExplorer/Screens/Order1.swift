@@ -67,9 +67,9 @@ extension Order1 {
             DSGroupedList(data: orderTotals, id: \.id) { total in
                 DSHStack {
                     DSText(total.title)
-                        .dsTextStyle(total.bold ? .smallHeadline : .smallSubtitle)
+                        .dsTextStyle(total.bold ? .smallHeadline : .smallSubheadline)
                     Spacer()
-                    DSPriceView(price: total.price, size: total.bold ? .smallHeadline : .smallSubtitle)
+                    DSPriceView(price: total.price, size: total.bold ? .smallHeadline : .smallSubheadline)
                 }.dsHeight(25)
             }
         }
@@ -94,7 +94,7 @@ extension Order1 {
                     .dsCornerRadius()
                 DSVStack(spacing: .zero) {
                     DSText(method.title).dsTextStyle(.smallHeadline)
-                    DSText(method.subtitle).dsTextStyle(.smallSubtitle)
+                    DSText(method.subtitle).dsTextStyle(.smallSubheadline)
                 }
             }
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
@@ -122,11 +122,11 @@ extension Order1 {
                 DSVStack(spacing: .small) {
                     DSHStack {
                         DSImageView(systemName: "house", size: 12, tint: .text(.subheadline))
-                        DSText(address.address).dsTextStyle(.smallSubtitle)
+                        DSText(address.address).dsTextStyle(.smallSubheadline)
                     }
                     DSHStack {
                         DSImageView(systemName: "phone", size: 12, tint: .text(.subheadline))
-                        DSText(address.phone).dsTextStyle(.smallSubtitle)
+                        DSText(address.phone).dsTextStyle(.smallSubheadline)
                     }
                 }
             }
@@ -157,7 +157,7 @@ extension Order1 {
                 DSVStack(spacing: .small) {
                     DSHStack {
                         DSImageView(systemName: "calendar", size: 12, tint: .text(.subheadline))
-                        DSText(shipping.date).dsTextStyle(.smallSubtitle)
+                        DSText(shipping.date).dsTextStyle(.smallSubheadline)
                     }
                     DSPriceView(price: shipping.price, size: .smallHeadline)
                 }
@@ -189,7 +189,7 @@ extension Order1 {
                 
                 DSVStack(alignment: .leading, spacing: .small) {
                     DSText(product.title).dsTextStyle(.smallHeadline)
-                    DSText(product.subtitle).dsTextStyle(.smallSubtitle)
+                    DSText(product.subtitle).dsTextStyle(.smallSubheadline)
                     DSPriceView(price: product.price, size: .smallHeadline)
                 }.dsFullWidth()
             }

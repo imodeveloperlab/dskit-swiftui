@@ -60,9 +60,9 @@ extension Shipping2 {
             DSGroupedList(data: orderTotals, id: \.id) { total in
                 DSHStack {
                     DSText(total.title)
-                        .dsTextStyle(total.bold ? .smallHeadline : .smallSubtitle)
+                        .dsTextStyle(total.bold ? .smallHeadline : .smallSubheadline)
                     Spacer()
-                    DSPriceView(price: total.price, size: total.bold ? .smallHeadline : .smallSubtitle)
+                    DSPriceView(price: total.price, size: total.bold ? .smallHeadline : .smallSubheadline)
                 }.dsHeight(25)
             }
         }
@@ -84,7 +84,7 @@ extension Shipping2 {
             DSVStack(spacing: .small) {
                 DSHStack(spacing: .small) {
                     DSImageView(systemName: "calendar", size: 12, tint: .text(.subheadline))
-                    DSText(method.description).dsTextStyle(.smallSubtitle)
+                    DSText(method.description).dsTextStyle(.smallSubheadline)
                 }
                 if let price = method.price {
                     DSPriceView(price: .init(amount: price, currency: "$"), size: .smallHeadline)

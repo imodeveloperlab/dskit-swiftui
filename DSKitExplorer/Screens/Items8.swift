@@ -50,7 +50,7 @@ extension Items8 {
                 DSVStack {
                     DSVStack(spacing: .zero) {
                         DSText(product.title).dsTextStyle(.smallHeadline)
-                        DSText(product.description).dsTextStyle(.smallSubtitle)
+                        DSText(product.description).dsTextStyle(.smallSubheadline)
                     }
                     DSHStack {
                         DSRatingView(rating: 4.5, size: 12)

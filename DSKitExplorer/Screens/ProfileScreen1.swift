@@ -26,7 +26,7 @@ struct ProfileScreen1: View {
                 ForEach(viewModel.groups, id: \.self) { (group: ActionView.Group) in
                     DSVStack(spacing: .small) {
                         if let title = group.title {
-                            DSText(title).dsTextStyle(.smallSubtitle)
+                            DSText(title).dsTextStyle(.smallSubheadline)
                                 .dsPadding(.top)
                         }
                         ForEach(group.items, id: \.title) { (action: ActionView.Action) in
@@ -66,7 +66,7 @@ extension ProfileScreen1 {
                 )
                 DSVStack(alignment: .center) {
                     DSText(title).dsTextStyle(.headline)
-                    DSText(subtitle).dsTextStyle(.smallSubtitle)
+                    DSText(subtitle).dsTextStyle(.smallSubheadline)
                 }
             }
             .frame(maxWidth: .infinity)
@@ -95,12 +95,12 @@ extension ProfileScreen1 {
                 
                 if let badge = action.badge {
                     DSText(badge)
-                        .dsTextStyle(.smallSubtitle, .viewStyle(.secondary, .button(.supportColor)))
+                        .dsTextStyle(.smallSubheadline, .viewStyle(.secondary, .button(.supportColor)))
                         .dsSize(18)
                         .dsBackground(.color(.red))
                         .clipShape(Circle())
                 } else if let option = action.option {
-                    DSText(option).dsTextStyle(.smallSubtitle)
+                    DSText(option).dsTextStyle(.smallSubheadline)
                 }
                 
                 DSChevronView()

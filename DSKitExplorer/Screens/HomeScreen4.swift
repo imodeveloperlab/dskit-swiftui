@@ -54,7 +54,7 @@ extension HomeScreen4 {
                 DSImageView(named: product.image)
                 DSVStack(spacing: .zero) {
                     DSText(product.title).dsTextStyle(.smallHeadline)
-                    DSText(product.description).dsTextStyle(.smallSubtitle)
+                    DSText(product.description).dsTextStyle(.smallSubheadline)
                     DSPriceView(price: product.price, size: .smallHeadline)
                         .dsPadding(.top, .regular)
                 }.dsPadding()
@@ -80,7 +80,7 @@ extension HomeScreen4 {
                     .overlay(alignment: .bottomTrailing) {
                         DSVStack(alignment: .trailing, spacing: .zero) {
                             DSText(product.title).dsTextStyle(.smallHeadline)
-                            DSText(product.subtitle).dsTextStyle(.smallSubtitle)
+                            DSText(product.subtitle).dsTextStyle(.smallSubheadline)
                         }
                         .dsPadding(.regular)
                         .dsBackground(.viewStyle(.secondary, .background))

@@ -12,14 +12,14 @@ struct PoweredByDSKitView: View {
     var body: some View {
         DSVStack(spacing: .small) {
             DSHStack(spacing: .small) {
-                DSText("Powered by").dsTextStyle(.smallSubtitle)
+                DSText("Powered by").dsTextStyle(.smallSubheadline)
                 DSImageView(systemName: "square.stack.3d.down.right.fill", size: .smallIcon, tint: .view(.button(.accentColor)))
-                DSText("DSKit").dsTextStyle(.smallSubtitle)
+                DSText("DSKit").dsTextStyle(.smallSubheadline)
             }.frame(maxWidth: .infinity, alignment: .center)
             DSHStack(spacing: .small) {
-                DSText("Made with").dsTextStyle(.smallSubtitle)
+                DSText("Made with").dsTextStyle(.smallSubheadline)
                 DSImageView(systemName: "heart.fill", size: .smallIcon, tint: .color(.red))
-                DSText("by imodeveloper").dsTextStyle(.smallSubtitle)
+                DSText("by imodeveloper").dsTextStyle(.smallSubheadline)
             }.frame(maxWidth: .infinity, alignment: .center)
         }
     }

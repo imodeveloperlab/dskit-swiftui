@@ -78,8 +78,8 @@ extension Order2 {
                     DSText(card.title)
                         .dsTextStyle(.headline, .view(.button(.accentColor)))
                     DSVStack(alignment: .center, spacing: .small) {
-                        DSText(card.subtitle).dsTextStyle(.smallSubtitle)
-                        DSText(card.description).dsTextStyle(.smallSubtitle)
+                        DSText(card.subtitle).dsTextStyle(.smallSubheadline)
+                        DSText(card.description).dsTextStyle(.smallSubheadline)
                     }
                 }.frame(maxWidth: .infinity, alignment: .center)
             }
@@ -106,9 +106,9 @@ extension Order2 {
             DSGroupedList(data: orderTotals, id: \.id) { total in
                 DSHStack {
                     DSText(total.title)
-                        .dsTextStyle(total.bold ? .smallHeadline : .smallSubtitle)
+                        .dsTextStyle(total.bold ? .smallHeadline : .smallSubheadline)
                     Spacer()
-                    DSPriceView(price: total.price, size: total.bold ? .smallHeadline : .smallSubtitle)
+                    DSPriceView(price: total.price, size: total.bold ? .smallHeadline : .smallSubheadline)
                 }.dsHeight(25)
             }
         }

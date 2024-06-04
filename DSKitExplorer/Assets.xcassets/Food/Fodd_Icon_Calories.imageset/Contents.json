@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Fodd_Icon_Calories.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -51,7 +51,7 @@ extension HomeScreen3 {
                 DSImageView(url: product.imageUrl)
                 DSVStack(spacing: .zero) {
                     DSText(product.title).dsTextStyle(.smallHeadline)
-                    DSText(product.description).dsTextStyle(.smallSubtitle)
+                    DSText(product.description).dsTextStyle(.smallSubheadline)
                     DSPriceView(price: product.price, size: .smallHeadline)
                         .dsPadding(.top, .regular)
                 }.dsPadding()

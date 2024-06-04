@@ -15,6 +15,29 @@ struct ScreenView: View {
     
     var body: some View {
         switch screen {
+        case .foodCategoriesScreen1:
+            FoodCategoriesScreen1()
+                .environment(\.appearance, appearance)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("Menu")
+        case .foodNearbyRestaurantScreen1:
+            FoodNearbyRestaurantScreen1()
+                .environment(\.appearance, appearance)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("Nearby")
+        case .foodRestaurantScreen1:
+            FoodRestaurantScreen1()
+                .environment(\.appearance, appearance)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("Restaurant")
+        case .foodDetailsScreen1:
+            Testable_FoodDetailsScreen1()
+                .environment(\.appearance, appearance)
+                .navigationBarHidden(true)
+        case .foodHomeScreen1:
+            Testable_FoodHomeScreen1()
+                .environment(\.appearance, appearance)
+                .navigationBarHidden(true)
         case .bookingScreen1:
             Testable_BookingScreen1()
                 .environment(\.appearance, appearance)

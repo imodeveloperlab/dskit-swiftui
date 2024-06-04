@@ -174,6 +174,11 @@
 		901D2D482C00CA260017DC0C /* BookingScreen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D2D472C00CA260017DC0C /* BookingScreen3.swift */; };
 		901D2D4A2C0705640017DC0C /* BookingScreen4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D2D492C0705640017DC0C /* BookingScreen4.swift */; };
 		901D2D4C2C070B280017DC0C /* BookingScreen5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D2D4B2C070B280017DC0C /* BookingScreen5.swift */; };
+		901D2D4E2C07561C0017DC0C /* FoodHomeScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D2D4D2C07561C0017DC0C /* FoodHomeScreen1.swift */; };
+		901D2D502C08665B0017DC0C /* FoodCategoriesScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D2D4F2C08665B0017DC0C /* FoodCategoriesScreen1.swift */; };
+		9055764B2C0DAAC0009F1CE2 /* FoodDetailsScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055764A2C0DAAC0009F1CE2 /* FoodDetailsScreen1.swift */; };
+		9055764D2C0DB222009F1CE2 /* FoodNearbyRestaurantScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055764C2C0DB222009F1CE2 /* FoodNearbyRestaurantScreen1.swift */; };
+		90CCC8132C0D9DE60025D2EE /* FoodRestaurantScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CCC8122C0D9DE60025D2EE /* FoodRestaurantScreen1.swift */; };
 		90FB4ACE2BFCB1FE008178DF /* DSFuturaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB4ACC2BFCB1FE008178DF /* DSFuturaFont.swift */; };
 		90FB4AD02BFCDD20008178DF /* DSHelveticaNeueFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB4ACF2BFCDD20008178DF /* DSHelveticaNeueFont.swift */; };
 		90FB4AD22BFCDECD008178DF /* DSVerdanaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB4AD12BFCDECD008178DF /* DSVerdanaFont.swift */; };
@@ -402,6 +407,11 @@
 		901D2D472C00CA260017DC0C /* BookingScreen3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingScreen3.swift; sourceTree = "<group>"; };
 		901D2D492C0705640017DC0C /* BookingScreen4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingScreen4.swift; sourceTree = "<group>"; };
 		901D2D4B2C070B280017DC0C /* BookingScreen5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingScreen5.swift; sourceTree = "<group>"; };
+		901D2D4D2C07561C0017DC0C /* FoodHomeScreen1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodHomeScreen1.swift; sourceTree = "<group>"; };
+		901D2D4F2C08665B0017DC0C /* FoodCategoriesScreen1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCategoriesScreen1.swift; sourceTree = "<group>"; };
+		9055764A2C0DAAC0009F1CE2 /* FoodDetailsScreen1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailsScreen1.swift; sourceTree = "<group>"; };
+		9055764C2C0DB222009F1CE2 /* FoodNearbyRestaurantScreen1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodNearbyRestaurantScreen1.swift; sourceTree = "<group>"; };
+		90CCC8122C0D9DE60025D2EE /* FoodRestaurantScreen1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodRestaurantScreen1.swift; sourceTree = "<group>"; };
 		90FB4ACC2BFCB1FE008178DF /* DSFuturaFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSFuturaFont.swift; sourceTree = "<group>"; };
 		90FB4ACF2BFCDD20008178DF /* DSHelveticaNeueFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSHelveticaNeueFont.swift; sourceTree = "<group>"; };
 		90FB4AD12BFCDECD008178DF /* DSVerdanaFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSVerdanaFont.swift; sourceTree = "<group>"; };
@@ -672,6 +682,11 @@
 				60D4699A2BCAF0DC00A6F7FC /* Filters3.swift */,
 				90FB4AD32BFD2B60008178DF /* ImageGalleryScreen1.swift */,
 				90FB4AD52BFD2FA3008178DF /* ImageGalleryScreen2.swift */,
+				901D2D4D2C07561C0017DC0C /* FoodHomeScreen1.swift */,
+				90CCC8122C0D9DE60025D2EE /* FoodRestaurantScreen1.swift */,
+				9055764C2C0DB222009F1CE2 /* FoodNearbyRestaurantScreen1.swift */,
+				9055764A2C0DAAC0009F1CE2 /* FoodDetailsScreen1.swift */,
+				901D2D4F2C08665B0017DC0C /* FoodCategoriesScreen1.swift */,
 				60D469A42BCAF0DC00A6F7FC /* HomeScreen1.swift */,
 				60D469B52BCAF0DC00A6F7FC /* HomeScreen2.swift */,
 				60D469A82BCAF0DC00A6F7FC /* HomeScreen3.swift */,
@@ -1084,17 +1099,20 @@
 				60D469D72BCAF0DC00A6F7FC /* Items4.swift in Sources */,
 				90FB4AD62BFD2FA3008178DF /* ImageGalleryScreen2.swift in Sources */,
 				60D469DB2BCAF0DC00A6F7FC /* SignUpScreen2.swift in Sources */,
+				90CCC8132C0D9DE60025D2EE /* FoodRestaurantScreen1.swift in Sources */,
 				60D469C72BCAF0DC00A6F7FC /* Payment1.swift in Sources */,
 				60D469E72BCAF0DC00A6F7FC /* HomeScreen4.swift in Sources */,
 				60D469D82BCAF0DC00A6F7FC /* Items8.swift in Sources */,
 				60D469F42BCAF0DC00A6F7FC /* ProfileScreen3.swift in Sources */,
 				60D469BF2BCAF0DC00A6F7FC /* PoweredByDSKitView.swift in Sources */,
 				60D469EE2BCAF0DC00A6F7FC /* ProfileScreen1.swift in Sources */,
+				901D2D502C08665B0017DC0C /* FoodCategoriesScreen1.swift in Sources */,
 				60D469EF2BCAF0DC00A6F7FC /* HomeScreen2.swift in Sources */,
 				60D469C92BCAF0DC00A6F7FC /* Order4.swift in Sources */,
 				60D469DC2BCAF0DC00A6F7FC /* ItemDetails4.swift in Sources */,
 				60D469DE2BCAF0DC00A6F7FC /* HomeScreen1.swift in Sources */,
 				60D469C52BCAF0DC00A6F7FC /* Categories2.swift in Sources */,
+				9055764B2C0DAAC0009F1CE2 /* FoodDetailsScreen1.swift in Sources */,
 				60D469D62BCAF0DC00A6F7FC /* Payment2.swift in Sources */,
 				60D469D32BCAF0DC00A6F7FC /* Categories5.swift in Sources */,
 				608350B22BCC565F002E4F47 /* ScreenKey.swift in Sources */,
@@ -1110,6 +1128,8 @@
 				60D469E52BCAF0DC00A6F7FC /* LogInScreen3.swift in Sources */,
 				60D469F02BCAF0DC00A6F7FC /* ItemDetails3.swift in Sources */,
 				60D469CA2BCAF0DC00A6F7FC /* Items7.swift in Sources */,
+				9055764D2C0DB222009F1CE2 /* FoodNearbyRestaurantScreen1.swift in Sources */,
+				901D2D4E2C07561C0017DC0C /* FoodHomeScreen1.swift in Sources */,
 				60D469C12BCAF0DC00A6F7FC /* Shipping1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

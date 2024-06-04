@@ -65,7 +65,7 @@ extension Payment1 {
                     ).dsCornerRadius()
                     DSVStack(spacing: .zero) {
                         DSText("\(method.type) **** \(method.end)").dsTextStyle(.smallHeadline)
-                        DSText("\(method.holder) \(method.expire)").dsTextStyle(.smallSubtitle)
+                        DSText("\(method.holder) \(method.expire)").dsTextStyle(.smallSubheadline)
                     }
                 }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
             }

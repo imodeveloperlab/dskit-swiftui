@@ -70,8 +70,8 @@ extension BookingScreen5 {
                     DSText(feedback.userName).dsTextStyle(.headline)
                         .dsFullWidth()
                     DSHStack {
-                        DSImageView(systemName: "calendar", size: .font(.smallSubtitle), tint: .text(.caption1))
-                        DSText("14.05.2024").dsTextStyle(.smallSubtitle)
+                        DSImageView(systemName: "calendar", size: .font(.smallSubheadline), tint: .text(.caption1))
+                        DSText("14.05.2024").dsTextStyle(.smallSubheadline)
                     }
                     DSRatingView(rating: 4.5, size: 12)
                     DSText(feedback.feedbackText).dsTextStyle(.caption1)

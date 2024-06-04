@@ -41,7 +41,7 @@ extension NewsScreen2 {
                         .dsFullWidth()
                     
                     DSText(article.description, alignment: .leading)
-                        .dsTextStyle(.smallSubtitle)
+                        .dsTextStyle(.smallSubheadline)
                         .dsFullWidth()
                     
                     DSHStack {

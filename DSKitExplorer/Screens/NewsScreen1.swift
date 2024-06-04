@@ -94,14 +94,14 @@ extension NewsScreen1 {
                                 .dsFullWidth()
                             
                             DSText(article.description, alignment: .leading)
-                                .dsTextStyle(.smallSubtitle)
+                                .dsTextStyle(.smallSubheadline)
                                 .dsFullWidth()
                         }
                         
                         if article.bookmarked {
                             DSImageView(
                                 systemName: "bookmark.fill",
-                                size: .font(.smallSubtitle),
+                                size: .font(.smallSubheadline),
                                 tint: .color(.orange)
                             )
                         }

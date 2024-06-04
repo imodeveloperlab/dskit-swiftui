@@ -35,10 +35,10 @@ extension BookingScreen1 {
                         DSImageView(
                             systemName: "house",
                             size: .font(.subheadline),
-                            tint: .text(.smallSubtitle)
+                            tint: .text(.smallSubheadline)
                         )
                         DSText(address.address)
-                            .dsTextStyle(.smallSubtitle)
+                            .dsTextStyle(.smallSubheadline)
                     }
                 }.dsPadding()
                 Map(

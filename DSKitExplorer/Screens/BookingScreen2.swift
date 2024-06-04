@@ -49,7 +49,7 @@ extension BookingScreen2 {
                     DSText(title)
                         .dsTextStyle(.smallHeadline)
                     DSText(subtitle)
-                        .dsTextStyle(.smallSubtitle)
+                        .dsTextStyle(.smallSubheadline)
                 }.dsFullWidth()
                 DSChevronView()
             }.dsCardStyle()
@@ -67,10 +67,10 @@ extension BookingScreen2 {
                         DSImageView(
                             systemName: "house",
                             size: .font(.subheadline),
-                            tint: .text(.smallSubtitle)
+                            tint: .text(.smallSubheadline)
                         )
                         DSText(address.address)
-                            .dsTextStyle(.smallSubtitle)
+                            .dsTextStyle(.smallSubheadline)
                     }
                 }.dsPadding()
                 Map(

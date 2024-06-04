@@ -32,7 +32,7 @@ struct LogInScreen2: View {
             Spacer()
             Spacer()
             
-            DSText("Use Facebook to find friends").dsTextStyle(.smallSubtitle)
+            DSText("Use Facebook to find friends").dsTextStyle(.smallSubheadline)
             DSButton(
                 title: "Login with facebook",
                 rightImageNamed: "facebook",

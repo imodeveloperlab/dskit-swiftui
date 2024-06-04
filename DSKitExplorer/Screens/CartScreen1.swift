@@ -57,7 +57,7 @@ extension CartScreen1 {
                 
                 DSVStack(spacing: .small) {
                     DSText(product.title).dsTextStyle(.smallHeadline)
-                    DSText(product.description).dsTextStyle(.smallSubtitle)
+                    DSText(product.description).dsTextStyle(.smallSubheadline)
                     DSRatingView(rating: product.rating, size: 10)
                     DSPriceView(price: product.price, size: .smallHeadline).dsPadding(.top, .regular)
                 }.dsFullWidth()

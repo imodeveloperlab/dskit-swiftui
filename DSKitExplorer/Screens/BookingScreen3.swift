@@ -74,7 +74,7 @@ extension BookingScreen3 {
                     DSText(barber.name)
                         .dsTextStyle(.smallHeadline)
                     DSText(barber.grade)
-                        .dsTextStyle(.smallSubtitle)
+                        .dsTextStyle(.smallSubheadline)
                 }.dsFullWidth()
                 
                 DSSFSymbolButton(name: "pencil.circle.fill", size: .mediumIcon)
@@ -103,11 +103,11 @@ extension BookingScreen3 {
                             DSHStack {
                                 DSImageView(
                                     systemName: "clock.fill",
-                                    size: .font(.smallSubtitle),
-                                    tint: .text(.smallSubtitle)
+                                    size: .font(.smallSubheadline),
+                                    tint: .text(.smallSubheadline)
                                 )
                                 DSText("Duration:\(service.duration)")
-                                    .dsTextStyle(.smallSubtitle)
+                                    .dsTextStyle(.smallSubheadline)
                             }
                             DSPriceView(price: service.price, size: .smallHeadline)
                         }
@@ -150,10 +150,10 @@ extension BookingScreen3 {
                         DSImageView(
                             systemName: "house",
                             size: .font(.subheadline),
-                            tint: .text(.smallSubtitle)
+                            tint: .text(.smallSubheadline)
                         )
                         DSText(address.address)
-                            .dsTextStyle(.smallSubtitle)
+                            .dsTextStyle(.smallSubheadline)
                     }
                 }.dsPadding()
                 Map(

@@ -67,7 +67,7 @@ public indirect enum DSTextColorKey: Equatable, Hashable {
             return uiColor(for: font, appearance: appearance, viewStyle: viewStyle)
         case .smallHeadline:
             return designableTextColor.headline
-        case .smallSubtitle:
+        case .smallSubheadline:
             return designableTextColor.subheadline
         case .largeHeadline:
             return designableTextColor.headline

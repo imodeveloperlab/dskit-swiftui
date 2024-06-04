@@ -8,6 +8,11 @@
 import Foundation
 
 enum ScreenKey: String, CaseIterable, Identifiable {
+    case foodCategoriesScreen1
+    case foodDetailsScreen1
+    case foodNearbyRestaurantScreen1
+    case foodRestaurantScreen1
+    case foodHomeScreen1
     case bookingScreen1
     case bookingScreen2
     case bookingScreen3
@@ -134,6 +139,11 @@ enum ScreenKey: String, CaseIterable, Identifiable {
         case .bookingScreen3: return "Booking 3"
         case .bookingScreen4: return "Booking 4"
         case .bookingScreen5: return "Booking 5"
+        case .foodHomeScreen1: return "Food Home 1"
+        case .foodCategoriesScreen1: return "Food Categories 1"
+        case .foodDetailsScreen1: return "Food Details 1"
+        case .foodNearbyRestaurantScreen1: return "Food Nearby Restaurants 1"
+        case .foodRestaurantScreen1:  return "Food Restaurants 1"
         }
     }
 }

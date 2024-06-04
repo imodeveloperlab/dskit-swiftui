@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Food_banner_pasta.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

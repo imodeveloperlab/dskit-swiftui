@@ -56,7 +56,7 @@ extension Order4 {
                     DSText(product.title, alignment: .leading)
                         .dsTextStyle(.headline, 12)
                     DSText(product.subtitle, alignment: .leading)
-                        .dsTextStyle(.smallSubtitle)
+                        .dsTextStyle(.smallSubheadline)
                     DSPriceView(price: product.price, size: .smallHeadline)
                 }.frame(maxWidth: 160, alignment: .leading)
             }.dsCardStyle(padding: .regular)

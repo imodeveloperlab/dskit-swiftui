@@ -55,7 +55,7 @@ extension Shipping1 {
                 DSText(address.address).dsTextStyle(.smallHeadline)
                 DSHStack(spacing: .small) {
                     DSImageView(systemName: "phone", size: 12, tint: .text(.subheadline))
-                    DSText(address.phone).dsTextStyle(.smallSubtitle)
+                    DSText(address.phone).dsTextStyle(.smallSubheadline)
                 }
             }
         }

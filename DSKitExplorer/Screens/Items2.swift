@@ -82,7 +82,7 @@ extension Items2 {
                     DSText(product.title)
                         .dsTextStyle(.smallHeadline, .white)
                     DSText(product.description)
-                        .dsTextStyle(.smallSubtitle, .white.opacity(0.8))
+                        .dsTextStyle(.smallSubheadline, .white.opacity(0.8))
                     DSPriceView(price: product.price, size: .smallHeadline, color: .white)
                 }
                 .dsPadding(.bottom)

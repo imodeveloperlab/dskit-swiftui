@@ -32,17 +32,17 @@ public struct DSTermsAndConditions: View {
     public var body: some View {
         DSVStack(spacing: .small) {
             DSText(message)
-                .dsTextStyle(.smallSubtitle)
+                .dsTextStyle(.smallSubheadline)
                 .frame(maxWidth: .infinity, alignment: .center)
             DSHStack(spacing: .small) {
                 DSText("Terms")
                     .dsTextStyle(.headline, 12)
                     .onTap { }
-                DSText("and").dsTextStyle(.smallSubtitle)
+                DSText("and").dsTextStyle(.smallSubheadline)
                 DSText("Privacy")
                     .dsTextStyle(.headline, 12)
                     .onTap { }
-                DSText("policy").dsTextStyle(.smallSubtitle)
+                DSText("policy").dsTextStyle(.smallSubheadline)
             }.frame(maxWidth: .infinity, alignment: .center)
         }
     }

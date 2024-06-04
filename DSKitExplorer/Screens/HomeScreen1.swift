@@ -41,7 +41,7 @@ extension HomeScreen1 {
                 DSImageView(url: product.imageUrl, style: .capsule)
                 DSVStack(spacing: .zero) {
                     DSText(product.title).dsTextStyle(.smallHeadline)
-                    DSText(product.description).dsTextStyle(.smallSubtitle)
+                    DSText(product.description).dsTextStyle(.smallSubheadline)
                 }
             }.dsPadding(.bottom, .regular)
         }

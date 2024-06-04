@@ -38,7 +38,7 @@ extension Categories2 {
                 }
                 DSVStack(alignment: .center, spacing: .zero) {
                     DSText(category.title).dsTextStyle(.headline, Color.white)
-                    DSText(category.description).dsTextStyle(.smallSubtitle, Color.white.opacity(0.8))
+                    DSText(category.description).dsTextStyle(.smallSubheadline, Color.white.opacity(0.8))
                 }
                 .dsPadding(.bottom)
             }

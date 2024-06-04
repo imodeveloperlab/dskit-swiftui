@@ -25,7 +25,7 @@ struct SignUpScreen4: View {
                 DSText("Please enter your mobile number to\nget sms to activate your account")
                 DSTextField.password(value: viewModel.code)
                 DSHStack {
-                    DSText("Valid for 45 seconds").dsTextStyle(.smallSubtitle)
+                    DSText("Valid for 45 seconds").dsTextStyle(.smallSubheadline)
                     Spacer()
                     DSButton(title: "Resend Code", style: .clear, maxWidth: false, action: {
                         dismiss()
