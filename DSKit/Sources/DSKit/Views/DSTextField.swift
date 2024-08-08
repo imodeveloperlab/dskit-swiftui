@@ -47,14 +47,14 @@ public struct DSTextField: View {
     let textContentType: UITextContentType?
     let autocapitalizationType: UITextAutocapitalizationType
     let validationPattern: String
-    let keftSystemName: String?
+    let leftSystemName: String?
     let validateMinimumLength: Int
     let validateMaximumLength: Int
     let validateEmptyTextField: Bool
     
     public var body: some View {
         DSHStack {
-            if let symbolName = keftSystemName {
+            if let symbolName = leftSystemName {
                 DSImageView(
                     systemName: symbolName,
                     size: 15,

@@ -131,7 +131,7 @@ public struct DSButton: View {
     
     public init(
         title: String,
-        keftSystemName: String? = nil,
+        leftSystemName: String? = nil,
         rightSystemName: String? = nil,
         pushContentToSides: Bool = false,
         style: Style = .default,
@@ -140,8 +140,8 @@ public struct DSButton: View {
         action: @escaping () -> Void
     ) {
         var leftImage: DSImage?
-        if let keftSystemName {
-            leftImage = DSImage(content: .system(name: keftSystemName), size: .smallIcon)
+        if let leftSystemName {
+            leftImage = DSImage(content: .system(name: leftSystemName), size: .smallIcon)
         }
         
         var rightImage: DSImage?
@@ -318,7 +318,7 @@ struct Testable_DSButton: View {
                 )
                 DSButton(
                     title: "Bordered Light",
-                    keftSystemName: "message.fill",
+                    leftSystemName: "message.fill",
                     style: .borderedLight,
                     action: { }
                 )

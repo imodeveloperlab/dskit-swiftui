@@ -18,6 +18,19 @@ DSKit is a simple Design System Kit for **iOS 15+ SwiftUI**, designed to help de
 
 <img src="Content/Images/Preview.png">
 
+To help you get started, DSKit includes demonstration screen code showcasing a wide range of possibilities. With over 60 ready-to-use screens, you can see the full potential of DSKit in action. This extensive collection of ready-made code can be directly utilized in your next project, making it easier to integrate DSKit's features and functionalities seamlessly.
+
+#### E-Commerce 
+
+<img src="Content/Images/e-commerce.png">
+
+#### Barbershop
+
+<img src="Content/Images/barbershop.png">
+
+#### Food Delivery
+
+<img src="Content/Images/food.png">
 
 ## Get Started
 
@@ -104,22 +117,6 @@ To dive deeper into specific features and functionalities, continue to the secti
 - [Layout](Content/Layout-in-DSKit.md)
 - [Views / Components](Content/Views.md)
 - [Appearance](Content/Appearance-in-DSKit.md)
-
-### Demo Screens
-
-To help you get started, DSKit includes demonstration screen code showcasing a wide range of possibilities. With over 60 ready-to-use screens, you can see the full potential of DSKit in action. This extensive collection of ready-made code can be directly utilized in your next project, making it easier to integrate DSKit's features and functionalities seamlessly.
-
-#### E-Commerce 
-
-<img src="Content/Images/e-commerce.png">
-
-#### Barbershop
-
-<img src="Content/Images/barbershop.png">
-
-#### Food Delivery
-
-<img src="Content/Images/food.png">
 
 ## Contributions and support
 
