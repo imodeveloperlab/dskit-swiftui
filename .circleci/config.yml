@@ -14,13 +14,16 @@ jobs:
     macos:
       # Specify the Xcode version you desire here
       # See: https://circleci.com/docs/using-macos/
-      xcode: 15.2.0 
+      xcode: 16.1.0
 
     # Add steps to the job
     # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
     steps:
+      # Checkout the code as the first step.
       - checkout
-      - run: fastlane scan --project "DSKitExplorer/DSKitExplorer.xcodeproj" --device "iPhone SE (3rd generation) (17.0)"  # Run tests using Fastlane
+      - run: pod install # Install CocoaPods dependencies
+      - run: fastlane scan # Run tests using Fastlane
+
       # Collect XML test results data to show in the UI, and save the same XML
       # files under test-results folder in the Artifacts tab
       - store_test_results:
