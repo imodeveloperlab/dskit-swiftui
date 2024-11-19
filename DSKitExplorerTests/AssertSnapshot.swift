@@ -20,29 +20,20 @@ extension XCTestCase {
         file: StaticString = #file,
         line: UInt = #line
     ) {
-        SnapshotTesting.diffTool = "open"
-        isRecording = false
-       // UIView.setAnimationsEnabled(false)
+    // UIView.setAnimationsEnabled(false)
        // let view = UIHostingController(rootView: testView)
        // view.overrideUserInterfaceStyle = .light
         
 //        guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
 //            fatalError("A key window is required for UI operations")
 //        }
-        //window.rootViewController = view
-        let testView = VStack {
-            Spacer().frame(height: 47)
-            testView.frame(width: 393, height: 852)
-                .safeAreaInset(edge: .bottom) {
-                    Spacer().frame(height: 34)
-                }
-        }.dsAppearance(LightBlueAppearance())
+       
         
         SnapshotTesting.assertSnapshot(
-            of: testView, 
-            as: .wait(for: 0.05, on: .image(drawHierarchyInKeyWindow: true, precision: 0.95, perceptualPrecision: 0.95)),
+            of: testView.frame(width: 393, height: 852).dsAppearance(LightBlueAppearance()),
+            as: .wait(for: 0.2, on: .image(precision: 0.96, perceptualPrecision: 0.96)),
             named: "snapshot",
-            record: record,
+            record: false,
             timeout: timeout,
             file: file,
             testName: named,

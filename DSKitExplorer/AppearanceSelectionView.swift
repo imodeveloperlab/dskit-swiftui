@@ -73,6 +73,7 @@ fileprivate struct AppearanceView: View {
         .dsPadding()
         .dsSecondaryBackground()
         .dsCornerRadius()
+        
     }
 }
 
