@@ -6,7 +6,6 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
 import SwiftUI
 
 public indirect enum DSTextColorKey: Equatable, Hashable {
@@ -27,7 +26,7 @@ public indirect enum DSTextColorKey: Equatable, Hashable {
         uiColor(for: font, appearance: appearance, viewStyle: viewStyle).color
     }
     
-    public func uiColor(for font: DSTextFontKey, appearance: DSAppearance, viewStyle: DSViewStyle) -> UIColor {
+    public func uiColor(for font: DSTextFontKey, appearance: DSAppearance, viewStyle: DSViewStyle) -> DSUIColor {
         
         let designableTextColor: DSTextAppearanceProtocol
         
@@ -62,7 +61,7 @@ public indirect enum DSTextColorKey: Equatable, Hashable {
         case .footnote:
             return designableTextColor.footnote
         case .custom(_):
-            return UIColor.black
+            return DSUIColor.black
         case .fontWithSize(let font, _):
             return uiColor(for: font, appearance: appearance, viewStyle: viewStyle)
         case .smallHeadline:

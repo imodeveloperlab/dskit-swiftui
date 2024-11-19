@@ -6,30 +6,14 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
 import SwiftUI
 
 public protocol DSTabBarAppearanceProtocol {
-    var barTint: UIColor { get set }
-    var itemTint: UIColor { get set }
-    var unselectedItemTint: UIColor { get set }
-    var badge: UIColor { get set }
+    var barTint: DSUIColor { get set }
+    var itemTint: DSUIColor { get set }
+    var unselectedItemTint: DSUIColor { get set }
+    var badge: DSUIColor { get set }
     var translucent: Bool { get set }
-}
-
-extension DSTabBarAppearanceProtocol {
-    func color(key: DSTabBarColorKey) -> Color {
-        switch key {
-        case .tint:
-            barTint.color
-        case .itemTint:
-            itemTint.color
-        case .unselectedItemTint:
-            unselectedItemTint.color
-        case .badge:
-            badge.color
-        }
-    }
 }
 
 public enum DSTabBarColorKey {
@@ -39,23 +23,38 @@ public enum DSTabBarColorKey {
     case badge
 }
 
-public struct DSTabbarAppearance: DSTabBarAppearanceProtocol {
+extension DSTabBarAppearanceProtocol {
+    /// Returns a SwiftUI Color based on the DSTabBarColorKey
+    func color(key: DSTabBarColorKey) -> Color {
+        switch key {
+        case .tint:
+            return Color(barTint)
+        case .itemTint:
+            return Color(itemTint)
+        case .unselectedItemTint:
+            return Color(unselectedItemTint)
+        case .badge:
+            return Color(badge)
+        }
+    }
+}
+
+public struct DSTabBarAppearance: DSTabBarAppearanceProtocol {
     
-    /// Init tabbar colors
+    /// Initialize tab bar colors
     /// - Parameters:
-    ///   - barTint: UIColor
-    ///   - itemTint: UIColor
-    ///   - unselectedItemTint: UIColor
-    ///   - badge: UIColor
+    ///   - barTint: DSUIColor
+    ///   - itemTint: DSUIColor
+    ///   - unselectedItemTint: DSUIColor
+    ///   - badge: DSUIColor
     ///   - translucent: Bool
     public init(
-        barTint: UIColor,
-        itemTint: UIColor,
-        unselectedItemTint: UIColor,
-        badge: UIColor,
+        barTint: DSUIColor,
+        itemTint: DSUIColor,
+        unselectedItemTint: DSUIColor,
+        badge: DSUIColor,
         translucent: Bool = false
     ) {
-        
         self.barTint = barTint
         self.itemTint = itemTint
         self.unselectedItemTint = unselectedItemTint
@@ -63,9 +62,9 @@ public struct DSTabbarAppearance: DSTabBarAppearanceProtocol {
         self.translucent = translucent
     }
     
-    public var barTint: UIColor
-    public var itemTint: UIColor
-    public var unselectedItemTint: UIColor
-    public var badge: UIColor
+    public var barTint: DSUIColor
+    public var itemTint: DSUIColor
+    public var unselectedItemTint: DSUIColor
+    public var badge: DSUIColor
     public var translucent: Bool
 }

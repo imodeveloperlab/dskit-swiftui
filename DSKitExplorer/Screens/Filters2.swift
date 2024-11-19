@@ -30,7 +30,7 @@ struct Filters2: View {
                     id: \.self,
                     selected: $viewModel.selectedColor
                 ) { color in
-                    Color(uiColor: color)
+                    Color(color)
                         .dsSize(dimension: .actionElement)
                 }.dsSectionStyle(title: "Color")
                 
@@ -59,7 +59,7 @@ struct Filters2: View {
                 )
             }
         }.toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSButton(title: "Reset", style: .clear, action: {})
             }
         }.dsScreen()
@@ -95,14 +95,14 @@ final class Filters2Model: ObservableObject {
     @Published var selectedSize: String = "10"
     let sizes = ["8", "9", "10", "11", "12", "13", "14", "15", "16"]
     
-    @Published var selectedColor: UIColor = UIColor(0xF88F6F)
-    let colors = [UIColor(0xFFC6A3),
-                  UIColor(0xF88F6F),
-                  UIColor(0x5CB946),
-                  UIColor(0x006A7A),
-                  UIColor(0x28527a),
-                  UIColor(0x8ac4d0),
-                  UIColor(0xfbeeac)]
+    @Published var selectedColor: DSUIColor = DSUIColor(0xF88F6F)
+    let colors = [DSUIColor(0xFFC6A3),
+                  DSUIColor(0xF88F6F),
+                  DSUIColor(0x5CB946),
+                  DSUIColor(0x006A7A),
+                  DSUIColor(0x28527a),
+                  DSUIColor(0x8ac4d0),
+                  DSUIColor(0xfbeeac)]
     
     
     @Published var selectedSortByOption = "Chelsea Boots"

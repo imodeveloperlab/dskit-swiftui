@@ -6,20 +6,18 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
-
 public protocol DSFontsProtocol {
-    var body: UIFont { get }
-    var callout: UIFont { get }
-    var caption1: UIFont { get }
-    var caption2: UIFont { get }
-    var footnote: UIFont { get }
-    var headline: UIFont { get }
-    var subheadline: UIFont { get }
-    var largeTitle: UIFont { get }
-    var title1: UIFont { get }
-    var title2: UIFont { get }
-    var title3: UIFont { get }
+    var body: DSFont { get }
+    var callout: DSFont { get }
+    var caption1: DSFont { get }
+    var caption2: DSFont { get }
+    var footnote: DSFont { get }
+    var headline: DSFont { get }
+    var subheadline: DSFont { get }
+    var largeTitle: DSFont { get }
+    var title1: DSFont { get }
+    var title2: DSFont { get }
+    var title3: DSFont { get }
 }
 
 public class DSFonts: DSFontsProtocol {
@@ -34,47 +32,47 @@ public class DSFonts: DSFontsProtocol {
         DSScaledFont(fontName: fontName)
     }()
     
-    lazy public var body: UIFont = {
+    lazy public var body: DSFont = {
         return scaledFont.font(forTextStyle: .body)
     }()
     
-    lazy public var callout: UIFont = {
+    lazy public var callout: DSFont = {
         return scaledFont.font(forTextStyle: .callout)
     }()
     
-    lazy public var caption1: UIFont = {
+    lazy public var caption1: DSFont = {
         return scaledFont.font(forTextStyle: .caption1)
     }()
     
-    lazy public var caption2: UIFont = {
+    lazy public var caption2: DSFont = {
         return scaledFont.font(forTextStyle: .caption2)
     }()
     
-    lazy public var footnote: UIFont  = {
+    lazy public var footnote: DSFont  = {
         return scaledFont.font(forTextStyle: .footnote)
     }()
     
-    lazy public var headline: UIFont = {
+    lazy public var headline: DSFont = {
         return scaledFont.font(forTextStyle: .headline)
     }()
     
-    lazy public var subheadline: UIFont = {
+    lazy public var subheadline: DSFont = {
         return scaledFont.font(forTextStyle: .subheadline)
     }()
     
-    lazy public var largeTitle: UIFont = {
+    lazy public var largeTitle: DSFont = {
         return scaledFont.font(forTextStyle: .largeTitle)
     }()
     
-    lazy public var title1: UIFont = {
+    lazy public var title1: DSFont = {
         return scaledFont.font(forTextStyle: .title1)
     }()
     
-    lazy public var title2: UIFont = {
+    lazy public var title2: DSFont = {
         return scaledFont.font(forTextStyle: .title2)
     }()
     
-    lazy public var title3: UIFont = {
+    lazy public var title3: DSFont = {
         return scaledFont.font(forTextStyle: .title3)
     }()
 }

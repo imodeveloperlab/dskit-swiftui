@@ -27,89 +27,75 @@
 //  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //  POSSIBILITY OF SUCH DAMAGE.
 
-import UIKit
-
-/// A utility class to help you use custom fonts with
-/// dynamic type.
-///
-/// To use this class you must supply the name of a style
-/// dictionary for the font when creating the class. The
-/// style dictionary should be stored as a property list
-/// file in the main bundle.
-///
-/// The style dictionary contains an entry for each text
-/// style that uses the raw string value for each
-/// `UIFontTextStyle` as the key.
-///
-/// The value of each entry is a dictionary with two keys:
-///
-/// + fontName: A String which is the font name.
-/// + fontSize: A number which is the point size to use
-///             at the `.large` content size.
-///
-/// For example to use a 17 pt Noteworthy-Bold font
-/// for the `.headline` style at the `.large` content size:
-///
-///     <dict>
-///         <key>UICTFontTextStyleHeadline</key>
-///         <dict>
-///             <key>fontName</key>
-///             <string>Noteworthy-Bold</string>
-///             <key>fontSize</key>
-///             <integer>17</integer>
-///         </dict>
-///     </dict>
-///
-/// You do not need to include an entry for every text style
-/// but if you try to use a text style that is not included
-/// in the dictionary it will fallback to the system preferred
-/// font.
+import Foundation
+import SwiftUI
 
 public final class DSScaledFont {
     private struct FontDescription: Decodable {
         let fontSize: CGFloat
         let fontName: String
     }
-
-    private typealias DSStyleDictionary = [UIFont.TextStyle.RawValue: FontDescription]
+    
+    private typealias DSStyleDictionary = [String: FontDescription]
     private var styleDictionary: DSStyleDictionary?
-
-    /// Create a `ScaledFont`
+    
+    /// Create a `DSScaledFont`
     ///
     /// - Parameter fontName: Name of a plist file (without the extension)
     ///   in the main bundle that contains the style dictionary used to
     ///   scale fonts for each text style.
-
     public init(fontName: String) {
-                
         if let url = Bundle(for: DSScaledFont.self).url(forResource: fontName, withExtension: "plist"),
-            let data = try? Data(contentsOf: url) {
+           let data = try? Data(contentsOf: url) {
             let decoder = PropertyListDecoder()
             styleDictionary = try? decoder.decode(DSStyleDictionary.self, from: data)
         }
     }
-
+    
     /// Get the scaled font for the given text style using the
     /// style dictionary supplied at initialization.
     ///
-    /// - Parameter textStyle: The `UIFontTextStyle` for the
-    ///   font.
-    /// - Returns: A `UIFont` of the custom font that has been
-    ///   scaled for the users currently selected preferred
-    ///   text size.
+    /// - Parameter textStyle: The `DSFont.TextStyle` for the font.
+    /// - Returns: A `DSFont` of the custom font that has been scaled
+    ///   for the user's currently selected preferred text size.
     ///
-    /// - Note: If the style dictionary does not have
-    ///   a font for this text style the default preferred
-    ///   font is returned.
-
-    public func font(forTextStyle textStyle: UIFont.TextStyle) -> UIFont {
-                
-        guard let fontDescription = styleDictionary?[textStyle.rawValue],
-            let font = UIFont(name: fontDescription.fontName, size: fontDescription.fontSize) else {
-            return UIFont.preferredFont(forTextStyle: textStyle)
+    /// - Note: If the style dictionary does not have a font for this
+    ///   text style, the default preferred font is returned.
+    public func font(forTextStyle textStyle: DSFont.TextStyle) -> DSFont {
+        guard let fontDescription = styleDictionary?[textStyle.rawValue] else {
+            return defaultFont(for: textStyle)
         }
-
+        
+        guard let font = DSFont(name: fontDescription.fontName, size: fontDescription.fontSize) else {
+            return defaultFont(for: textStyle)
+        }
+        
+        #if canImport(UIKit)
         let fontMetrics = UIFontMetrics(forTextStyle: textStyle)
         return fontMetrics.scaledFont(for: font)
+        #elseif canImport(AppKit)
+        return font // macOS does not have `UIFontMetrics`
+        #endif
+    }
+    
+    /// Fallback to the default system font for the given text style.
+    private func defaultFont(for textStyle: DSFont.TextStyle) -> DSFont {
+        #if canImport(UIKit)
+        return DSFont.preferredFont(forTextStyle: textStyle)
+        #elseif canImport(AppKit)
+        switch textStyle {
+        case .title1: return DSFont.systemFont(ofSize: 28, weight: .bold)
+        case .title2: return DSFont.systemFont(ofSize: 22, weight: .semibold)
+        case .title3: return DSFont.systemFont(ofSize: 20, weight: .regular)
+        case .headline: return DSFont.systemFont(ofSize: 17, weight: .semibold)
+        case .subheadline: return DSFont.systemFont(ofSize: 15, weight: .regular)
+        case .body: return DSFont.systemFont(ofSize: 17, weight: .regular)
+        case .callout: return DSFont.systemFont(ofSize: 16, weight: .regular)
+        case .caption1: return DSFont.systemFont(ofSize: 12, weight: .regular)
+        case .caption2: return DSFont.systemFont(ofSize: 11, weight: .regular)
+        case .footnote: return DSFont.systemFont(ofSize: 13, weight: .regular)
+        default: return DSFont.systemFont(ofSize: 17, weight: .regular)
+        }
+        #endif
     }
 }

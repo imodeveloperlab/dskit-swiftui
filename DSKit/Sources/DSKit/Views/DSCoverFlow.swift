@@ -31,6 +31,7 @@ Initializes `DSCoverFlow` with specific layout and behavioral settings.
 - `content`: Closure that returns a `Content` view for each data item.
 */
 
+
 public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Data.Element: Equatable, Content: View {
     
     @Environment(\.appearance) var appearance: DSAppearance
@@ -85,7 +86,7 @@ public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessColle
         DSHStack {
             ForEach(data, id: id) { element in
                 Circle()
-                    .fill(Color(uiColor: appearance.primaryView.text.headline))
+                    .fill(Color(appearance.primaryView.text.headline))
                     .dsSize(7)
                     .opacity(currentElementID == element ? 1 : 0.1)
             }
@@ -93,7 +94,11 @@ public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessColle
     }
 }
 
-fileprivate struct DSPaginatedScrollView<Data, ID, Content>: UIViewRepresentable where Data: RandomAccessCollection, Data.Element: Equatable, ID: Hashable, Content: View {
+import SwiftUI
+
+import SwiftUI
+
+struct DSPaginatedScrollView<Data, ID, Content>: DSViewRepresentable where Data: RandomAccessCollection, Data.Element: Equatable, ID: Hashable, Content: View {
     
     let data: Data
     let content: (Data.Element) -> Content
@@ -118,115 +123,100 @@ fileprivate struct DSPaginatedScrollView<Data, ID, Content>: UIViewRepresentable
         self._currentPage = currentPage
     }
     
-    typealias UIViewType = UIScrollView
-    
     func makeCoordinator() -> Coordinator {
-        Coordinator(parent: self)
+        return Coordinator(parent: self)
     }
     
-    func makeUIView(context: Context) -> UIScrollView {
-        let scrollView = UIScrollView()
+    // MARK: - Cross-Platform Implementations
+    #if canImport(UIKit)
+    func makeUIView(context: Context) -> DSUIScrollView {
+        let scrollView = DSUIScrollView()
         setupScrollView(scrollView, context: context)
-        addContentView(to: scrollView)
+        addContentView(to: scrollView, context: context)
         return scrollView
     }
-
-    private func setupScrollView(_ scrollView: UIScrollView, context: Context) {
-        scrollView.isPagingEnabled = false
+    
+    func updateUIView(_ uiView: DSUIScrollView, context: Context) {}
+    #elseif canImport(AppKit)
+    func makeNSView(context: Context) -> DSUIScrollView {
+        let scrollView = DSUIScrollView()
+        setupScrollView(scrollView, context: context)
+        addContentView(to: scrollView, context: context)
+        return scrollView
+    }
+    
+    func updateNSView(_ nsView: DSUIScrollView, context: Context) {}
+    #endif
+    
+    // MARK: - Setup Methods
+    private func setupScrollView(_ scrollView: DSUIScrollView, context: Context) {
+        #if canImport(UIKit)
+        scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
-        scrollView.clipsToBounds = false
-        scrollView.delegate = context.coordinator
-        scrollView.decelerationRate = .fast
         scrollView.backgroundColor = .clear
+        scrollView.delegate = context.coordinator
+        #elseif canImport(AppKit)
+        scrollView.hasHorizontalScroller = true
+        scrollView.hasVerticalScroller = false
+        scrollView.drawsBackground = false
+        scrollView.backgroundColor = .clear
+        #endif
     }
-
-    private func addContentView(to scrollView: UIScrollView) {
-        let contentView = createContentView()
-        contentView.view.backgroundColor = .clear
-        contentView.view.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(contentView.view)
+    
+    private func addContentView(to scrollView: DSUIScrollView, context: Context) {
+        let hostingController = DSHostingController(rootView: createContentView())
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         
+        #if canImport(UIKit)
+        scrollView.addSubview(hostingController.view)
         NSLayoutConstraint.activate([
-            contentView.view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            contentView.view.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            contentView.view.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            contentView.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.view.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
+            hostingController.view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            hostingController.view.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            hostingController.view.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            hostingController.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            hostingController.view.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
         ])
+        #elseif canImport(AppKit)
+        scrollView.documentView = hostingController.view
+        #endif
     }
-
-    private func createContentView() -> UIHostingController<AnyView> {
-        let hostedContent = HStack(spacing: interItemSpacing) {
+    
+    private func createContentView() -> some View {
+        HStack(spacing: interItemSpacing) {
             ForEach(data, id: id) { element in
-                content(element).frame(width: pageWidth)
+                content(element)
+                    .frame(width: pageWidth)
             }
         }
-        return UIHostingController(rootView: AnyView(hostedContent))
     }
     
-    func updateUIView(_ uiView: UIScrollView, context: Context) {
-        // Update the view if needed
-    }
-    
-    class Coordinator: NSObject, UIScrollViewDelegate {
+    // MARK: - Coordinator
+    class Coordinator: NSObject, DSScrollViewDelegate {
         var parent: DSPaginatedScrollView
         
         init(parent: DSPaginatedScrollView) {
             self.parent = parent
         }
         
-        func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-            let maxIndex = CGFloat(parent.data.count)
-            let targetIndex = calculateTargetIndex(scrollView: scrollView, velocity: velocity, maxIndex: maxIndex)
-            let targetOffset = calculateTargetOffset(scrollView: scrollView, targetIndex: targetIndex)
-            targetContentOffset.pointee.x = targetOffset
-            setDecelerationRate(for: scrollView)
-            setCurrentPage(for: Int(targetIndex))
-        }
-
-        private func calculateTargetIndex(scrollView: UIScrollView, velocity: CGPoint, maxIndex: CGFloat) -> CGFloat {
-            let pageWidth = parent.pageWidth
-            let interItemSpacing = parent.interItemSpacing
-            let targetX = scrollView.contentOffset.x + velocity.x * 60.0
-            var targetIndex: CGFloat = 0.0
-            
-            if velocity.x > 0 {
-                targetIndex = ceil(targetX / (pageWidth + interItemSpacing))
-            } else if velocity.x == 0 {
-                targetIndex = round(targetX / (pageWidth + interItemSpacing))
-            } else if velocity.x < 0 {
-                targetIndex = floor(targetX / (pageWidth + interItemSpacing))
-            }
-            
-            return min(max(targetIndex, 0), maxIndex)
-        }
-
-        private func calculateTargetOffset(scrollView: UIScrollView, targetIndex: CGFloat) -> CGFloat {
-            let pageWidth = parent.pageWidth
-            let interItemSpacing = parent.interItemSpacing
-            return targetIndex * (pageWidth + interItemSpacing)
-        }
-
-        private func setDecelerationRate(for scrollView: UIScrollView) {
-            scrollView.decelerationRate = .fast
-        }
-        
-        private func setCurrentPage(for index: Int) {
-            let index = parent.data.index(parent.data.startIndex, offsetBy: index)
-            if index >= parent.data.startIndex && index < parent.data.endIndex {
-                self.parent.currentPage = self.parent.data[index]
+        #if canImport(UIKit)
+        func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+            let pageIndex = Int(round(scrollView.contentOffset.x / parent.pageWidth))
+            if pageIndex >= 0 && pageIndex < parent.data.count {
+                let index = parent.data.index(parent.data.startIndex, offsetBy: pageIndex)
+                parent.currentPage = parent.data[index]
             }
         }
+        #endif
     }
 }
 
 struct Testable_DSCoverFlow: View {
     
     let colors = [
-        UIColor(0x006A7A),
-        UIColor(0x28527a),
-        UIColor(0xfbeeac)
+        DSUIColor(0x006A7A),
+        DSUIColor(0x28527a),
+        DSUIColor(0xfbeeac)
     ]
     
     var body: some View {

@@ -62,7 +62,9 @@ public struct DSRadioPickerView<Data, ID, Content>: View where Data: RandomAcces
                     }
                 }
                 .onTap {
+                    #if canImport(UIKit)
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    #endif
                     selected = element
                 }
                 .dsCardStyle()

@@ -31,7 +31,7 @@ struct CartScreen3: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "trash.fill").onTap { dismiss() }
             }
         }.dsScreen()
@@ -136,7 +136,7 @@ struct Testable_CartScreen3: View {
         NavigationView {
             CartScreen3()
                 .navigationTitle("My Cart")
-                .navigationBarTitleDisplayMode(.inline)
+                .platformBasedNavigationBarTitleDisplayModeInline()
         }
     }
 }

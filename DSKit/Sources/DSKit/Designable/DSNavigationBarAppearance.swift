@@ -6,17 +6,17 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
 import SwiftUI
 
 public protocol DSNavigationBarAppearanceProtocol {
-    var buttons: UIColor { get set }
-    var text: UIColor { get set }
-    var bar: UIColor { get set }
+    var buttons: DSUIColor { get set }
+    var text: DSUIColor { get set }
+    var bar: DSUIColor { get set }
     var translucent: Bool { get set }
 }
 
 extension DSNavigationBarAppearanceProtocol {
+    /// Returns a SwiftUI Color based on the DSNavigationBarColor key
     func color(key: DSNavigationBarColor) -> Color {
         switch key {
         case .button:
@@ -37,9 +37,9 @@ public enum DSNavigationBarColor {
 
 public struct DSNavigationBarAppearance: DSNavigationBarAppearanceProtocol {
     public init(
-        buttons: UIColor,
-        text: UIColor,
-        bar: UIColor,
+        buttons: DSUIColor,
+        text: DSUIColor,
+        bar: DSUIColor,
         translucent: Bool = false
     ) {
         self.buttons = buttons
@@ -48,8 +48,8 @@ public struct DSNavigationBarAppearance: DSNavigationBarAppearanceProtocol {
         self.translucent = translucent
     }
     
-    public var buttons: UIColor
-    public var text: UIColor
-    public var bar: UIColor
+    public var buttons: DSUIColor
+    public var text: DSUIColor
+    public var bar: DSUIColor
     public var translucent: Bool
 }

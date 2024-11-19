@@ -17,8 +17,8 @@
 		41A858222BF3420000375D4D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 41A858212BF3420000375D4D /* SDWebImage */; };
 		41A858242BF3421200375D4D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 41A858232BF3421200375D4D /* SDWebImage */; };
 		604EED4B2BD23BE9009E3278 /* DSKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 604EED4A2BD23BE9009E3278 /* DSKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		604EED4F2BD23BE9009E3278 /* DSKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 604EED482BD23BE9009E3278 /* DSKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		604EED602BD23D23009E3278 /* DSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604EED482BD23BE9009E3278 /* DSKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		604EED4F2BD23BE9009E3278 /* DSKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 604EED482BD23BE9009E3278 /* DSKit.framework */; platformFilters = (ios, macos, ); settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		604EED602BD23D23009E3278 /* DSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604EED482BD23BE9009E3278 /* DSKit.framework */; platformFilters = (ios, macos, ); settings = {ATTRIBUTES = (Required, ); }; };
 		604EEDC62BD23E1B009E3278 /* DSBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED632BD23E1A009E3278 /* DSBackgroundModifier.swift */; };
 		604EEDC72BD23E1B009E3278 /* DSBlurBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED642BD23E1A009E3278 /* DSBlurBackgroundModifier.swift */; };
 		604EEDC82BD23E1B009E3278 /* DSCardStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED652BD23E1A009E3278 /* DSCardStyleModifier.swift */; };
@@ -109,6 +109,14 @@
 		608350B52BCC5892002E4F47 /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608350B42BCC5892002E4F47 /* ScreenView.swift */; };
 		6092FE5C2BD2AC600016CB4A /* DSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604EED482BD23BE9009E3278 /* DSKit.framework */; };
 		6092FE5D2BD2AC600016CB4A /* DSKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 604EED482BD23BE9009E3278 /* DSKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		60AD1FAA2CE78DE200DF81AF /* DSFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AD1FA92CE78DE200DF81AF /* DSFont.swift */; };
+		60AD1FAC2CE78F9700DF81AF /* DSUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AD1FAB2CE78F9700DF81AF /* DSUIColor.swift */; };
+		60AD1FAE2CEB39CD00DF81AF /* DSUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AD1FAD2CEB39CD00DF81AF /* DSUIImage.swift */; };
+		60AD1FB02CEB489100DF81AF /* DSViewReprezentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AD1FAF2CEB489100DF81AF /* DSViewReprezentable.swift */; };
+		60AD1FB22CEB491100DF81AF /* DSUIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AD1FB12CEB491100DF81AF /* DSUIScrollView.swift */; };
+		60AD1FB42CEB4A7900DF81AF /* DSHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AD1FB32CEB4A7900DF81AF /* DSHostingController.swift */; };
+		60AD1FB62CEB4BF700DF81AF /* ToolbarItemPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AD1FB52CEB4BF700DF81AF /* ToolbarItemPlacement.swift */; };
+		60AF8F792CEB6A5E0014E1D7 /* NavigationBarHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AF8F782CEB6A5E0014E1D7 /* NavigationBarHidden.swift */; };
 		60D469BB2BCAF0DC00A6F7FC /* AppearanceSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4697F2BCAF0D800A6F7FC /* AppearanceSelectionView.swift */; };
 		60D469BC2BCAF0DC00A6F7FC /* DSKitExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D469802BCAF0D800A6F7FC /* DSKitExplorerApp.swift */; };
 		60D469BD2BCAF0DC00A6F7FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D469812BCAF0DA00A6F7FC /* Assets.xcassets */; };
@@ -171,6 +179,8 @@
 		60D46A092BCAF16600A6F7FC /* DSKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D46A082BCAF16600A6F7FC /* DSKitTests.swift */; };
 		60D46A192BCAF25A00A6F7FC /* AssertSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D46A182BCAF25A00A6F7FC /* AssertSnapshot.swift */; };
 		60D46A1B2BCAF29600A6F7FC /* AssertSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D46A1A2BCAF29600A6F7FC /* AssertSnapshot.swift */; };
+		60E268112CEB4CF400C3E256 /* NavigationBarTitleDisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E268102CEB4CF400C3E256 /* NavigationBarTitleDisplayMode.swift */; };
+		60E268132CEB622E00C3E256 /* DSKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E268122CEB622E00C3E256 /* DSKeyboard.swift */; };
 		901D2D482C00CA260017DC0C /* BookingScreen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D2D472C00CA260017DC0C /* BookingScreen3.swift */; };
 		901D2D4A2C0705640017DC0C /* BookingScreen4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D2D492C0705640017DC0C /* BookingScreen4.swift */; };
 		901D2D4C2C070B280017DC0C /* BookingScreen5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D2D4B2C070B280017DC0C /* BookingScreen5.swift */; };
@@ -339,6 +349,14 @@
 		604EEE2C2BD256C8009E3278 /* DSKitExplorer.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DSKitExplorer.xctestplan; sourceTree = "<group>"; };
 		608350B12BCC565F002E4F47 /* ScreenKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKey.swift; sourceTree = "<group>"; };
 		608350B42BCC5892002E4F47 /* ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
+		60AD1FA92CE78DE200DF81AF /* DSFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSFont.swift; sourceTree = "<group>"; };
+		60AD1FAB2CE78F9700DF81AF /* DSUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSUIColor.swift; sourceTree = "<group>"; };
+		60AD1FAD2CEB39CD00DF81AF /* DSUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSUIImage.swift; sourceTree = "<group>"; };
+		60AD1FAF2CEB489100DF81AF /* DSViewReprezentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSViewReprezentable.swift; sourceTree = "<group>"; };
+		60AD1FB12CEB491100DF81AF /* DSUIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSUIScrollView.swift; sourceTree = "<group>"; };
+		60AD1FB32CEB4A7900DF81AF /* DSHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHostingController.swift; sourceTree = "<group>"; };
+		60AD1FB52CEB4BF700DF81AF /* ToolbarItemPlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItemPlacement.swift; sourceTree = "<group>"; };
+		60AF8F782CEB6A5E0014E1D7 /* NavigationBarHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarHidden.swift; sourceTree = "<group>"; };
 		60D4696E2BCAF07F00A6F7FC /* DSKitExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSKitExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D4697F2BCAF0D800A6F7FC /* AppearanceSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceSelectionView.swift; sourceTree = "<group>"; };
 		60D469802BCAF0D800A6F7FC /* DSKitExplorerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSKitExplorerApp.swift; sourceTree = "<group>"; };
@@ -404,6 +422,8 @@
 		60D46A082BCAF16600A6F7FC /* DSKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSKitTests.swift; sourceTree = "<group>"; };
 		60D46A182BCAF25A00A6F7FC /* AssertSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertSnapshot.swift; sourceTree = "<group>"; };
 		60D46A1A2BCAF29600A6F7FC /* AssertSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertSnapshot.swift; sourceTree = "<group>"; };
+		60E268102CEB4CF400C3E256 /* NavigationBarTitleDisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarTitleDisplayMode.swift; sourceTree = "<group>"; };
+		60E268122CEB622E00C3E256 /* DSKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSKeyboard.swift; sourceTree = "<group>"; };
 		901D2D472C00CA260017DC0C /* BookingScreen3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingScreen3.swift; sourceTree = "<group>"; };
 		901D2D492C0705640017DC0C /* BookingScreen4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingScreen4.swift; sourceTree = "<group>"; };
 		901D2D4B2C070B280017DC0C /* BookingScreen5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingScreen5.swift; sourceTree = "<group>"; };
@@ -532,6 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				604EED822BD23E1A009E3278 /* DSScaledFont.swift */,
+				60AD1FA92CE78DE200DF81AF /* DSFont.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -539,6 +560,7 @@
 		604EED982BD23E1A009E3278 /* Designable */ = {
 			isa = PBXGroup;
 			children = (
+				605343722CEC883900B19AA1 /* PlatformBased */,
 				604EED832BD23E1A009E3278 /* Fonts */,
 				604EED842BD23E1A009E3278 /* DSAppearance.swift */,
 				604EED852BD23E1A009E3278 /* DSButtonAppearance.swift */,
@@ -608,6 +630,22 @@
 			);
 			name = Views;
 			path = Sources/DSKit/Views;
+			sourceTree = "<group>";
+		};
+		605343722CEC883900B19AA1 /* PlatformBased */ = {
+			isa = PBXGroup;
+			children = (
+				60AD1FB52CEB4BF700DF81AF /* ToolbarItemPlacement.swift */,
+				60E268102CEB4CF400C3E256 /* NavigationBarTitleDisplayMode.swift */,
+				60E268122CEB622E00C3E256 /* DSKeyboard.swift */,
+				60AF8F782CEB6A5E0014E1D7 /* NavigationBarHidden.swift */,
+				60AD1FB32CEB4A7900DF81AF /* DSHostingController.swift */,
+				60AD1FB12CEB491100DF81AF /* DSUIScrollView.swift */,
+				60AD1FAF2CEB489100DF81AF /* DSViewReprezentable.swift */,
+				60AD1FAB2CE78F9700DF81AF /* DSUIColor.swift */,
+				60AD1FAD2CEB39CD00DF81AF /* DSUIImage.swift */,
+			);
+			path = PlatformBased;
 			sourceTree = "<group>";
 		};
 		60D469652BCAF07F00A6F7FC = {
@@ -968,10 +1006,13 @@
 				604EEDE72BD23E1B009E3278 /* DSDesignable.swift in Sources */,
 				604EEDDD2BD23E1B009E3278 /* DSTintColorModifier.swift in Sources */,
 				604EEDF22BD23E1B009E3278 /* DSSpacingSystem.swift in Sources */,
+				60AD1FB22CEB491100DF81AF /* DSUIScrollView.swift in Sources */,
 				604EEE0E2BD23E1B009E3278 /* DSDesignGuideView.swift in Sources */,
 				604EEDD32BD23E1B009E3278 /* DSMaxWidthCenteredModifier.swift in Sources */,
 				604EEDDA2BD23E1B009E3278 /* DSSelectedStyleModifier.swift in Sources */,
 				604EEDF52BD23E1B009E3278 /* DSTextFieldAppearance.swift in Sources */,
+				60AD1FB42CEB4A7900DF81AF /* DSHostingController.swift in Sources */,
+				60E268112CEB4CF400C3E256 /* NavigationBarTitleDisplayMode.swift in Sources */,
 				604EEDFE2BD23E1B009E3278 /* BlueAppearance.swift in Sources */,
 				604EEE192BD23E1B009E3278 /* DSRatingView.swift in Sources */,
 				604EEDC72BD23E1B009E3278 /* DSBlurBackgroundModifier.swift in Sources */,
@@ -979,6 +1020,7 @@
 				604EEE062BD23E1B009E3278 /* DSText.swift in Sources */,
 				604EEDEA2BD23E1B009E3278 /* DSDynamicColor.swift in Sources */,
 				604EEDC62BD23E1B009E3278 /* DSBackgroundModifier.swift in Sources */,
+				60AD1FB02CEB489100DF81AF /* DSViewReprezentable.swift in Sources */,
 				604EEE162BD23E1B009E3278 /* DSPriceView.swift in Sources */,
 				604EEE0F2BD23E1B009E3278 /* DSDivider.swift in Sources */,
 				604EEDD92BD23E1B009E3278 /* DSSectionStyleModifier.swift in Sources */,
@@ -988,6 +1030,7 @@
 				90FB4AD22BFCDECD008178DF /* DSVerdanaFont.swift in Sources */,
 				604EEDD22BD23E1B009E3278 /* DSKeyboardAwareModifier.swift in Sources */,
 				604EEE172BD23E1B009E3278 /* DSQuantityPicker.swift in Sources */,
+				60AD1FAC2CE78F9700DF81AF /* DSUIColor.swift in Sources */,
 				604EEDD12BD23E1B009E3278 /* DSHideKeyboardWhenTappedModifier.swift in Sources */,
 				604EEDCE2BD23E1B009E3278 /* DSDebugLayoutModifier.swift in Sources */,
 				604EEDFF2BD23E1B009E3278 /* DSCustomUITextField.swift in Sources */,
@@ -1013,9 +1056,11 @@
 				604EEDDC2BD23E1B009E3278 /* DSSizeModifier.swift in Sources */,
 				604EEE002BD23E1B009E3278 /* DSTextField.swift in Sources */,
 				604EEDE32BD23E1B009E3278 /* DSScaledFont.swift in Sources */,
+				60AD1FB62CEB4BF700DF81AF /* ToolbarItemPlacement.swift in Sources */,
 				604EEDF12BD23E1B009E3278 /* DSSpace.swift in Sources */,
 				604EEDFC2BD23E1B009E3278 /* PeachAppearance.swift in Sources */,
 				604EEE012BD23E1B009E3278 /* DSTextField+Factory.swift in Sources */,
+				60AD1FAE2CEB39CD00DF81AF /* DSUIImage.swift in Sources */,
 				604EEDE82BD23E1B009E3278 /* DSDesignableTextFieldColor.swift in Sources */,
 				604EEE112BD23E1B009E3278 /* DSGroupedList.swift in Sources */,
 				604EEDCF2BD23E1B009E3278 /* DSDisplayShapeModifier.swift in Sources */,
@@ -1024,12 +1069,15 @@
 				604EEE182BD23E1B009E3278 /* DSRadioPickerView.swift in Sources */,
 				604EEDDE2BD23E1B009E3278 /* DSWidthModifier.swift in Sources */,
 				604EEDF62BD23E1B009E3278 /* DSViewAppearance.swift in Sources */,
+				60AF8F792CEB6A5E0014E1D7 /* NavigationBarHidden.swift in Sources */,
 				604EEE1C2BD23E1B009E3278 /* DSSFSymbolButton.swift in Sources */,
 				90FB4AD02BFCDD20008178DF /* DSHelveticaNeueFont.swift in Sources */,
 				604EEE022BD23E1B009E3278 /* DSTextfieldValidator.swift in Sources */,
 				604EEDD62BD23E1B009E3278 /* DSPreviewForEachAppearance.swift in Sources */,
 				604EEDF02BD23E1B009E3278 /* DSSize.swift in Sources */,
+				60E268132CEB622E00C3E256 /* DSKeyboard.swift in Sources */,
 				604EEE132BD23E1B009E3278 /* DSHStack.swift in Sources */,
+				60AD1FAA2CE78DE200DF81AF /* DSFont.swift in Sources */,
 				604EEE2B2BD24797009E3278 /* DSScrollableContentMarginsModifier.swift in Sources */,
 				604EEDE02BD23E1B009E3278 /* KeyboardObserver.swift in Sources */,
 				604EEDE52BD23E1B009E3278 /* DSButtonAppearance.swift in Sources */,
@@ -1161,6 +1209,10 @@
 		};
 		604EED4D2BD23BE9009E3278 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilters = (
+				ios,
+				macos,
+			);
 			target = 604EED472BD23BE9009E3278 /* DSKit */;
 			targetProxy = 604EED4C2BD23BE9009E3278 /* PBXContainerItemProxy */;
 		};
@@ -1197,24 +1249,30 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = dskit.app.DSKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = NO;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				XROS_DEPLOYMENT_TARGET = 1.3;
 			};
 			name = Debug;
 		};
@@ -1233,24 +1291,30 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = dskit.app.DSKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = NO;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				XROS_DEPLOYMENT_TARGET = 1.3;
 			};
 			name = Release;
 		};
@@ -1386,6 +1450,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DSKitExplorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 27XPF5QBGW;
+				ENABLE_CODE_COVERAGE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1393,14 +1458,21 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-fprofile-instr-generate";
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = dskit.app.DSKitExplorer.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1421,6 +1493,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DSKitExplorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 27XPF5QBGW;
+				ENABLE_CODE_COVERAGE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1428,14 +1501,21 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-fprofile-instr-generate";
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = dskit.app.DSKitExplorer.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1450,6 +1530,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T4R84BG8N8;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dskit.app.DSKitExplorerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1468,6 +1549,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T4R84BG8N8;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dskit.app.DSKitExplorerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1486,6 +1568,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T4R84BG8N8;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dskit.app.DSKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1504,6 +1587,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T4R84BG8N8;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dskit.app.DSKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -6,8 +6,6 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
-
 public final class RetroAppearance: DSAppearance {
     
     public var title: String
@@ -27,7 +25,7 @@ public final class RetroAppearance: DSAppearance {
     
     /// Init system appearance with brand color, or primary color of your app
     /// - Parameter primaryBrandColor: UIColor
-    public init(brandColor: UIColor? = nil, title: String = "Retro") {
+    public init(brandColor: DSUIColor? = nil, title: String = "Retro") {
         
         self.title = title
         
@@ -101,7 +99,7 @@ public final class RetroAppearance: DSAppearance {
         
         // MARK: - Tabbar
         
-        tabBar = DSTabbarAppearance(
+        tabBar = DSTabBarAppearance(
             barTint: primaryView.background,
             itemTint: primaryView.button.accentColor,
             unselectedItemTint: text.subheadline,

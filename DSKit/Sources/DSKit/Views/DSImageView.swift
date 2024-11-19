@@ -55,7 +55,7 @@ public struct DSImageView: View {
     }
     
     public init(
-        uiImage: UIImage?,
+        uiImage: DSUIImage?,
         displayShape: DSDisplayShape = .none,
         size: DSSize = .fillUpTheSpace,
         tintColor: DSColorKey? = nil,
@@ -117,7 +117,7 @@ public struct DSImageView: View {
                     .dsSize(image.size)
                     .setDisplayShape(shape: image.displayShape)
             } else if let uiImage {
-                Image(uiImage: uiImage)
+                Image(dsUIImage: uiImage)
                     .resizable()
                     .setImageTint(tint: image.tintColor)
                     .setContentMode(mode: image.contentMode)
@@ -136,7 +136,7 @@ public struct DSImageView: View {
                         
                         Color.gray.opacity(0.1)
                             .overlay(alignment: .center) {
-                                Image(uiImage: imageManager.image!)
+                                Image(dsUIImage: imageManager.image!)
                                     .resizable()
                                     .setContentMode(mode: image.contentMode)
                                     .opacity(imageLoaded ? 1 : 0)
@@ -177,7 +177,7 @@ public struct DSImageView: View {
 
 public enum DSImageContentType {
     case system(name: String)
-    case image(image: UIImage?)
+    case image(image: DSUIImage?)
     case imageURL(url: URL?)
 }
 
@@ -227,7 +227,7 @@ public struct DSImage {
         contentMode: DSContentMode = .scaleAspectFit
     ) {
         self.init(
-            content: .image(image: UIImage(named: named)),
+            content: .image(image: DSUIImage(named: named)),
             displayShape: displayShape,
             size: size,
             tintColor: tintColor,
@@ -236,7 +236,7 @@ public struct DSImage {
     }
     
     public init(
-        uiImage: UIImage?,
+        uiImage: DSUIImage?,
         displayShape: DSDisplayShape = .none,
         size: DSSize = .fillUpTheSpace,
         tintColor: DSColorKey? = nil,
@@ -278,8 +278,10 @@ extension DSImage {
 
 struct Testable_DSImageView: View {
     
-    let imageUrl = URL(string: "https://images.unsplash.com/photo-1702540122576-dd7d387f652f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    let testImage = UIImage(
+    let imageUrl = URL(string: "https://images.unsplash.com/photo-1702540122576-dd7d387f652f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    )
+    
+    let testImage = DSUIImage(
         named: "demo",
         in: Bundle(identifier: "app.DSKit"),
         with: nil

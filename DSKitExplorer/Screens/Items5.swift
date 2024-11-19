@@ -40,11 +40,11 @@ struct Items5: View {
         }
         .dsScreen()
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")
                     .onTap { dismiss() }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "line.horizontal.3.decrease.circle.fill")
                     .onTap { dismiss() }
             }
@@ -159,7 +159,7 @@ struct Testable_Items5: View {
         NavigationView {
             Items5()
                 .navigationTitle("Products")
-                .navigationBarTitleDisplayMode(.inline)
+                .platformBasedNavigationBarTitleDisplayModeInline()
         }
     }
 }

@@ -21,11 +21,11 @@ struct Items6: View {
         }
         .dsScreen()
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")
                     .onTap { dismiss() }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "line.horizontal.3.decrease.circle.fill")
                     .onTap { dismiss() }
             }
@@ -61,7 +61,7 @@ extension Items6 {
                     tint: .color(product.favourite ? .red : .white)
                 )
                 .dsPadding(.regular)
-                .dsBlurBackground(style: .light)
+                .dsBlurBackgroundLight()
                 .dsCornerRadius()
                 .dsPadding(.regular)
             })
@@ -144,7 +144,7 @@ struct Testable_Items6: View {
         NavigationView {
             Items6()
                 .navigationTitle("Products")
-                .navigationBarTitleDisplayMode(.inline)
+                .platformBasedNavigationBarTitleDisplayModeInline()
         }
     }
 }

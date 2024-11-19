@@ -57,7 +57,7 @@ struct ItemDetails4: View {
                     id: \.self,
                     selected: $viewModel.selectedColor
                 ) { color in
-                    Color(uiColor: color)
+                    Color(color)
                         .dsSize(dimension: .actionElement)
                 }.dsSectionStyle(title: "Color")
                 
@@ -79,10 +79,10 @@ struct ItemDetails4: View {
                 DSTermsAndConditions(message: "By continuing you agree to our")
             }
         }.toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
             }
         }.dsScreen()
@@ -126,17 +126,17 @@ final class ItemDetails4Model: ObservableObject {
     )
     
     @Published var selectedSize: String = "10"
-    @Published var selectedColor: UIColor = UIColor(0xF88F6F)
+    @Published var selectedColor: DSUIColor = DSUIColor(0xF88F6F)
     
     let imageGallery = [p2Image, p1Image, p3Image]
     
-    let colors = [UIColor(0xFFC6A3),
-                  UIColor(0xF88F6F),
-                  UIColor(0x5CB946),
-                  UIColor(0x006A7A),
-                  UIColor(0x28527a),
-                  UIColor(0x8ac4d0),
-                  UIColor(0xfbeeac)]
+    let colors = [DSUIColor(0xFFC6A3),
+                  DSUIColor(0xF88F6F),
+                  DSUIColor(0x5CB946),
+                  DSUIColor(0x006A7A),
+                  DSUIColor(0x28527a),
+                  DSUIColor(0x8ac4d0),
+                  DSUIColor(0xfbeeac)]
     
     let sizes = ["8", "9", "10", "11", "12", "13", "14", "15", "16"]
 }
@@ -148,7 +148,7 @@ struct Testable_ItemDetails4: View {
         NavigationView {
             ItemDetails4()
                 .navigationTitle("Product Details")
-                .navigationBarTitleDisplayMode(.inline)
+                .platformBasedNavigationBarTitleDisplayModeInline()
         }
     }
 }

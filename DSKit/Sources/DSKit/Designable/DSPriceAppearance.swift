@@ -6,13 +6,12 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
 import SwiftUI
 
 public protocol DSPriceAppearanceProtocol {
-    var regularAmount: UIColor { get set }
-    var badgeBackground: UIColor { get set }
-    var badgeText: UIColor { get set }
+    var regularAmount: DSUIColor { get set }
+    var badgeBackground: DSUIColor { get set }
+    var badgeText: DSUIColor { get set }
     var badgeCornerRadius: CGFloat { get set }
 }
 
@@ -23,14 +22,15 @@ public enum DSPriceColorKey {
 }
 
 extension DSPriceAppearanceProtocol {
+    /// Returns a SwiftUI Color based on the DSPriceColorKey
     func color(key: DSPriceColorKey) -> Color {
         switch key {
         case .regularAmount:
-            regularAmount.color
+            return Color(regularAmount)
         case .badgeBackground:
-            badgeBackground.color
+            return Color(badgeBackground)
         case .badgeText:
-            badgeText.color
+            return Color(badgeText)
         }
     }
 }
@@ -38,19 +38,19 @@ extension DSPriceAppearanceProtocol {
 public struct DSPriceAppearance: DSPriceAppearanceProtocol {
     
     public init(
-        regularAmount: UIColor,
-        badgeBackground: UIColor = .red, 
-        badgeText: UIColor = .white,
+        regularAmount: DSUIColor,
+        badgeBackground: DSUIColor = DSUIColor.red,
+        badgeText: DSUIColor = DSUIColor.white,
         badgeCornerRadius: CGFloat = 4.0
     ) {
-        self.badgeText = badgeText
-        self.badgeBackground = badgeBackground
-        self.badgeCornerRadius = badgeCornerRadius
         self.regularAmount = regularAmount
+        self.badgeBackground = badgeBackground
+        self.badgeText = badgeText
+        self.badgeCornerRadius = badgeCornerRadius
     }
     
-    public var regularAmount: UIColor
-    public var badgeBackground: UIColor
-    public var badgeText: UIColor
+    public var regularAmount: DSUIColor
+    public var badgeBackground: DSUIColor
+    public var badgeText: DSUIColor
     public var badgeCornerRadius: CGFloat
 }

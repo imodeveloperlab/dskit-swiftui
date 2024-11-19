@@ -37,7 +37,7 @@ struct Filters1: View {
                 )
             }
         }.toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSButton(title: "Reset", style: .clear, action: {})
             }
         }.dsScreen()

@@ -6,22 +6,20 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
-
 protocol DSTextFieldColorsProtocol {
-    var border: UIColor { get set }
-    var background: UIColor { get set }
-    var text: UIColor { get set }
-    var placeHolder: UIColor { get set }
+    var border: DSUIColor { get set }
+    var background: DSUIColor { get set }
+    var text: DSUIColor { get set }
+    var placeHolder: DSUIColor { get set }
 }
 
 public struct DSTextFieldColors: DSTextFieldColorsProtocol {
     
     public init(
-        border: UIColor,
-        background: UIColor,
-        text: UIColor,
-        placeHolder: UIColor
+        border: DSUIColor,
+        background: DSUIColor,
+        text: DSUIColor,
+        placeHolder: DSUIColor
     ) {
         self.border = border
         self.background = background
@@ -29,8 +27,8 @@ public struct DSTextFieldColors: DSTextFieldColorsProtocol {
         self.placeHolder = placeHolder
     }
     
-    public var border: UIColor
-    public var background: UIColor
-    public var text: UIColor
-    public var placeHolder: UIColor
+    public var border: DSUIColor
+    public var background: DSUIColor
+    public var text: DSUIColor
+    public var placeHolder: DSUIColor
 }

@@ -29,7 +29,7 @@ struct NewsScreen1: View {
         }
         .dsScreen()
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 let icon = self.style == .compact ? "list.dash" : "list.bullet.below.rectangle"
                 DSToolbarSFSymbolButton(name: icon)
                     .onTap {
