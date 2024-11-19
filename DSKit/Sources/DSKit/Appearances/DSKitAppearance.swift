@@ -6,6 +6,8 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
+import Foundation
+
 public struct LightBlueAppearance: DSAppearance {
     
     public var title: String
