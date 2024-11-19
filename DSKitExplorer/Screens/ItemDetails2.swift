@@ -64,10 +64,10 @@ struct ItemDetails2: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
             }
         }.dsScreen()
@@ -101,7 +101,7 @@ struct Testable_ItemDetails2: View {
         NavigationView {
             ItemDetails2()
                 .navigationTitle("Product Details")
-                .navigationBarTitleDisplayMode(.inline)
+                .platformBasedNavigationBarTitleDisplayModeInline()
         }
     }
 }

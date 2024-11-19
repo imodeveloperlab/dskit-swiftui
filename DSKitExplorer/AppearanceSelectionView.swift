@@ -35,9 +35,16 @@ struct AppearanceSelectionView: View {
                 
                 Spacer()
             }
+            #if os(iOS)
             .fullScreenCover(item: $selectedAppearance) { identifiableDesignable in
                 ScreensView(appearance: identifiableDesignable.appearance)
             }
+            #elseif os(macOS)
+            .sheet(item: $selectedAppearance) { identifiableDesignable in
+                ScreensView(appearance: identifiableDesignable.appearance)
+                    .frame(minWidth: 800, minHeight: 600) 
+            }
+            #endif
             PoweredByDSKitView()
         }.dsScreen()
     }

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import UIKit
+
 
 /*
 ## DSTextField
@@ -22,6 +22,8 @@ Initializes a `DSTextField` with various options for handling different types of
 #### Usage:
 `DSTextField` is suitable for forms, login screens, and any interface where user input is required. The secure entry option and input validation make it particularly useful for handling sensitive information.
 */
+
+import SwiftUI
 
 public struct DSTextField: View {
     
@@ -43,9 +45,9 @@ public struct DSTextField: View {
     // Boolean to determine if the text field should be secure (for passwords)
     let isSecureEntry: Bool
     // Keyboard configuration properties
-    let keyboardType: UIKeyboardType
-    let textContentType: UITextContentType?
-    let autocapitalizationType: UITextAutocapitalizationType
+    let keyboardType: DSKeyboardType
+    let textContentType: DSTextContentType?
+    let autocapitalizationType: DSAutocapitalizationType
     let validationPattern: String
     let leftSystemName: String?
     let validateMinimumLength: Int

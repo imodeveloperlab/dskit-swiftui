@@ -21,11 +21,11 @@ struct Items1: View {
         }
         .dsScreen()
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "square.and.arrow.up")
                     .onTap { dismiss() }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "heart")
                     .onTap { dismiss() }
             }
@@ -70,7 +70,7 @@ extension Items1 {
                         tint: .color(product.favourite ? .red : .white)
                     )
                     .dsPadding(.regular)
-                    .dsBlurBackground(style: .systemThinMaterialLight)
+                    .dsBlurSystemThinMaterialLight()
                     .dsCornerRadius()
                     .dsPadding(.regular)
                 }
@@ -155,7 +155,7 @@ struct Testable_Items1: View {
         NavigationView {
             Items1()
                 .navigationTitle("Products")
-                .navigationBarTitleDisplayMode(.inline)
+                .platformBasedNavigationBarTitleDisplayModeInline()
         }
     }
 }

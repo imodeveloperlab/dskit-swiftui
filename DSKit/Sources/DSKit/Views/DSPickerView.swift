@@ -85,7 +85,9 @@ public struct DSPickerView<Data, ID, Content>: View where Data: RandomAccessColl
             .dsCornerRadius()
             .dsSelectedStyle(isSelected: selected == element)
             .onTap {
+                #if canImport(UIKit)
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                #endif
                 selected = element
             }
     }

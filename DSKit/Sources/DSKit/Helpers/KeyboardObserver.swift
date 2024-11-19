@@ -5,6 +5,8 @@
 //  Created by Ivan Borinschi on 08.02.2023.
 //
 
+#if canImport(UIKit)
+
 import SwiftUI
 import Combine
 
@@ -68,3 +70,5 @@ public final class KeyboardObserver: ObservableObject {
         }
     }
 }
+
+#endif

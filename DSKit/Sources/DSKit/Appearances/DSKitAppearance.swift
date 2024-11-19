@@ -6,8 +6,6 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
-
 public struct LightBlueAppearance: DSAppearance {
     
     public var title: String
@@ -25,7 +23,7 @@ public struct LightBlueAppearance: DSAppearance {
     
     /// Init DSKit appearance with specific brand color
     /// - Parameter brandColor: UIColor
-    public init(brandColor: UIColor? = nil) {
+    public init(brandColor: DSUIColor? = nil) {
         
         self.title = "Light Blue"
         
@@ -60,10 +58,10 @@ public struct LightBlueAppearance: DSAppearance {
         )
         
         // Background
-        let background: UIColor = .dynamic(light: 0xfefffe, dark: 0x15202b)
+        let background: DSUIColor = .dynamic(light: 0xfefffe, dark: 0x15202b)
         
         // Separator
-        let separator: UIColor = .dynamic(light: 0xd0dbe3, dark: 0x38444d)
+        let separator: DSUIColor = .dynamic(light: 0xd0dbe3, dark: 0x38444d)
         
         // Corner radius
         let cornerRadius: CGFloat = 10
@@ -109,10 +107,10 @@ public struct LightBlueAppearance: DSAppearance {
         )
         
         // Background
-        let sBackground: UIColor = .dynamic(light: 0xf3f4f2, dark: 0x101a24)
+        let sBackground: DSUIColor = .dynamic(light: 0xf3f4f2, dark: 0x101a24)
         
         // Separator
-        let sSeparator: UIColor = .dynamic(light: 0xd0dbe3, dark: 0x15202b)
+        let sSeparator: DSUIColor = .dynamic(light: 0xd0dbe3, dark: 0x15202b)
         
         // Corner radius
         let sCornerRadius: CGFloat = 10
@@ -129,7 +127,7 @@ public struct LightBlueAppearance: DSAppearance {
         
         // MARK: - Tabbar
         
-        tabBar = DSTabbarAppearance(
+        tabBar = DSTabBarAppearance(
             barTint: primaryView.background,
             itemTint: primaryView.button.accentColor,
             unselectedItemTint: text.subheadline,
@@ -158,7 +156,7 @@ public struct LightBlueAppearance: DSAppearance {
         
         price = DSPriceAppearance(
             regularAmount: text.subheadline,
-            badgeBackground: UIColor(0xFF656B)
+            badgeBackground: DSUIColor(0xFF656B)
         )
     }
     

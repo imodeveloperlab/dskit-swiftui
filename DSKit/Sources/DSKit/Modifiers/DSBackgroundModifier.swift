@@ -20,7 +20,7 @@ public struct DSBackgroundModifier: ViewModifier {
     }
     
     public func body(content: Content) -> some View {
-        content.background(Color(uiColor: group.colors(from: appearance).background))
+        content.background(Color(group.colors(from: appearance).background))
             .environment(\.viewStyle, viewStyle)
     }
 }

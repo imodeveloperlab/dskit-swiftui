@@ -26,7 +26,7 @@ struct ScreensView: View {
                             ScreenView(screen: screen)                            
                         } label: {
                             CustomActionView(title: screen.displayName)
-                        }
+                        }.buttonStyle(.plain)
                     }
                 }
             }

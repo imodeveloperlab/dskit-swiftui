@@ -46,7 +46,7 @@ extension Categories5 {
                         tint: .color(category.favourite ? .red : .white)
                     )
                     .dsPadding(.regular)
-                    .dsBlurBackground(style: .light)
+                    .dsBlurBackgroundLight()
                     .dsCornerRadius()
                     .dsPadding(.regular)
                 }
@@ -55,7 +55,7 @@ extension Categories5 {
                         DSText(tag)
                             .dsTextStyle(.headline, 10, Color.white)
                             .dsPadding(.regular)
-                            .dsBlurBackground(style: .light)
+                            .dsBlurBackgroundLight()
                             .dsCornerRadius()
                             .dsPadding(.regular)
                     }

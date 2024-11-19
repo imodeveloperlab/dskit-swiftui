@@ -6,24 +6,24 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
 import SwiftUI
 
 public protocol DSTextFieldAppearanceProtocol {
-    var background: UIColor { get set }
-    var text: UIColor { get set }
-    var placeHolder: UIColor { get set }
+    var background: DSUIColor { get set }
+    var text: DSUIColor { get set }
+    var placeHolder: DSUIColor { get set }
 }
 
 public extension DSTextFieldAppearanceProtocol {
+    /// Returns a SwiftUI Color based on the DSTextFieldColorKey
     func color(key: DSTextFieldColorKey) -> Color {
         switch key {
         case .background:
-            background.color
+            return Color(background)
         case .text:
-            text.color
+            return Color(text)
         case .placeholder:
-            placeHolder.color
+            return Color(placeHolder)
         }
     }
 }
@@ -37,16 +37,16 @@ public enum DSTextFieldColorKey {
 public struct DSTextFieldAppearance: DSTextFieldAppearanceProtocol {
     
     public init(
-        background: UIColor,
-        text: UIColor,
-        placeHolder: UIColor
+        background: DSUIColor,
+        text: DSUIColor,
+        placeHolder: DSUIColor
     ) {
         self.background = background
         self.text = text
         self.placeHolder = placeHolder
     }
     
-    public var background: UIColor
-    public var text: UIColor
-    public var placeHolder: UIColor
+    public var background: DSUIColor
+    public var text: DSUIColor
+    public var placeHolder: DSUIColor
 }

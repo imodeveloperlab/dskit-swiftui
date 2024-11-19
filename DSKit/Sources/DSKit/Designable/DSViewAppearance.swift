@@ -6,31 +6,31 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
 import SwiftUI
 
 public protocol DSViewAppearanceProtocol {
     var button: DSButtonAppearanceProtocol { get }
     var text: DSTextAppearanceProtocol { get }
     var textField: DSTextFieldAppearanceProtocol { get }
-    var background: UIColor { get }
-    var separator: UIColor { get }
+    var background: DSUIColor { get }
+    var separator: DSUIColor { get }
     var cornerRadius: CGFloat { get }
 }
 
 public extension DSViewAppearanceProtocol {
+    /// Returns a SwiftUI Color based on the DSViewColorKey
     func color(for viewKey: DSViewColorKey, appearance: DSAppearance, style: DSViewStyle) -> Color {
         switch viewKey {
         case .button(let buttonKey):
-            button.color(key: buttonKey)
+            return button.color(key: buttonKey)
         case .background:
-            background.color
+            return Color(background)
         case .separator:
-            separator.color
+            return Color(separator)
         case .textField(let textFieldKey):
-            textField.color(key: textFieldKey)
+            return textField.color(key: textFieldKey)
         case .text(let textKey):
-            textKey.color(for: appearance, and: style)
+            return textKey.color(for: appearance, and: style)
         }
     }
 }
@@ -49,24 +49,22 @@ public struct DSViewAppearance: DSViewAppearanceProtocol {
         button: DSButtonAppearanceProtocol,
         text: DSTextAppearanceProtocol,
         textField: DSTextFieldAppearanceProtocol,
-        background: UIColor,
-        separator: UIColor,
+        background: DSUIColor,
+        separator: DSUIColor,
         cornerRadius: CGFloat
     ) {
-        
         self.button = button
         self.text = text
+        self.textField = textField
         self.background = background
         self.separator = separator
         self.cornerRadius = cornerRadius
-        self.textField = textField
     }
     
     public var button: DSButtonAppearanceProtocol
     public var text: DSTextAppearanceProtocol
     public var textField: DSTextFieldAppearanceProtocol
-    public var background: UIColor
-    public var separator: UIColor
+    public var background: DSUIColor
+    public var separator: DSUIColor
     public var cornerRadius: CGFloat
 }
-

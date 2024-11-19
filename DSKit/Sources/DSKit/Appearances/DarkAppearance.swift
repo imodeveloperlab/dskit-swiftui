@@ -6,8 +6,6 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
-
 public class DarkAppearance: DSAppearance {
     
     public var title: String
@@ -24,7 +22,7 @@ public class DarkAppearance: DSAppearance {
     
     /// Init system appearance with brand color, or primary color of your app
     /// - Parameter primaryBrandColor: UIColor
-    public init(brandColor: UIColor? = nil, title: String = "Dark") {
+    public init(brandColor: DSUIColor? = nil, title: String = "Dark") {
         
         self.title = title
         
@@ -84,11 +82,11 @@ public class DarkAppearance: DSAppearance {
         
         // MARK: - Tabbar
         
-        tabBar = DSTabbarAppearance(
+        tabBar = DSTabBarAppearance(
             barTint: primaryView.background,
             itemTint: primaryView.button.accentColor,
             unselectedItemTint: secondaryText.subheadline,
-            badge: UIColor.red,
+            badge: DSUIColor.red,
             translucent: true
         )
         

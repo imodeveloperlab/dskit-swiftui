@@ -6,36 +6,36 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
+import SwiftUI
 
 public protocol DSTextAppearanceProtocol {
-    var largeTitle: UIColor { get set }
-    var title1: UIColor { get set }
-    var title2: UIColor { get set }
-    var title3: UIColor { get set }
-    var headline: UIColor { get set }
-    var subheadline: UIColor { get set }
-    var body: UIColor { get set }
-    var callout: UIColor { get set }
-    var caption1: UIColor { get set }
-    var caption2: UIColor { get set }
-    var footnote: UIColor { get set }
+    var largeTitle: DSUIColor { get set }
+    var title1: DSUIColor { get set }
+    var title2: DSUIColor { get set }
+    var title3: DSUIColor { get set }
+    var headline: DSUIColor { get set }
+    var subheadline: DSUIColor { get set }
+    var body: DSUIColor { get set }
+    var callout: DSUIColor { get set }
+    var caption1: DSUIColor { get set }
+    var caption2: DSUIColor { get set }
+    var footnote: DSUIColor { get set }
 }
 
 public struct DSTextAppearance: DSTextAppearanceProtocol {
     
     public init(
-        largeTitle: UIColor,
-        title1: UIColor,
-        title2: UIColor,
-        title3: UIColor,
-        headline: UIColor,
-        subheadline: UIColor,
-        body: UIColor,
-        callout: UIColor,
-        caption1: UIColor,
-        caption2: UIColor,
-        footnote: UIColor
+        largeTitle: DSUIColor,
+        title1: DSUIColor,
+        title2: DSUIColor,
+        title3: DSUIColor,
+        headline: DSUIColor,
+        subheadline: DSUIColor,
+        body: DSUIColor,
+        callout: DSUIColor,
+        caption1: DSUIColor,
+        caption2: DSUIColor,
+        footnote: DSUIColor
     ) {
         self.largeTitle = largeTitle
         self.title1 = title1
@@ -50,28 +50,28 @@ public struct DSTextAppearance: DSTextAppearanceProtocol {
         self.footnote = footnote
     }
     
-    public var largeTitle: UIColor
-    public var title1: UIColor
-    public var title2: UIColor
-    public var title3: UIColor
-    public var headline: UIColor
-    public var subheadline: UIColor
-    public var body: UIColor
-    public var callout: UIColor
-    public var caption1: UIColor
-    public var caption2: UIColor
-    public var footnote: UIColor
+    public var largeTitle: DSUIColor
+    public var title1: DSUIColor
+    public var title2: DSUIColor
+    public var title3: DSUIColor
+    public var headline: DSUIColor
+    public var subheadline: DSUIColor
+    public var body: DSUIColor
+    public var callout: DSUIColor
+    public var caption1: DSUIColor
+    public var caption2: DSUIColor
+    public var footnote: DSUIColor
 }
 
 public extension DSTextAppearance {
     
-    /// Get DSTextAppearance using only 2 colors to fill them all
+    /// Get DSTextAppearance using only 2 colors to fill all text styles
     /// - Parameters:
-    ///   - main: UIColor
-    ///   - secondary: UIColor
+    ///   - main: DSUIColor
+    ///   - secondary: DSUIColor
     /// - Returns: DSTextAppearance
     static func textColors(
-        main: UIColor, secondary: UIColor
+        main: DSUIColor, secondary: DSUIColor
     ) -> DSTextAppearance {
         DSTextAppearance(
             largeTitle: main,

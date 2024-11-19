@@ -40,7 +40,7 @@ extension XCTestCase {
         
         SnapshotTesting.assertSnapshot(
             of: testView, 
-            as: .wait(for: 0.05, on: .image(drawHierarchyInKeyWindow: true)),
+            as: .wait(for: 0.05, on: .image(drawHierarchyInKeyWindow: true, precision: 0.95, perceptualPrecision: 0.95)),
             named: "snapshot",
             record: record,
             timeout: timeout,

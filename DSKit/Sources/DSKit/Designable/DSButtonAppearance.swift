@@ -6,21 +6,21 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
 import SwiftUI
 
 public protocol DSButtonAppearanceProtocol {
-    var accentColor: UIColor { get set }
-    var supportColor: UIColor { get set }
+    var accentColor: DSUIColor { get set }
+    var supportColor: DSUIColor { get set }
 }
 
 public extension DSButtonAppearanceProtocol {
+    /// Returns a SwiftUI `Color` based on the given `DSButtonColorKey`
     func color(key: DSButtonColorKey) -> Color {
         switch key {
         case .accentColor:
-            accentColor.color
+            return Color(accentColor)
         case .supportColor:
-            supportColor.color
+            return Color(supportColor)
         }
     }
 }
@@ -32,12 +32,13 @@ public enum DSButtonColorKey {
 
 public struct DSButtonAppearance: DSButtonAppearanceProtocol {
     
-    public var accentColor: UIColor
-    public var supportColor: UIColor
+    public var accentColor: DSUIColor
+    public var supportColor: DSUIColor
     
+    /// Initialize `DSButtonAppearance` with colors
     public init(
-        accentColor: UIColor,
-        supportColor: UIColor
+        accentColor: DSUIColor,
+        supportColor: DSUIColor
     ) {
         self.accentColor = accentColor
         self.supportColor = supportColor

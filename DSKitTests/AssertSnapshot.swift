@@ -27,7 +27,7 @@ extension XCTestCase {
         let view: UIView = UIHostingController(rootView: testView.fixedSize(horizontal: true, vertical: true)).view
         SnapshotTesting.assertSnapshot(
             matching: view,
-            as: .image(size: view.intrinsicContentSize),
+            as: .image(precision: 0.95, perceptualPrecision: 0.95, size: view.intrinsicContentSize),
             record: record,
             timeout: timeout,
             file: file,

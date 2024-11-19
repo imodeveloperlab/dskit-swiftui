@@ -70,7 +70,8 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
                 } else {
                     self.content(element)
                 }
-            }.dsResetContentMargins()
+            }
+            //.dsResetContentMargins()
         }.dsContentMargins()
     }
 }
