@@ -6,6 +6,8 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
+import Foundation
+
 public final class RetroAppearance: DSAppearance {
     
     public var title: String

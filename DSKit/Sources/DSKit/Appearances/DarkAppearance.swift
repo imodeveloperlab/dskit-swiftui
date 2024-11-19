@@ -6,6 +6,8 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
+import Foundation
+
 public class DarkAppearance: DSAppearance {
     
     public var title: String
