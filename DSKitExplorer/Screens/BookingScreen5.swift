@@ -137,7 +137,7 @@ struct Testable_BookingScreen5: View {
     var body: some View {
         NavigationView {
             BookingScreen5()
-                .navigationBarTitleDisplayMode(.inline)
+                .platformBasedNavigationBarTitleDisplayModeInline()
                 .navigationTitle("Barber Details")
         }
     }

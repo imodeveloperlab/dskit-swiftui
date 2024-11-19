@@ -44,7 +44,7 @@ struct LogInScreen3: View {
                         title: "Facebook",
                         rightImageNamed: "facebook",
                         pushContentToSides: true,
-                        style: .custom(color: Color(uiColor: UIColor(0x4267B2)))
+                        style: .custom(color: Color(DSUIColor(0x4267B2)))
                     ) {
                         self.dismiss()
                     }
@@ -53,7 +53,7 @@ struct LogInScreen3: View {
                         title: "Google",
                         rightImageNamed: "google",
                         pushContentToSides: true,
-                        style: .custom(color: Color(uiColor: UIColor(0x4285F4)))
+                        style: .custom(color: Color(DSUIColor(0x4285F4)))
                     ) {
                         self.dismiss()
                     }

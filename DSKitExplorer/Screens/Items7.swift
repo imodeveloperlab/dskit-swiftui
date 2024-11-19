@@ -23,11 +23,11 @@ struct Items7: View {
         }
         .dsScreen()
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")
                     .onTap { dismiss() }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "line.horizontal.3.decrease.circle.fill")
                     .onTap { dismiss() }
             }
@@ -74,7 +74,7 @@ extension Items7 {
                     tint: .color(product.favorite ? .red : .white)
                 )
                 .dsPadding(.regular)
-                .dsBlurBackground(style: .light)
+                .dsBlurBackgroundLight()
                 .dsCornerRadius()
                 .dsPadding(.regular)
             })

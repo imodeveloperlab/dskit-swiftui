@@ -39,7 +39,7 @@ struct SignUpScreen3: View {
         .dsScreen()
         .navigationTitle("Sign Up")
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "xmark")
                     .onTap { dismiss() }
             }
@@ -69,7 +69,7 @@ struct Testable_SignUpScreen3: View {
     var body: some View {
         NavigationView {
             SignUpScreen3()
-                .navigationBarTitleDisplayMode(.inline)
+                .platformBasedNavigationBarTitleDisplayModeInline()
         }
     }
 }

@@ -5,65 +5,76 @@
 //  Created by Ivan Borinschi on 21.05.2024.
 //
 
+#if canImport(UIKit)
 import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
 
 public class DSFuturaFont: DSFontsProtocol {
-    public var body: UIFont {
+    
+    public var body: DSFont {
         return regularFont(size: 17.0)
     }
     
-    public var callout: UIFont {
+    public var callout: DSFont {
         return regularFont(size: 16.0)
     }
     
-    public var caption1: UIFont {
+    public var caption1: DSFont {
         return regularFont(size: 12.0)
     }
     
-    public var caption2: UIFont {
+    public var caption2: DSFont {
         return regularFont(size: 11.0)
     }
     
-    public var footnote: UIFont {
+    public var footnote: DSFont {
         return regularFont(size: 13.0)
     }
     
-    public var headline: UIFont {
-        return bolfFont(size: 17.0)
+    public var headline: DSFont {
+        return boldFont(size: 17.0)
     }
     
-    public var subheadline: UIFont {
+    public var subheadline: DSFont {
         return regularFont(size: 15.0)
     }
     
-    public var largeTitle: UIFont {
+    public var largeTitle: DSFont {
         return regularFont(size: 34.0)
     }
     
-    public var title1: UIFont {
+    public var title1: DSFont {
         return regularFont(size: 28.0)
     }
     
-    public var title2: UIFont {
+    public var title2: DSFont {
         return regularFont(size: 22.0)
     }
     
-    public var title3: UIFont {
+    public var title3: DSFont {
         return regularFont(size: 20.0)
     }
     
     public init() {}
     
-    private func regularFont(size: CGFloat) -> UIFont {
-        scaledFont(for: "Futura-Medium", textStyle: .body, defaultSize: size)
+    // MARK: - Private Helpers
+    
+    private func regularFont(size: CGFloat) -> DSFont {
+        return scaledFont(for: "Futura-Medium", textStyle: .body, defaultSize: size)
     }
     
-    private func bolfFont(size: CGFloat) -> UIFont {
-        scaledFont(for: "Futura-Bold", textStyle: .body, defaultSize: size)
+    private func boldFont(size: CGFloat) -> DSFont {
+        return scaledFont(for: "Futura-Bold", textStyle: .body, defaultSize: size)
     }
     
-    private func scaledFont(for fontName: String, textStyle: UIFont.TextStyle, defaultSize: CGFloat) -> UIFont {
-        let font = UIFont(name: fontName, size: defaultSize) ?? UIFont.systemFont(ofSize: defaultSize)
+    private func scaledFont(for fontName: String, textStyle: DSFont.TextStyle, defaultSize: CGFloat) -> DSFont {
+        let font = DSFont(name: fontName, size: defaultSize) ?? DSFont.systemFont(ofSize: defaultSize)
+        #if canImport(UIKit)
         return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
+        #elseif canImport(AppKit)
+        return font
+        #endif
     }
 }

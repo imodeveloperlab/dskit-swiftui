@@ -86,7 +86,7 @@ struct Testable_SignUpScreen2: View {
     var body: some View {
         NavigationView {
             SignUpScreen2()
-                .navigationBarTitleDisplayMode(.inline)
+                .platformBasedNavigationBarTitleDisplayModeInline()
         }
     }
 }

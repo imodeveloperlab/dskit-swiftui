@@ -7,7 +7,8 @@
 //
 
 import SwiftUI
-import UIKit
+
+// MARK: - Environment Key for DSAppearance
 
 struct AppearanceEnvironment: EnvironmentKey {
     static let defaultValue: DSAppearance = LightBlueAppearance()
@@ -19,6 +20,8 @@ public extension EnvironmentValues {
         set { self[AppearanceEnvironment.self] = newValue }
     }
 }
+
+// MARK: - DSAppearance Protocol
 
 public protocol DSAppearance {
     var title: String { get set }
@@ -42,7 +45,10 @@ extension DSAppearance {
 }
 
 public extension DSAppearance {
+    /// Override the system appearance settings (iOS only)
     func overrideTheSystemAppearance() {
+        #if canImport(UIKit)
+        // Configure Navigation Bar Appearance
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.configureWithOpaqueBackground()
         navigationBarAppearance.backgroundColor = self.navigationBar.bar
@@ -77,13 +83,16 @@ public extension DSAppearance {
         
         UITabBar.appearance().standardAppearance = tabBarAppearance
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        #endif
     }
 }
 
+// MARK: - SwiftUI View Extension
+
 public extension View {
+    /// Apply the `DSAppearance` to the SwiftUI view
     func dsAppearance(_ appearance: DSAppearance) -> some View {
         appearance.overrideTheSystemAppearance()
-        return self
-            .environment(\.appearance, appearance)
+        return self.environment(\.appearance, appearance)
     }
 }

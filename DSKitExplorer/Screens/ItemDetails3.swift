@@ -81,10 +81,10 @@ struct ItemDetails3: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .platformBasedTrailing) {
                 DSToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
             }
         }.dsScreen()
@@ -108,7 +108,9 @@ extension ItemDetails3 {
                         .dsSecondaryBackground()
                         .dsSelectedStyle(isSelected: viewModel.selectedSize == size)
                         .onTap {
+                            #if canImport(UIKit)
                             UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                            #endif
                             viewModel.selectedSize = size
                         }
                 }
@@ -127,7 +129,9 @@ extension ItemDetails3 {
                     DSImageView(named: color, size: .size(width: 70, height: 50))
                         .dsSelectedStyle(isSelected: viewModel.selectedColor == color)
                         .onTap {
+                            #if canImport(UIKit)
                             UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                            #endif
                             viewModel.selectedColor = color
                         }
                 }
@@ -163,7 +167,7 @@ struct Testable_ItemDetails3: View {
         NavigationView {
             ItemDetails3()
                 .navigationTitle("Product Details")
-                .navigationBarTitleDisplayMode(.inline)
+                .platformBasedNavigationBarTitleDisplayModeInline()
         }
     }
 }

@@ -96,11 +96,11 @@ public struct DSButton: View {
         self.title = title
         
         if let leftImageNamed {
-            self.leftImage = DSImage(content: .image(image: UIImage(named: leftImageNamed)), size: .smallIcon)
+            self.leftImage = DSImage(content: .image(image: DSUIImage(named: leftImageNamed)), size: .smallIcon)
         }
         
         if let rightImageNamed {
-            self.rightImage = DSImage(content: .image(image: UIImage(named: rightImageNamed)), size: .smallIcon)
+            self.rightImage = DSImage(content: .image(image: DSUIImage(named: rightImageNamed)), size: .smallIcon)
         }
         
         self.pushContentToSides = pushContentToSides
@@ -190,7 +190,7 @@ public struct DSButton: View {
                             .stroke(titleColor.color(for: appearance, and: viewStyle), lineWidth: 1)
                     ).padding(1)
             }
-        })
+        }).buttonStyle(.plain)
     }
     
     var buttonView: some View {

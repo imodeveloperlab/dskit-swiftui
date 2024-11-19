@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+#if canImport(UIKit)
+
 public struct DSKeyboardAwareModifier: ViewModifier {
     
     @ObservedObject var keyboard = KeyboardObserver.shared
@@ -24,12 +26,22 @@ public struct DSKeyboardAwareModifier: ViewModifier {
     }
 }
 
+#endif
+
 public extension View {
     func hideWhenKeyboardIsDisplayed(transition: AnyTransition = .opacity) -> some View {
+        #if canImport(UIKit)
         self.modifier(DSKeyboardAwareModifier(hide: true, transition: transition))
+        #else
+        self
+        #endif
     }
     
     func showWhenKeyboardIsDisplayed(transition: AnyTransition = .opacity) -> some View {
+        #if canImport(UIKit)
         self.modifier(DSKeyboardAwareModifier(hide: false, transition: transition))
+        #else
+        self
+        #endif
     }
 }

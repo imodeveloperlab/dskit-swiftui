@@ -6,10 +6,6 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
-
-import UIKit
-
 public class PeachAppearance: DSAppearance {
     
     public var title: String
@@ -24,7 +20,7 @@ public class PeachAppearance: DSAppearance {
     public var actionElementHeight: CGFloat = 48
     public var screenMargins: CGFloat = 16
     
-    public init(brandColor: UIColor? = nil, title: String = "Peach") {
+    public init(brandColor: DSUIColor? = nil, title: String = "Peach") {
         
         self.title = title
         
@@ -83,11 +79,11 @@ public class PeachAppearance: DSAppearance {
         
         // MARK: - Tabbar
         
-        tabBar = DSTabbarAppearance(
-            barTint: .dynamic(light: 0xFFFFFF, dark: 0x1A1A1A),
-            itemTint: .dynamic(light: 0xE84F3D, dark: 0xE84F3D),
-            unselectedItemTint: .dynamic(light: 0x717171, dark: 0x999999),
-            badge: .dynamic(light: 0xE84F3D, dark: 0xE84F3D),
+        tabBar = DSTabBarAppearance(
+            barTint: DSUIColor.dynamic(light: 0xFFFFFF, dark: 0x1A1A1A),
+            itemTint: DSUIColor.dynamic(light: 0xE84F3D, dark: 0xE84F3D),
+            unselectedItemTint: DSUIColor.dynamic(light: 0x717171, dark: 0x999999),
+            badge: DSUIColor.dynamic(light: 0xE84F3D, dark: 0xE84F3D),
             translucent: true
         )
         

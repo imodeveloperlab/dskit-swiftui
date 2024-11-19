@@ -51,7 +51,9 @@ public struct DSQuantityPicker: View {
                     .onTap {
                         if quantity > 1 {
                             quantity = quantity - 1
+                            #if canImport(UIKit)
                             UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                            #endif
                         }
                     }
                 DSDivider()
@@ -61,7 +63,9 @@ public struct DSQuantityPicker: View {
                     .dsPadding(.horizontal, .regular)
                     .onTap {
                         quantity = quantity + 1
+                        #if canImport(UIKit)
                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                        #endif
                     }
             }
             .dsHeight(20)

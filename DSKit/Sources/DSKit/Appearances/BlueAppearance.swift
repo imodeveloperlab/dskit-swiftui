@@ -6,8 +6,6 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
-
 public class BlueAppearance: DSAppearance {
     
     public var title: String
@@ -24,7 +22,7 @@ public class BlueAppearance: DSAppearance {
     
     /// Init system appearance with brand color, or primary color of your app
     /// - Parameter primaryBrandColor: UIColor
-    public init(brandColor: UIColor? = nil, title: String = "Blue") {
+    public init(brandColor: DSUIColor? = nil, title: String = "Blue") {
         
         self.title = title
         
@@ -79,7 +77,7 @@ public class BlueAppearance: DSAppearance {
         
         // MARK: - Tabbar
         
-        tabBar = DSTabbarAppearance(
+        tabBar = DSTabBarAppearance(
             barTint: primaryView.background,
             itemTint: primaryView.button.accentColor,
             unselectedItemTint: secondaryText.subheadline,

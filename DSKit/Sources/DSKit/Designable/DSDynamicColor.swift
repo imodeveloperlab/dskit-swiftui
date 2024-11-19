@@ -5,48 +5,31 @@
 //  Created by Borinschi Ivan on 16.12.2020.
 //
 
-import UIKit
-
 public class DSDynamicColor {
-        
-    /// Generate light and dark color for dynamic interfaces
-    /// - Parameters:
-    ///   - light: UIColor for light interface
-    ///   - dark: UIColor for dark interface
-    /// - Returns: UIColor
-    public static func color(light: UIColor, dark: UIColor) -> UIColor {
-        return UIColor { (traitCollection: UITraitCollection) -> UIColor in
-            if traitCollection.userInterfaceStyle == .dark {
-                return dark
-            } else {
-                return light
-            }
-        }
-    }
     
     /// Generate light and dark color for dynamic interfaces
     /// - Parameters:
-    ///   - light: UIColor fo light interface
-    ///   - dark: UIColor for dark interface
-    /// - Returns: UIColor
-    public static func color(light: Int, dark: Int) -> UIColor {
-        return color(light: UIColor(light), dark: UIColor(dark))
-    }
-}
-
-extension UIColor {
-    static func dynamic(light: UIColor, dark: UIColor) -> UIColor {
-        return UIColor { traitCollection -> UIColor in
-            switch traitCollection.userInterfaceStyle {
-            case .dark:
-                return dark
-            default:
-                return light
-            }
+    ///   - light: DSUIColor for light interface
+    ///   - dark: DSUIColor for dark interface
+    /// - Returns: DSUIColor
+    public static func color(light: DSUIColor, dark: DSUIColor) -> DSUIColor {
+        #if canImport(UIKit)
+        return DSUIColor { traitCollection in
+            traitCollection.userInterfaceStyle == .dark ? dark : light
         }
+        #elseif canImport(AppKit)
+        return DSUIColor(name: nil, dynamicProvider: { appearance in
+            appearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua ? dark : light
+        })
+        #endif
     }
     
-    static func dynamic(light: Int, dark: Int) -> UIColor {
-        dynamic(light: UIColor(light), dark: UIColor(dark))
+    /// Generate light and dark color for dynamic interfaces using hex values
+    /// - Parameters:
+    ///   - light: Hex color for light interface
+    ///   - dark: Hex color for dark interface
+    /// - Returns: DSUIColor
+    public static func color(light: Int, dark: Int) -> DSUIColor {
+        return color(light: DSUIColor(light), dark: DSUIColor(dark))
     }
 }

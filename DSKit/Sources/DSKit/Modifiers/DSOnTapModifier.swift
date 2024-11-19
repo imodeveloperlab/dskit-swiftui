@@ -11,6 +11,7 @@ public struct DSOnTapModifier: ViewModifier {
     var action: () -> Void
     public func body(content: Content) -> some View {
         Button(action: action, label: { content })
+            .buttonStyle(.plain)
     }
 }
 

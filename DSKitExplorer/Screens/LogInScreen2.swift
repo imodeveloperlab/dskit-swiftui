@@ -37,7 +37,7 @@ struct LogInScreen2: View {
                 title: "Login with facebook",
                 rightImageNamed: "facebook",
                 pushContentToSides: true,
-                style: .custom(color: Color(uiColor: UIColor(0x4267B2)))
+                style: .custom(color: Color(DSUIColor(0x4267B2)))
             ) {
                 self.dismiss()
             }

@@ -6,7 +6,6 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
-import UIKit
 import SwiftUI
 
 public indirect enum DSTextFontKey: Equatable, Hashable {
@@ -22,7 +21,7 @@ public indirect enum DSTextFontKey: Equatable, Hashable {
     case caption1
     case caption2
     case footnote
-    case custom(UIFont)
+    case custom(DSFont)
     case fontWithSize(DSTextFontKey, CGFloat)
     case smallHeadline
     case smallSubheadline
@@ -36,7 +35,7 @@ public indirect enum DSTextFontKey: Equatable, Hashable {
         return Font(uiFont(for: appearance))
     }
     
-    public func uiFont(for appearance: DSAppearance) -> UIFont {
+    public func uiFont(for appearance: DSAppearance) -> DSFont {
         return switch self {
         case .title1:
             appearance.fonts.title1
@@ -73,7 +72,7 @@ public indirect enum DSTextFontKey: Equatable, Hashable {
         }
     }
     
-    func color(for textColors: DSTextAppearance) -> UIColor {
+    func color(for textColors: DSTextAppearance) -> DSUIColor {
         return switch self {
         case .largeTitle:
             textColors.largeTitle
@@ -98,7 +97,7 @@ public indirect enum DSTextFontKey: Equatable, Hashable {
         case .footnote:
             textColors.footnote
         case .custom(_):
-            UIColor.black
+            DSUIColor.black
         case .fontWithSize(let font, _):
             font.color(for: textColors)
         case .smallHeadline:
