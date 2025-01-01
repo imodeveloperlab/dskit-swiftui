@@ -1653,24 +1653,24 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.16.0;
+				kind = exactVersion;
+				version = 1.16.0;
 			};
 		};
 		41A858192BF3412600375D4D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.4;
+				kind = exactVersion;
+				version = 3.0.4;
 			};
 		};
 		41A858202BF3420000375D4D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.19.2;
+				kind = exactVersion;
+				version = 5.19.2;
 			};
 		};
 		604EED2E2BD198CA009E3278 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
