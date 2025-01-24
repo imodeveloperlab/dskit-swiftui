@@ -71,7 +71,11 @@ struct DSCustomUITextField: DSViewRepresentable {
         textField.isBordered = true
         textField.isEditable = true
         textField.isSelectable = true
-        textField.contentType = .addressCity
+        if #available(macOS 14.0, *) {
+            textField.contentType = .addressCity
+        } else {
+            // Fallback on earlier versions
+        }
     }
     #endif
 

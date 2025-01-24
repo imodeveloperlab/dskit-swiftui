@@ -10,19 +10,35 @@ import SwiftUI
 public extension DSTextField {
     // Email TextField
     static func email(value: DSTextFieldValue, placeholder: String = "Email") -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: false,
-            keyboardType: .emailAddress,
-            textContentType: .emailAddress,
-            autocapitalizationType: .none,
-            validationPattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}",
-            leftSystemName: "envelope.fill",
-            validateMinimumLength: 5,
-            validateMaximumLength: 250,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .emailAddress,
+                textContentType: .emailAddress,
+                autocapitalizationType: .none,
+                validationPattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}",
+                leftSystemName: "envelope.fill",
+                validateMinimumLength: 5,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .emailAddress,
+                textContentType: .none,
+                autocapitalizationType: .none,
+                validationPattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}",
+                leftSystemName: "envelope.fill",
+                validateMinimumLength: 5,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        }
     }
     
     /// Generates a phone number input field.
@@ -38,19 +54,35 @@ public extension DSTextField {
     static func phone(value: DSTextFieldValue,
                       placeholder: String = "Phone",
                       customValidationPattern: String? = nil) -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: false,
-            keyboardType: .phonePad,
-            textContentType: .telephoneNumber,
-            autocapitalizationType: .none,
-            validationPattern: customValidationPattern ?? "^\\s*(?:\\+?(\\d{1,3}))?([-. (]*(\\d{3})[-. )]*)?((\\d{3})[-. ]*(\\d{2,4})(?:[-.x ]*(\\d+))?)\\s*$",
-            leftSystemName: "phone.fill",
-            validateMinimumLength: 5,
-            validateMaximumLength: 35,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .phonePad,
+                textContentType: .telephoneNumber,
+                autocapitalizationType: .none,
+                validationPattern: customValidationPattern ?? "^\\s*(?:\\+?(\\d{1,3}))?([-. (]*(\\d{3})[-. )]*)?((\\d{3})[-. ]*(\\d{2,4})(?:[-.x ]*(\\d+))?)\\s*$",
+                leftSystemName: "phone.fill",
+                validateMinimumLength: 5,
+                validateMaximumLength: 35,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .phonePad,
+                textContentType: .none,
+                autocapitalizationType: .none,
+                validationPattern: customValidationPattern ?? "^\\s*(?:\\+?(\\d{1,3}))?([-. (]*(\\d{3})[-. )]*)?((\\d{3})[-. ]*(\\d{2,4})(?:[-.x ]*(\\d+))?)\\s*$",
+                leftSystemName: "phone.fill",
+                validateMinimumLength: 5,
+                validateMaximumLength: 35,
+                validateEmptyTextField: false
+            )
+        }
     }
 
     /// Creates a secure code input field.
@@ -122,19 +154,35 @@ public extension DSTextField {
     static func newPassword(value: DSTextFieldValue,
                             placeholder: String = "New Password",
                             customValidationPattern: String? = nil) -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: true,
-            keyboardType: .default,
-            textContentType: .newPassword,
-            autocapitalizationType: .none,
-            validationPattern: customValidationPattern ?? "",
-            leftSystemName: "lock.fill",
-            validateMinimumLength: 8,
-            validateMaximumLength: 14,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: true,
+                keyboardType: .default,
+                textContentType: .newPassword,
+                autocapitalizationType: .none,
+                validationPattern: customValidationPattern ?? "",
+                leftSystemName: "lock.fill",
+                validateMinimumLength: 8,
+                validateMaximumLength: 14,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: true,
+                keyboardType: .default,
+                textContentType: .none,
+                autocapitalizationType: .none,
+                validationPattern: customValidationPattern ?? "",
+                leftSystemName: "lock.fill",
+                validateMinimumLength: 8,
+                validateMaximumLength: 14,
+                validateEmptyTextField: false
+            )
+        }
     }
 
     /// Creates a name input field.
@@ -151,19 +199,35 @@ public extension DSTextField {
     static func name(value: DSTextFieldValue,
                      placeholder: String = "Name",
                      customValidationPattern: String? = nil) -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: false,
-            keyboardType: .default,
-            textContentType: .name,
-            autocapitalizationType: .words,
-            validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
-            leftSystemName: "person.crop.circle",
-            validateMinimumLength: 3,
-            validateMaximumLength: 35,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .name,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
+                leftSystemName: "person.crop.circle",
+                validateMinimumLength: 3,
+                validateMaximumLength: 35,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .none,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
+                leftSystemName: "person.crop.circle",
+                validateMinimumLength: 3,
+                validateMaximumLength: 35,
+                validateEmptyTextField: false
+            )
+        }
     }
     
     /// Creates a given name (first name) input field.
@@ -180,19 +244,35 @@ public extension DSTextField {
     static func givenName(value: DSTextFieldValue,
                           placeholder: String = "Given Name",
                           customValidationPattern: String? = nil) -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: false,
-            keyboardType: .default,
-            textContentType: .givenName,
-            autocapitalizationType: .words,
-            validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
-            leftSystemName: "person.crop.circle",
-            validateMinimumLength: 3,
-            validateMaximumLength: 35,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .givenName,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
+                leftSystemName: "person.crop.circle",
+                validateMinimumLength: 3,
+                validateMaximumLength: 35,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .none,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
+                leftSystemName: "person.crop.circle",
+                validateMinimumLength: 3,
+                validateMaximumLength: 35,
+                validateEmptyTextField: false
+            )
+        }
     }
     
     /// Creates a family name (last name) input field.
@@ -209,19 +289,35 @@ public extension DSTextField {
     static func familyName(value: DSTextFieldValue,
                            placeholder: String = "Family Name",
                            customValidationPattern: String? = nil) -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: false,
-            keyboardType: .default,
-            textContentType: .familyName,
-            autocapitalizationType: .words,
-            validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
-            leftSystemName: "person.crop.circle",
-            validateMinimumLength: 3,
-            validateMaximumLength: 35,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .familyName,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
+                leftSystemName: "person.crop.circle",
+                validateMinimumLength: 3,
+                validateMaximumLength: 35,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .none,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
+                leftSystemName: "person.crop.circle",
+                validateMinimumLength: 3,
+                validateMaximumLength: 35,
+                validateEmptyTextField: false
+            )
+        }
     }
 
     /// Creates a number input field.
@@ -265,19 +361,35 @@ public extension DSTextField {
     static func address(value: DSTextFieldValue,
                         placeholder: String = "Address",
                         customValidationPattern: String? = nil) -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: false,
-            keyboardType: .default,
-            textContentType: .fullStreetAddress,
-            autocapitalizationType: .words,
-            validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSystemName: "house",
-            validateMinimumLength: 3,
-            validateMaximumLength: 250,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .fullStreetAddress,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "house",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .none,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "house",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        }
     }
 
     /// Creates a search input field.
@@ -318,19 +430,35 @@ public extension DSTextField {
     static func streetAddressLine1(value: DSTextFieldValue,
                                    placeholder: String = "Street Address Line 1",
                                    customValidationPattern: String? = nil) -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: false,
-            keyboardType: .default,
-            textContentType: .streetAddressLine1,
-            autocapitalizationType: .words,
-            validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSystemName: "house",
-            validateMinimumLength: 3,
-            validateMaximumLength: 250,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .streetAddressLine1,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "house",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .none,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "house",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        }
     }
 
     /// Creates a street address line 2 input field.
@@ -346,19 +474,35 @@ public extension DSTextField {
     static func streetAddressLine2(value: DSTextFieldValue,
                                    placeholder: String = "Street Address Line 2",
                                    customValidationPattern: String? = nil) -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: false,
-            keyboardType: .default,
-            textContentType: .streetAddressLine2,
-            autocapitalizationType: .words,
-            validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSystemName: "house",
-            validateMinimumLength: 3,
-            validateMaximumLength: 250,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .streetAddressLine2,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "house",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .none,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "house",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        }
     }
     
     /// Creates an address state input field.
@@ -374,19 +518,35 @@ public extension DSTextField {
     static func addressState(value: DSTextFieldValue,
                              placeholder: String = "State",
                              customValidationPattern: String? = nil) -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: false,
-            keyboardType: .default,
-            textContentType: .addressState,
-            autocapitalizationType: .words,
-            validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSystemName: "network",
-            validateMinimumLength: 3,
-            validateMaximumLength: 250,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .addressState,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "network",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .none,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "network",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        }
     }
     
     /// Creates an address city input field.
@@ -402,19 +562,35 @@ public extension DSTextField {
     static func addressCity(value: DSTextFieldValue,
                             placeholder: String = "City",
                             customValidationPattern: String? = nil) -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: false,
-            keyboardType: .default,
-            textContentType: .addressCity,
-            autocapitalizationType: .words,
-            validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSystemName: "building.2",
-            validateMinimumLength: 3,
-            validateMaximumLength: 250,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .addressCity,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "building.2",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .none,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "building.2",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        }
     }
 
     /// Creates an address city and state input field.
@@ -430,18 +606,34 @@ public extension DSTextField {
     static func addressCityAndState(value: DSTextFieldValue,
                                     placeholder: String = "City & State",
                                     customValidationPattern: String? = nil) -> DSTextField {
-        DSTextField(
-            model: value,
-            placeholder: placeholder,
-            isSecureEntry: false,
-            keyboardType: .default,
-            textContentType: .addressCityAndState,
-            autocapitalizationType: .words,
-            validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSystemName: "house",
-            validateMinimumLength: 3,
-            validateMaximumLength: 250,
-            validateEmptyTextField: false
-        )
+        if #available(macOS 14.0, *) {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .addressCityAndState,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "house",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        } else {
+            DSTextField(
+                model: value,
+                placeholder: placeholder,
+                isSecureEntry: false,
+                keyboardType: .default,
+                textContentType: .none,
+                autocapitalizationType: .words,
+                validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
+                leftSystemName: "house",
+                validateMinimumLength: 3,
+                validateMaximumLength: 250,
+                validateEmptyTextField: false
+            )
+        }
     }
 }
