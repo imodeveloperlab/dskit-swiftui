@@ -4,14 +4,15 @@ import PackageDescription
 let package = Package(
     name: "DSKit",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v15),
+        .macOS(.v12)
     ],
     products: [
         .library(name: "DSKit", targets: ["DSKit"]),
     ],
     dependencies: [
         // Here, the .git suffix is acceptable because it's part of the URL
-        .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git", from: "2.2.6")
+        .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git", from: "3.0.4")
     ],
     targets: [
         .target(
