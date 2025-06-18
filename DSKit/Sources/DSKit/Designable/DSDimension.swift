@@ -29,17 +29,17 @@ extension DSDimension {
     public func value(appearance: DSAppearance) -> CGFloat {
         switch self {
         case .custom(let number):
-            number
+            return number
         case .fillUpTheSpace:
-                .infinity
+            return .infinity
         case .none:
-                .infinity
+            return .infinity
         case .zero:
-            0
+            return 0
         case .font(let font):
-            font.pointSize(for: appearance)
+            return font.pointSize(for: appearance)
         case .actionElement:
-            40
+            return 40
         }
     }
 }

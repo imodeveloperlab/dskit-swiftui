@@ -22,15 +22,15 @@ public struct DSSpacingSystem: DSSpacingProtocol {
     public func value(for space: DSSpace) -> CGFloat {
         switch space {
         case .small:
-            spatialSystem.multiply(by: 0.5)
+            return spatialSystem.multiply(by: 0.5)
         case .regular:
-            spatialSystem.multiply(by: 1.0)
+            return spatialSystem.multiply(by: 1.0)
         case .medium:
-            spatialSystem.multiply(by: 2.0)
+            return spatialSystem.multiply(by: 2.0)
         case .custom(let number):
-            number
+            return number
         case .zero:
-            0
+            return 0
         }
     }
 }
