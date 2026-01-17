@@ -1,5 +1,15 @@
 # Agent Instructions
 
+## Project Purpose
+- DSKit is a SwiftUI design system library.
+- DSKitExplorer is the demo app and snapshot-test surface for DSKit.
+- This repo is referenced by `../imodeveloperlab/Workspace.xcworkspace` to provide `DSKit.framework`.
+
+## Architecture Pointers
+- Library sources: `DSKit/Sources/DSKit` (Views, Modifiers, Appearances, Helpers, Fonts).
+- Demo app: `DSKitExplorer/` with a screen catalog driven by `ScreenKey`.
+- Snapshot tests: `DSKitTests` and `DSKitExplorerTests` with goldens in `__Snapshots__`.
+
 ## Build (simulator)
 - Project: `DSKitExplorer.xcodeproj`
 - Destination: `platform=iOS Simulator,name=iPhone 17 Pro,OS=26.1`
@@ -19,6 +29,10 @@
 
 Bundle ID:
 - DSKitExplorer: `dskit.app.DSKitExplorer.com`
+
+## Tests
+- Snapshot tests live in `DSKitTests` and `DSKitExplorerTests`.
+- Test plan: `DSKitExplorerTests/DSKitExplorer.xctestplan`.
 
 ## Notes
 - This repo is referenced by `../imodeveloperlab/Workspace.xcworkspace`.
