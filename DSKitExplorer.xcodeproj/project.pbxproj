@@ -100,10 +100,13 @@
 		604EEE182BD23E1B009E3278 /* DSRadioPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDBD2BD23E1A009E3278 /* DSRadioPickerView.swift */; };
 		604EEE192BD23E1B009E3278 /* DSRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDBE2BD23E1A009E3278 /* DSRatingView.swift */; };
 		604EEE1B2BD23E1B009E3278 /* DSSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDC02BD23E1A009E3278 /* DSSectionHeaderView.swift */; };
+		7A1B5C8A4F1A4F8F00AAB002 /* DSSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B5C8A4F1A4F8F00AAA002 /* DSSection.swift */; };
 		604EEE1C2BD23E1B009E3278 /* DSSFSymbolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDC12BD23E1A009E3278 /* DSSFSymbolButton.swift */; };
 		604EEE1D2BD23E1B009E3278 /* DSTermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDC22BD23E1A009E3278 /* DSTermsAndConditions.swift */; };
 		604EEE1E2BD23E1B009E3278 /* DSToolbarSFSymbolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDC32BD23E1A009E3278 /* DSToolbarSFSymbolButton.swift */; };
+		7A1B5C8A4F1A4F8F00AAB003 /* DSLazyVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B5C8A4F1A4F8F00AAA003 /* DSLazyVStack.swift */; };
 		604EEE1F2BD23E1C009E3278 /* DSVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDC42BD23E1A009E3278 /* DSVStack.swift */; };
+		7A1B5C8A4F1A4F8F00AAB001 /* DSList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B5C8A4F1A4F8F00AAA001 /* DSList.swift */; };
 		604EEE2B2BD24797009E3278 /* DSScrollableContentMarginsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEE2A2BD24797009E3278 /* DSScrollableContentMarginsModifier.swift */; };
 		607F7CBA2D89B015006CB03D /* DSThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607F7CB92D89B015006CB03D /* DSThread.swift */; };
 		608350B22BCC565F002E4F47 /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608350B12BCC565F002E4F47 /* ScreenKey.swift */; };
@@ -178,8 +181,8 @@
 		60D469F42BCAF0DC00A6F7FC /* ProfileScreen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D469BA2BCAF0DC00A6F7FC /* ProfileScreen3.swift */; };
 		60D469FC2BCAF14000A6F7FC /* DSKitExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D469FB2BCAF14000A6F7FC /* DSKitExplorerTests.swift */; };
 		60D46A092BCAF16600A6F7FC /* DSKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D46A082BCAF16600A6F7FC /* DSKitTests.swift */; };
-		60D46A192BCAF25A00A6F7FC /* AssertSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D46A182BCAF25A00A6F7FC /* AssertSnapshot.swift */; };
-		60D46A1B2BCAF29600A6F7FC /* AssertSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D46A1A2BCAF29600A6F7FC /* AssertSnapshot.swift */; };
+		A1B2C3D4E5F6A7B8C9D0E1F3 /* AssertSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F2 /* AssertSnapshot.swift */; };
+		A1B2C3D4E5F6A7B8C9D0E1F4 /* AssertSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F2 /* AssertSnapshot.swift */; };
 		60E268112CEB4CF400C3E256 /* NavigationBarTitleDisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E268102CEB4CF400C3E256 /* NavigationBarTitleDisplayMode.swift */; };
 		60E268132CEB622E00C3E256 /* DSKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E268122CEB622E00C3E256 /* DSKeyboard.swift */; };
 		60FB2F482DA8FC4500BB761E /* DSTabPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB2F472DA8FC4500BB761E /* DSTabPagingView.swift */; };
@@ -344,10 +347,13 @@
 		604EEDBD2BD23E1A009E3278 /* DSRadioPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSRadioPickerView.swift; sourceTree = "<group>"; };
 		604EEDBE2BD23E1A009E3278 /* DSRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSRatingView.swift; sourceTree = "<group>"; };
 		604EEDC02BD23E1A009E3278 /* DSSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSSectionHeaderView.swift; sourceTree = "<group>"; };
+		7A1B5C8A4F1A4F8F00AAA002 /* DSSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSSection.swift; sourceTree = "<group>"; };
 		604EEDC12BD23E1A009E3278 /* DSSFSymbolButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSSFSymbolButton.swift; sourceTree = "<group>"; };
 		604EEDC22BD23E1A009E3278 /* DSTermsAndConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTermsAndConditions.swift; sourceTree = "<group>"; };
 		604EEDC32BD23E1A009E3278 /* DSToolbarSFSymbolButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSToolbarSFSymbolButton.swift; sourceTree = "<group>"; };
+		7A1B5C8A4F1A4F8F00AAA003 /* DSLazyVStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSLazyVStack.swift; sourceTree = "<group>"; };
 		604EEDC42BD23E1A009E3278 /* DSVStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSVStack.swift; sourceTree = "<group>"; };
+		7A1B5C8A4F1A4F8F00AAA001 /* DSList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSList.swift; sourceTree = "<group>"; };
 		604EEE2A2BD24797009E3278 /* DSScrollableContentMarginsModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSScrollableContentMarginsModifier.swift; sourceTree = "<group>"; };
 		604EEE2C2BD256C8009E3278 /* DSKitExplorer.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DSKitExplorer.xctestplan; sourceTree = "<group>"; };
 		607F7CB92D89B015006CB03D /* DSThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSThread.swift; sourceTree = "<group>"; };
@@ -424,8 +430,7 @@
 		60D469FB2BCAF14000A6F7FC /* DSKitExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSKitExplorerTests.swift; sourceTree = "<group>"; };
 		60D46A062BCAF16600A6F7FC /* DSKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D46A082BCAF16600A6F7FC /* DSKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSKitTests.swift; sourceTree = "<group>"; };
-		60D46A182BCAF25A00A6F7FC /* AssertSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertSnapshot.swift; sourceTree = "<group>"; };
-		60D46A1A2BCAF29600A6F7FC /* AssertSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertSnapshot.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F6A7B8C9D0E1F2 /* AssertSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertSnapshot.swift; sourceTree = "<group>"; };
 		60E268102CEB4CF400C3E256 /* NavigationBarTitleDisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarTitleDisplayMode.swift; sourceTree = "<group>"; };
 		60E268122CEB622E00C3E256 /* DSKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSKeyboard.swift; sourceTree = "<group>"; };
 		60FB2F472DA8FC4500BB761E /* DSTabPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTabPagingView.swift; sourceTree = "<group>"; };
@@ -623,11 +628,14 @@
 				604EEDB62BD23E1A009E3278 /* DSGroupedList.swift */,
 				604EEDB72BD23E1A009E3278 /* DSHScroll.swift */,
 				604EEDB82BD23E1A009E3278 /* DSHStack.swift */,
+				7A1B5C8A4F1A4F8F00AAA003 /* DSLazyVStack.swift */,
+				7A1B5C8A4F1A4F8F00AAA001 /* DSList.swift */,
 				604EEDB92BD23E1A009E3278 /* DSPickerView.swift */,
 				604EEDBB2BD23E1A009E3278 /* DSPriceView.swift */,
 				604EEDBC2BD23E1A009E3278 /* DSQuantityPicker.swift */,
 				604EEDBD2BD23E1A009E3278 /* DSRadioPickerView.swift */,
 				604EEDBE2BD23E1A009E3278 /* DSRatingView.swift */,
+				7A1B5C8A4F1A4F8F00AAA002 /* DSSection.swift */,
 				604EEDC02BD23E1A009E3278 /* DSSectionHeaderView.swift */,
 				604EEDC12BD23E1A009E3278 /* DSSFSymbolButton.swift */,
 				604EEDC22BD23E1A009E3278 /* DSTermsAndConditions.swift */,
@@ -663,6 +671,7 @@
 				60D469702BCAF07F00A6F7FC /* DSKitExplorer */,
 				60D469FA2BCAF14000A6F7FC /* DSKitExplorerTests */,
 				60D46A072BCAF16600A6F7FC /* DSKitTests */,
+				A1B2C3D4E5F6A7B8C9D0E1F5 /* SharedTests */,
 				604EED492BD23BE9009E3278 /* DSKit */,
 				60D4696F2BCAF07F00A6F7FC /* Products */,
 				60D46A122BCAF1CF00A6F7FC /* Frameworks */,
@@ -781,7 +790,6 @@
 			isa = PBXGroup;
 			children = (
 				604EEE2C2BD256C8009E3278 /* DSKitExplorer.xctestplan */,
-				60D46A182BCAF25A00A6F7FC /* AssertSnapshot.swift */,
 				60D469FB2BCAF14000A6F7FC /* DSKitExplorerTests.swift */,
 			);
 			path = DSKitExplorerTests;
@@ -790,10 +798,17 @@
 		60D46A072BCAF16600A6F7FC /* DSKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				60D46A1A2BCAF29600A6F7FC /* AssertSnapshot.swift */,
 				60D46A082BCAF16600A6F7FC /* DSKitTests.swift */,
 			);
 			path = DSKitTests;
+			sourceTree = "<group>";
+		};
+		A1B2C3D4E5F6A7B8C9D0E1F5 /* SharedTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1B2C3D4E5F6A7B8C9D0E1F2 /* AssertSnapshot.swift */,
+			);
+			path = SharedTests;
 			sourceTree = "<group>";
 		};
 		60D46A122BCAF1CF00A6F7FC /* Frameworks */ = {
@@ -1083,6 +1098,8 @@
 				604EEDF62BD23E1B009E3278 /* DSViewAppearance.swift in Sources */,
 				60AF8F792CEB6A5E0014E1D7 /* NavigationBarHidden.swift in Sources */,
 				604EEE1C2BD23E1B009E3278 /* DSSFSymbolButton.swift in Sources */,
+				7A1B5C8A4F1A4F8F00AAB003 /* DSLazyVStack.swift in Sources */,
+				7A1B5C8A4F1A4F8F00AAB001 /* DSList.swift in Sources */,
 				90FB4AD02BFCDD20008178DF /* DSHelveticaNeueFont.swift in Sources */,
 				604EEE022BD23E1B009E3278 /* DSTextfieldValidator.swift in Sources */,
 				604EEDD62BD23E1B009E3278 /* DSPreviewForEachAppearance.swift in Sources */,
@@ -1094,6 +1111,7 @@
 				604EEDE02BD23E1B009E3278 /* KeyboardObserver.swift in Sources */,
 				604EEDE52BD23E1B009E3278 /* DSButtonAppearance.swift in Sources */,
 				604EEE1B2BD23E1B009E3278 /* DSSectionHeaderView.swift in Sources */,
+				7A1B5C8A4F1A4F8F00AAB002 /* DSSection.swift in Sources */,
 				604EEDE92BD23E1B009E3278 /* DSDimension.swift in Sources */,
 				604EEE082BD23E1B009E3278 /* DSTextFontKey.swift in Sources */,
 				604EEDD82BD23E1B009E3278 /* DSSecondaryBackgroundModifier.swift in Sources */,
@@ -1199,7 +1217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D469FC2BCAF14000A6F7FC /* DSKitExplorerTests.swift in Sources */,
-				60D46A192BCAF25A00A6F7FC /* AssertSnapshot.swift in Sources */,
+				A1B2C3D4E5F6A7B8C9D0E1F3 /* AssertSnapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1208,7 +1226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D46A092BCAF16600A6F7FC /* DSKitTests.swift in Sources */,
-				60D46A1B2BCAF29600A6F7FC /* AssertSnapshot.swift in Sources */,
+				A1B2C3D4E5F6A7B8C9D0E1F4 /* AssertSnapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
