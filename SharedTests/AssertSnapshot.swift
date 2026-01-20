@@ -22,10 +22,10 @@ open class SnapshotTestCase: XCTestCase {
 
 struct SnapshotAssertionOptions {
     var recordDelay: TimeInterval = 0.5
-    var retries: Int = 2
+    var retries: Int = 10
     var retryDelay: TimeInterval = 0.2
-    var precision: Float = 0.96
-    var perceptualPrecision: Float = 0.96
+    var minimumAllowedPrecision: Float = 0.94
+    var precisionStep: Float = 0.001
 }
 
 enum SnapshotLayout {
@@ -81,17 +81,23 @@ extension XCTestCase {
         hostingController.view.setNeedsLayout()
         hostingController.view.layoutIfNeeded()
 
-        let snapshotting = Snapshotting<UIImage, UIImage>.image(
-            precision: options.precision,
-            perceptualPrecision: options.perceptualPrecision,
-            scale: prepared.traits.displayScale
-        )
-        .pullback { view in
-            renderSnapshot(view: view, traits: prepared.traits)
-        }
-
         var failure: String?
         for attempt in 0...max(options.retries, 0) {
+            let currentPrecision = calculatePrecision(
+                base: 1.0,
+                step: options.precisionStep,
+                attempt: attempt,
+                minimumAllowed: options.minimumAllowedPrecision
+            )
+            let snapshotting = Snapshotting<UIImage, UIImage>.image(
+                precision: currentPrecision,
+                perceptualPrecision: 1.0,
+                scale: prepared.traits.displayScale
+            )
+            .pullback { view in
+                renderSnapshot(view: view, traits: prepared.traits)
+            }
+
             failure = verifySnapshot(
                 matching: hostingController.view,
                 as: snapshotting,
@@ -105,6 +111,12 @@ extension XCTestCase {
             )
 
             if failure == nil {
+                logWarningIfReducedPrecision(
+                    attempt: attempt + 1,
+                    maxAttempts: options.retries + 1,
+                    precision: currentPrecision,
+                    name: named
+                )
                 break
             }
 
@@ -117,6 +129,28 @@ extension XCTestCase {
             XCTFail(failure, file: file, line: line)
         }
     }
+}
+
+private func calculatePrecision(
+    base: Float,
+    step: Float,
+    attempt: Int,
+    minimumAllowed: Float
+) -> Float {
+    let calculated = base - (Float(attempt) * step)
+    return max(calculated, minimumAllowed)
+}
+
+private func logWarningIfReducedPrecision(
+    attempt: Int,
+    maxAttempts: Int,
+    precision: Float,
+    name: String
+) {
+    guard attempt > 1 else { return }
+    let warningMessage = "⚠️ Snapshot matched with reduced precision: \(precision) (attempt \(attempt)/\(maxAttempts)) - \(name)"
+    XCTContext.runActivity(named: warningMessage) { _ in }
+    print(warningMessage)
 }
 
 private func makeSnapshotInputs(
