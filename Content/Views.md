@@ -12,7 +12,7 @@ Initializes a `DSVStack` with alignment, spacing, and dynamic content.
 #### Usage:
 `DSVStack` is particularly useful for creating layouts where vertical arrangement of components is required, maintaining consistency with the design system’s spacing and alignment guidelines.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSVStack: View {
     var body: some View {
@@ -55,7 +55,7 @@ Initializes a `DSHStack` with alignment, spacing, and dynamic content.
 #### Usage:
 `DSHStack` is particularly useful for creating layouts where horizontal arrangement of components is required, maintaining consistency with the design system’s spacing and alignment guidelines.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSHStack: View {
     var body: some View {
@@ -101,7 +101,7 @@ Initializes `DSGrid` with customizable settings for layout and data handling.
 #### Usage:
 `DSGrid` can be used in various applications, from displaying photos in a gallery to creating a product list in an e-commerce app.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSGrid: View {
     let colors = [Color.red, Color.green, Color.yellow, Color.purple, Color.red]
@@ -155,7 +155,7 @@ Extensions on `DSButton` provide convenient static methods to create commonly us
 #### Usage:
 `DSButton` can be used in various parts of the application where user interaction is required. It is capable of handling both text and icons, and can be styled dynamically according to the design requirements.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSButton: View {
     var body: some View {
@@ -184,7 +184,7 @@ struct Testable_DSButton: View {
                 )
                 DSButton(
                     title: "Bordered Light",
-                    keftSystemName: "message.fill",
+                    leftSystemName: "message.fill",
                     style: .borderedLight,
                     action: { }
                 )
@@ -223,7 +223,7 @@ Initializes a `DSText` with the text content and optional alignment.
 #### Usage:
 `DSText` is ideal for displaying any textual content where adherence to a design system is required. It supports multiple text styles and configurations, making it versatile for use in titles, body text, captions, and more.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSText: View {
     var body: some View {
@@ -285,7 +285,7 @@ Initializes a `DSHScroll` with parameters that control layout and behavior.
 #### Usage:
 `DSHScroll` is particularly useful in scenarios where users need to browse through a series of items without navigating away from the current view context, such as in a media gallery or a horizontal list of options.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSHScroll: View {
     let colors = [
@@ -330,7 +330,7 @@ Initializes `DSCoverFlow` with specific layout and behavioral settings.
 - `id`: KeyPath to the unique identifier for each data item.
 - `content`: Closure that returns a `Content` view for each data item.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSCoverFlow: View {
     
@@ -370,7 +370,7 @@ Code example result:
  #### Usage:
  `DSImageView` is ideal for applications requiring diverse image representations, from icons in buttons to profile pictures, and gallery images. Its flexibility makes it suitable for almost any visual representation involving images in a SwiftUI application.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSImageView: View {
     
@@ -462,7 +462,7 @@ Initializes a `DSTermsAndConditions` with a specific message.
 #### Usage:
 `DSTermsAndConditions` is ideal for registration screens, checkout processes, or any application section where legal agreements or policy acknowledgments are necessary.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSTermsAndConditions: View {
     var body: some View {
@@ -489,7 +489,7 @@ Initializes a `DSPriceView` with a given `DSPrice` model, text font key for styl
 #### Usage:
 The `DSPriceView` can display a standard price, a regular (crossed-out) price when a discount is applicable, and an optional discount badge.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSPriceView: View {
     let price = DSPrice(
@@ -530,7 +530,7 @@ Initializes a `DSGroupedList` with essential parameters for handling data and cu
 #### Usage:
 `DSGroupedList` is particularly effective in environments where distinct visual separation of items is beneficial, enhancing both the organization and aesthetics of list presentations.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSGroupedList: View {
     
@@ -565,7 +565,7 @@ Initializes a `DSSFSymbolButton` with a symbol name and size.
 #### Usage:
 `DSSFSymbolButton` is suitable for a wide range of applications where icons are preferred over text for button labels, such as toolbars, navigation bars, or any user interface element requiring concise visual cues.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSSFSymbolButton: View {
     var body: some View {
@@ -591,7 +591,7 @@ Initializes a `DSRatingView` with a specific rating and optional size for the st
 #### Usage:
 `DSRatingView` is ideal for applications where users need to view or input ratings, such as in product reviews, service evaluations, or user feedback mechanisms.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSRatingView: View {
     var body: some View {
@@ -628,7 +628,7 @@ Initializes a `DSRadioPickerView` with data and custom content rendering options
 #### Usage:
 `DSRadioPickerView` is suitable for scenarios where users need to make a single selection from multiple options, such as choosing a color, selecting a configuration option, or setting preferences.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSRadioPickerView: View {
     let data = ["Red","Orange","Purple","Green","Blue"]
@@ -662,7 +662,7 @@ Initializes a `DSQuantityPicker` with an optional initial quantity.
 `DSQuantityPicker` can be easily integrated into shopping carts, booking forms, or any interface where item count adjustments are necessary.
 
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSQuantityPicker: View {
     var body: some View {
@@ -696,7 +696,7 @@ Initializes a `DSPickerView` with customization options for layout and interacti
 #### Usage:
 `DSPickerView` is ideal for applications requiring user selection from a set of options displayed either in a line or a matrix.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSPickerView: View {
     
@@ -750,7 +750,7 @@ Initializes a `DSBottomContainer` with a view builder closure that defines its c
 #### Usage:
 `DSBottomContainer` is typically used to anchor controls or information at the bottom of the interface, adding visual structure and focus to bottom-placed elements.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSBottomContainer: View {
     var body: some View {
@@ -782,7 +782,7 @@ The `DSDivider` is initialized without parameters, defaulting to predefined styl
 #### Usage:
 `DSDivider` is used to visually separate content within a view, often between list items, sections in a form, or alongside layout changes.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSDivider: View {
     var body: some View {
@@ -808,7 +808,7 @@ Initializes a `DSTextField` with various options for handling different types of
 #### Usage:
 `DSTextField` is suitable for forms, login screens, and any interface where user input is required. The secure entry option and input validation make it particularly useful for handling sensitive information.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSTextField: View {
     
@@ -861,7 +861,7 @@ The `DSChevronView` is initialized without any parameters, defaulting to a prede
 #### Usage:
 `DSChevronView` is straightforward to use in various UI components where a visual indication for navigation or expansion is required.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSChevronView: View {
     var body: some View {
@@ -886,7 +886,7 @@ Initializes a `DSToolbarSFSymbolButton` with the SF Symbol name.
 #### Usage:
 `DSToolbarSFSymbolButton` is ideal for applications requiring accessible, touch-friendly icon buttons in a toolbar. This component is particularly effective in contexts where space is limited, and icons convey actions more efficiently than text.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSToolbarSFSymbolButton: View {
     var body: some View {
@@ -913,7 +913,7 @@ Initializes a `DSSectionHeaderView` with a title, action title, and a closure fo
 #### Usage:
 `DSSectionHeaderView` is ideally used at the top of sections where a clear distinction and optional user interaction are needed, such as in settings menus, content lists, or information panels.
 #### Code example:
-Here is how you might set up it within your views:
+Here is how you might set it up within your views:
 ```swift
 struct Testable_DSSectionHeaderView: View {
     var body: some View {
