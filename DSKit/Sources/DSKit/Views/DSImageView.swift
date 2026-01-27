@@ -277,15 +277,19 @@ extension DSImage {
 }
 
 struct Testable_DSImageView: View {
+    private static let localDemoImageURL: URL? = {
+        guard let image = DSUIImage(named: "demo", in: Bundle.main, with: nil),
+              let data = image.jpegData(compressionQuality: 0.9) else {
+            return nil
+        }
+        let url = FileManager.default.temporaryDirectory.appendingPathComponent("dskit-demo.jpg")
+        try? data.write(to: url, options: [.atomic])
+        return url
+    }()
     
-    let imageUrl = URL(string: "https://images.unsplash.com/photo-1702540122576-dd7d387f652f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    )
+    let imageUrl = Testable_DSImageView.localDemoImageURL
     
-    let testImage = DSUIImage(
-        named: "demo",
-        in: Bundle(identifier: "app.DSKit"),
-        with: nil
-    )
+    let testImage = DSUIImage(named: "demo", in: Bundle.main, with: nil)
     
     var body: some View {
         DSVStack {
@@ -360,4 +364,3 @@ struct DSImageView_Previews: PreviewProvider {
         }
     }
 }
-

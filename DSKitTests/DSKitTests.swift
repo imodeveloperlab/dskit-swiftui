@@ -10,7 +10,11 @@ import XCTest
 import SnapshotTesting
 @testable import DSKit
 
-final class DSKitTests: XCTestCase {
+final class DSKitTests: SnapshotTestCase {
+    override func setUpWithError() throws {
+        try super.setUpWithError()
+        recordAll = false
+    }
 
     func testDSCustomBackgroundModifier() throws {
         assertSnapshot(for: Testable_DSBackgroundModifier(), named: "DSBackgroundModifier")
